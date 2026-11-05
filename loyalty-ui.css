@@ -1,0 +1,552 @@
+/* ============================================
+   PHARMACLOUD - LOYALTY UI v1.0
+   Modern Tabs + Advanced Styling
+   ============================================ */
+
+/* ============================================
+   TABS CONTAINER — Card Style
+   ============================================ */
+.lui-tabs {
+  display: flex;
+  gap: 8px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 8px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  box-shadow:
+    0 4px 16px rgba(15, 23, 42, 0.04),
+    0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.lui-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+/* Decorative gradient line above tabs */
+.lui-tabs::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  inset-inline: 20px;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(0, 184, 132, 0.4) 20%,
+    rgba(30, 136, 229, 0.4) 50%,
+    rgba(124, 58, 237, 0.4) 80%,
+    transparent 100%);
+  border-radius: 999px;
+  opacity: 0.6;
+}
+
+/* ============================================
+   TAB BUTTON
+   ============================================ */
+.lui-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: 14px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  position: relative;
+  letter-spacing: 0.2px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.lui-tab::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #00b884 0%, #1E88E5 100%);
+  opacity: 0;
+  border-radius: inherit;
+  transition: opacity 0.3s;
+  z-index: 0;
+}
+
+.lui-tab > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================
+   TAB ICON — Rounded Square
+   ============================================ */
+.lui-tab-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.88rem;
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  color: var(--text-muted);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+}
+
+/* ============================================
+   TAB LABEL + COUNT
+   ============================================ */
+.lui-tab-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lui-tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  background: rgba(100, 116, 139, 0.12);
+  color: var(--text-muted);
+  transition: all 0.3s;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+
+/* ============================================
+   TAB HOVER STATE
+   ============================================ */
+.lui-tab:hover:not(.active) {
+  background: rgba(0, 184, 132, 0.06);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.lui-tab:hover:not(.active) .lui-tab-icon {
+  background: linear-gradient(135deg, rgba(0, 184, 132, 0.15), rgba(30, 136, 229, 0.1));
+  color: var(--primary);
+  transform: scale(1.08) rotate(-4deg);
+  box-shadow: 0 6px 16px rgba(0, 184, 132, 0.2);
+}
+
+.lui-tab:hover:not(.active) .lui-tab-count {
+  background: rgba(0, 184, 132, 0.15);
+  color: var(--primary);
+}
+
+/* ============================================
+   TAB ACTIVE STATE
+   ============================================ */
+.lui-tab.active {
+  color: #fff;
+  box-shadow:
+    0 12px 32px rgba(0, 184, 132, 0.35),
+    0 0 0 3px rgba(255, 255, 255, 0.5) inset;
+  transform: translateY(-2px);
+}
+
+.lui-tab.active::before {
+  opacity: 1;
+}
+
+.lui-tab.active .lui-tab-icon {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+  transform: scale(1.05);
+}
+
+.lui-tab.active .lui-tab-count {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   UNDERLINE ANIMATION FOR ACTIVE TAB
+   ============================================ */
+.lui-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 999px;
+  animation: luiTabUnderline 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+@keyframes luiTabUnderline {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 30%;
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   TAB ENTRANCE ANIMATION
+   ============================================ */
+.lui-tab {
+  animation: luiTabEnter 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.lui-tab:nth-child(1) { animation-delay: 0s; }
+.lui-tab:nth-child(2) { animation-delay: 0.05s; }
+.lui-tab:nth-child(3) { animation-delay: 0.1s; }
+.lui-tab:nth-child(4) { animation-delay: 0.15s; }
+.lui-tab:nth-child(5) { animation-delay: 0.2s; }
+
+@keyframes luiTabEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ============================================
+   ICON ANIMATIONS PER TAB TYPE
+   ============================================ */
+.lui-tab.active .lui-tab-icon i {
+  animation: luiIconPulse 2s ease-in-out infinite;
+}
+
+@keyframes luiIconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* ============================================
+   CONTENT AREA — Fade In
+   ============================================ */
+#luiContent {
+  animation: luiContentFade 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes luiContentFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   STATS CARDS - Enhanced (top of Overview)
+   ============================================ */
+.lui-stat-enhanced {
+  position: relative;
+  overflow: hidden;
+}
+
+.lui-stat-enhanced::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  inset-inline-end: -20%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.08;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .lui-tabs {
+    padding: 6px;
+    gap: 6px;
+    border-radius: 16px;
+  }
+
+  .lui-tab {
+    padding: 10px 14px;
+    font-size: 0.82rem;
+    gap: 8px;
+  }
+
+  .lui-tab-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 0.78rem;
+    border-radius: 8px;
+  }
+
+  .lui-tab-count {
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lui-tab {
+    padding: 10px 12px;
+  }
+
+  .lui-tab-label {
+    gap: 6px;
+  }
+}
+
+/* ============================================
+   DARK MODE (لو حبيت تضيفها بعدين)
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+  /* يمكن إضافة دعم الوضع الليلي لاحقاً */
+}
+/* ============================================
+   TIER CARDS — INTERACTIVE HOVER EFFECTS
+   ============================================ */
+
+/* Base tier card with smooth transition */
+.lui-tier-card {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow;
+}
+
+/* Hover — Lift + Scale + Colored Shadow */
+.lui-tier-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 20px 50px var(--tier-shadow, rgba(15, 23, 42, 0.15)),
+    0 0 0 2px var(--tier-color, #00b884) inset,
+    0 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Border glow on hover */
+.lui-tier-card::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 22px;
+  background: linear-gradient(135deg,
+    var(--tier-color, #00b884) 0%,
+    transparent 60%,
+    var(--tier-color, #00b884) 100%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.4s;
+  filter: blur(12px);
+}
+
+.lui-tier-card:hover::after {
+  opacity: 0.4;
+}
+
+/* Top badge animation */
+.lui-tier-card .loyalty-tier-badge {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lui-tier-card:hover .loyalty-tier-badge {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow:
+    0 12px 28px var(--tier-shadow, rgba(0, 0, 0, 0.25)),
+    0 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+.lui-tier-card:hover .loyalty-tier-badge i {
+  animation: luiBadgeIconSpin 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes luiBadgeIconSpin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(-15deg) scale(1.25); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+/* Points number animation */
+.lui-tier-card .lui-tier-points {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+}
+
+.lui-tier-card:hover .lui-tier-points {
+  transform: scale(1.12);
+  color: var(--tier-color, #00b884);
+  text-shadow: 0 4px 16px var(--tier-shadow, rgba(0, 0, 0, 0.15));
+}
+
+/* Count section animation */
+.lui-tier-card .lui-tier-count-section {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lui-tier-card:hover .lui-tier-count-section {
+  background: linear-gradient(135deg,
+    var(--tier-color, #00b884) 10%,
+    rgba(255, 255, 255, 0.9) 100%);
+  color: #fff;
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px var(--tier-shadow, rgba(0, 0, 0, 0.15));
+}
+
+.lui-tier-card:hover .lui-tier-count-section strong {
+  color: #fff;
+  font-size: 1.3rem;
+  transition: font-size 0.3s;
+}
+
+/* Discount perk animation */
+.lui-tier-card .loyalty-tier-perk {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.lui-tier-card .loyalty-tier-perk::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  inset-inline-start: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent);
+  transition: inset-inline-start 0.6s;
+}
+
+.lui-tier-card:hover .loyalty-tier-perk::before {
+  inset-inline-start: 100%;
+}
+
+.lui-tier-card:hover .loyalty-tier-perk {
+  background: linear-gradient(135deg,
+    var(--tier-color, #00b884),
+    color-mix(in srgb, var(--tier-color, #00b884) 70%, white));
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px var(--tier-shadow, rgba(0, 0, 0, 0.15));
+}
+
+/* Shine effect sweep */
+.lui-tier-card .lui-tier-shine {
+  position: absolute;
+  top: 0;
+  inset-inline-start: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent);
+  transform: skewX(-20deg);
+  transition: inset-inline-start 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.lui-tier-card:hover .lui-tier-shine {
+  inset-inline-start: 150%;
+}
+
+/* Crown / Gem Icon Bounce */
+.lui-tier-card:hover .lui-tier-icon-wrapper {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.lui-tier-card .lui-tier-icon-wrapper {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: inline-block;
+}
+
+/* Progress Ring Animation (Optional) */
+.lui-tier-progress-ring {
+  position: absolute;
+  top: 12px;
+  inset-inline-end: 12px;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.lui-tier-card:hover .lui-tier-progress-ring {
+  opacity: 1;
+}
+
+.lui-tier-progress-ring svg {
+  width: 100%;
+  height: 100%;
+  animation: luiRingSpin 3s linear infinite;
+}
+
+@keyframes luiRingSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   RIPPLE EFFECT ON CLICK
+   ============================================ */
+.lui-tier-card {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.lui-tier-card:active {
+  transform: translateY(-4px) scale(0.99);
+  transition: all 0.1s;
+}
+
+/* ============================================
+   STAGGERED ENTRANCE ANIMATION
+   ============================================ */
+.lui-tier-card {
+  animation: luiTierEnter 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.lui-tier-card:nth-child(1) { animation-delay: 0s; }
+.lui-tier-card:nth-child(2) { animation-delay: 0.08s; }
+.lui-tier-card:nth-child(3) { animation-delay: 0.16s; }
+.lui-tier-card:nth-child(4) { animation-delay: 0.24s; }
+.lui-tier-card:nth-child(5) { animation-delay: 0.32s; }
+
+@keyframes luiTierEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

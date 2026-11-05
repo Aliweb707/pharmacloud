@@ -1,0 +1,347 @@
+/* ============================================
+   2FA v1.0
+   ============================================ */
+
+.tfa-modal-head {
+  padding: 24px;
+  background: linear-gradient(135deg, #7c3aed, #1E88E5);
+  color: #fff;
+  border-radius: 22px 22px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+}
+
+.tfa-modal-head.success {
+  background: linear-gradient(135deg, #10b981, #34d399);
+}
+
+.tfa-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.tfa-icon-wrap.success {
+  background: rgba(255,255,255,0.3);
+}
+
+.tfa-modal-head h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.tfa-modal-head p {
+  margin: 4px 0 0;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.85);
+}
+
+.tfa-body {
+  padding: 24px;
+}
+
+.tfa-step {
+  margin-bottom: 24px;
+}
+
+.tfa-step-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.tfa-step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #1E88E5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+.tfa-step-head strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.tfa-step-head small {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.tfa-apps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.tfa-app-btn {
+  padding: 12px 16px;
+  background: var(--bg-alt);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 800;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.tfa-app-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.tfa-qr-box {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  border: 2px solid var(--border);
+  margin-bottom: 14px;
+}
+
+.tfa-qr-img {
+  width: 220px;
+  height: 220px;
+  display: block;
+  margin: 0 auto;
+}
+
+.tfa-manual-key label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.tfa-key-display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: var(--bg-alt);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  font-family: 'Courier New', monospace;
+}
+
+.tfa-key-display code {
+  flex: 1;
+  font-size: 0.82rem;
+  color: var(--text);
+  letter-spacing: 1px;
+  word-break: break-all;
+  direction: ltr;
+  text-align: center;
+}
+
+.tfa-copy-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: none;
+  background: var(--bg);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.tfa-copy-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.tfa-code-inputs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.tfa-code-digit {
+  width: 48px;
+  height: 56px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-alt);
+  color: var(--text);
+  font-family: 'Courier New', monospace;
+  transition: all 0.2s;
+}
+
+.tfa-code-digit:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: var(--bg);
+  box-shadow: 0 0 0 4px rgba(0, 184, 132, 0.12);
+  transform: scale(1.05);
+}
+
+.tfa-error {
+  color: var(--danger);
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-align: center;
+  min-height: 20px;
+  margin-top: 8px;
+}
+
+.tfa-alternatives {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.tfa-alternatives a {
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.tfa-warning {
+  display: flex;
+  gap: 10px;
+  padding: 14px;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1.5px solid rgba(245, 158, 11, 0.3);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #92400e;
+  margin-bottom: 16px;
+}
+
+.tfa-warning i {
+  color: #f59e0b;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.tfa-backup-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tfa-backup-code {
+  padding: 12px;
+  background: linear-gradient(135deg, #f0fdf9, #eff6ff);
+  border: 1.5px dashed var(--primary);
+  border-radius: 10px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  font-weight: 900;
+  text-align: center;
+  color: var(--primary);
+  letter-spacing: 2px;
+}
+
+.tfa-backup-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.tfa-copy-btn-large,
+.tfa-download-btn-large {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.tfa-copy-btn-large {
+  background: var(--bg-alt);
+  color: var(--text);
+  border: 1.5px solid var(--border);
+}
+
+.tfa-copy-btn-large:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.tfa-download-btn-large {
+  background: linear-gradient(135deg, #10b981, #34d399);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
+}
+
+.tfa-download-btn-large:hover {
+  transform: translateY(-2px);
+}
+
+/* DARK MODE */
+html[data-theme="dark"] .tfa-key-display,
+html[data-theme="dark"] .tfa-code-digit {
+  background: var(--bg-soft);
+}
+
+html[data-theme="dark"] .tfa-qr-box {
+  background: #fff;
+}
+
+html[data-theme="dark"] .tfa-backup-code {
+  background: linear-gradient(135deg, rgba(0, 184, 132, 0.1), rgba(30, 136, 229, 0.08));
+  color: #34d399;
+  border-color: #34d399;
+}
+
+@media (max-width: 640px) {
+  .tfa-code-inputs {
+    gap: 4px;
+  }
+  .tfa-code-digit {
+    width: 40px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+  .tfa-backup-grid {
+    grid-template-columns: 1fr;
+  }
+  .tfa-apps {
+    grid-template-columns: 1fr;
+  }
+}

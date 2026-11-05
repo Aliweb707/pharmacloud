@@ -1,0 +1,891 @@
+/* ============================================
+   PHARMACLOUD - SIGNUP WIZARD CSS v2.0
+   Standalone Modal System — No Conflicts
+   ============================================ */
+
+/* ============================================
+   1. OVERLAY (Full Screen)
+   ============================================ */
+#sfwOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+#sfwOverlay.sfw-open {
+  display: flex;
+  opacity: 1;
+}
+
+#sfwOverlay.sfw-closing {
+  opacity: 0;
+}
+
+/* ============================================
+   2. MODAL — Force Layout
+   ============================================ */
+#sfwModal {
+  position: relative;
+  background: #fff;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 92vh;
+  overflow-y: auto;
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  direction: rtl;
+  font-family: 'Cairo', 'Segoe UI', system-ui, sans-serif;
+  animation: sfw-slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+#sfwModal::-webkit-scrollbar {
+  width: 6px;
+}
+
+#sfwModal::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 6px;
+}
+
+@keyframes sfw-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ============================================
+   3. CLOSE BUTTON
+   ============================================ */
+.sfw-close-btn {
+  position: absolute;
+  top: 16px;
+  inset-inline-end: 16px;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.06);
+  border: none;
+  color: #475569;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all 0.25s;
+  z-index: 100;
+}
+
+.sfw-close-btn:hover {
+  background: #dc2626;
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+/* ============================================
+   4. WIZARD STEPS
+   ============================================ */
+.sfw-steps {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 32px 48px 24px;
+  background: linear-gradient(135deg, #f8fafc 0%, #fff 100%);
+  border-bottom: 1px solid #f1f5f9;
+  border-radius: 24px 24px 0 0;
+  flex-shrink: 0;
+}
+
+.sfw-steps::before {
+  content: '';
+  position: absolute;
+  top: 53px;
+  inset-inline-start: 90px;
+  inset-inline-end: 90px;
+  height: 2px;
+  background: linear-gradient(90deg, #10b981 0%, #e2e8f0 50%, #e2e8f0 100%);
+  z-index: 0;
+  border-radius: 2px;
+}
+
+.sfw-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 1;
+  min-width: 80px;
+}
+
+.sfw-step-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: #94a3b8;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+}
+
+.sfw-step.sfw-active .sfw-step-circle {
+  background: linear-gradient(135deg, #00b884, #1E88E5);
+  border-color: transparent;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 184, 132, 0.4);
+}
+
+.sfw-step.sfw-completed .sfw-step-circle {
+  background: #10b981;
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.35);
+}
+
+.sfw-step-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #94a3b8;
+  transition: color 0.3s;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.sfw-step.sfw-active .sfw-step-label {
+  color: #00b884;
+}
+
+.sfw-step.sfw-completed .sfw-step-label {
+  color: #10b981;
+}
+
+/* ============================================
+   5. BODY
+   ============================================ */
+.sfw-body {
+  padding: 28px 32px 32px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* ============================================
+   6. PLAN SUMMARY
+   ============================================ */
+.sfw-plan-summary {
+  background: linear-gradient(135deg, rgba(0, 184, 132, 0.08), rgba(30, 136, 229, 0.05));
+  border: 2px solid rgba(0, 184, 132, 0.25);
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sfw-plan-summary::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  inset-inline-end: -40px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 184, 132, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.sfw-plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.sfw-plan-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #00b884, #1E88E5);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  box-shadow: 0 8px 20px rgba(0, 184, 132, 0.35);
+}
+
+.sfw-plan-badge i {
+  font-size: 0.85rem;
+}
+
+.sfw-plan-cycle {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.sfw-plan-price {
+  text-align: end;
+}
+
+.sfw-plan-price-main {
+  font-size: 1.9rem;
+  font-weight: 900;
+  color: #00b884;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.sfw-plan-price-main small {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0;
+  margin-inline-start: 4px;
+}
+
+.sfw-plan-savings {
+  font-size: 0.75rem;
+  color: #10b981;
+  font-weight: 900;
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sfw-plan-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  position: relative;
+  z-index: 1;
+}
+
+.sfw-plan-feature {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 184, 132, 0.2);
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.sfw-plan-feature i {
+  color: #10b981;
+  font-size: 0.65rem;
+}
+
+/* ============================================
+   7. PRIMARY PAY BUTTON
+   ============================================ */
+.sfw-pay-primary {
+  width: 100%;
+  padding: 18px 24px;
+  border-radius: 16px;
+  border: none;
+  background: linear-gradient(135deg, #00b884, #1E88E5);
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 15px 35px rgba(0, 184, 132, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 12px;
+}
+
+.sfw-pay-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 45px rgba(0, 184, 132, 0.55);
+}
+
+.sfw-pay-primary:active {
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   8. TRIAL SECTION
+   ============================================ */
+.sfw-trial-section {
+  padding: 16px;
+  background: rgba(100, 116, 139, 0.04);
+  border: 1px dashed rgba(100, 116, 139, 0.2);
+  border-radius: 14px;
+  text-align: center;
+}
+
+.sfw-trial-text {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.sfw-trial-text i {
+  color: #00b884;
+}
+
+.sfw-trial-btn {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+  background: #fff;
+  color: #475569;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s;
+}
+
+.sfw-trial-btn:hover {
+  border-color: #00b884;
+  color: #00b884;
+  background: rgba(0, 184, 132, 0.04);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 184, 132, 0.15);
+}
+
+/* ============================================
+   9. DIVIDER
+   ============================================ */
+.sfw-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.sfw-divider::before,
+.sfw-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.sfw-divider span {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  font-weight: 900;
+  padding: 0 4px;
+}
+
+/* ============================================
+   10. AMOUNT DISPLAY (for payment step)
+   ============================================ */
+.sfw-amount-display {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sfw-amount-display::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(0, 184, 132, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(30, 136, 229, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.sfw-amount-label {
+  position: relative;
+  z-index: 1;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.sfw-amount-value {
+  position: relative;
+  z-index: 1;
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.sfw-amount-value small {
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0;
+  margin-inline-start: 6px;
+}
+
+.sfw-amount-plan {
+  position: relative;
+  z-index: 1;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 8px;
+  font-weight: 700;
+}
+
+/* ============================================
+   11. SECTION LABEL
+   ============================================ */
+.sfw-section-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+}
+
+.sfw-section-label i {
+  color: #00b884;
+}
+
+/* ============================================
+   12. PAYMENT METHODS GRID
+   ============================================ */
+.sfw-methods {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sfw-method {
+  position: relative;
+  background: #fff;
+  border: 2px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+  min-height: 86px;
+  justify-content: center;
+}
+
+.sfw-method:hover {
+  border-color: #00b884;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 184, 132, 0.15);
+}
+
+.sfw-method.sfw-method-active {
+  border-color: #00b884;
+  background: rgba(0, 184, 132, 0.06);
+  box-shadow: 0 0 0 4px rgba(0, 184, 132, 0.15);
+}
+
+.sfw-method.sfw-method-active::after {
+  content: '\f00c';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  top: 6px;
+  inset-inline-end: 6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #10b981;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  line-height: 1;
+}
+
+.sfw-method-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.15rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.sfw-method-name {
+  font-size: 0.72rem;
+  font-weight: 900;
+  color: #0f172a;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* ============================================
+   13. FORM
+   ============================================ */
+.sfw-form {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+.sfw-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.sfw-field {
+  margin-bottom: 14px;
+  display: block;
+}
+
+.sfw-field:last-child {
+  margin-bottom: 0;
+}
+
+.sfw-field-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.sfw-field-label .req {
+  color: #dc2626;
+  margin-inline-start: 2px;
+}
+
+.sfw-field input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  transition: all 0.25s;
+  box-sizing: border-box;
+  direction: ltr;
+  text-align: left;
+}
+
+.sfw-field input.rtl-input {
+  direction: rtl;
+  text-align: right;
+}
+
+.sfw-field input:focus {
+  outline: none;
+  border-color: #00b884;
+  box-shadow: 0 0 0 4px rgba(0, 184, 132, 0.12);
+}
+
+.sfw-field input::placeholder {
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+/* ============================================
+   14. SECURE BADGE
+   ============================================ */
+.sfw-secure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: rgba(16, 185, 129, 0.06);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 12px;
+  font-size: 0.78rem;
+  color: #065f46;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.sfw-secure i {
+  color: #10b981;
+  font-size: 0.95rem;
+}
+
+/* ============================================
+   15. ACTION BUTTONS
+   ============================================ */
+.sfw-actions {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 12px;
+}
+
+.sfw-btn {
+  padding: 15px 20px;
+  border-radius: 14px;
+  border: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sfw-btn-secondary {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1.5px solid #e2e8f0;
+}
+
+.sfw-btn-secondary:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.sfw-btn-primary {
+  background: linear-gradient(135deg, #00b884, #1E88E5);
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 184, 132, 0.35);
+}
+
+.sfw-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 184, 132, 0.5);
+}
+
+.sfw-btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ============================================
+   16. SUCCESS SCREEN
+   ============================================ */
+.sfw-success {
+  text-align: center;
+  padding: 20px 8px;
+}
+
+.sfw-success-icon {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981, #34d399);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.2rem;
+  margin: 0 auto 24px;
+  box-shadow:
+    0 25px 60px rgba(16, 185, 129, 0.45),
+    0 0 0 12px rgba(16, 185, 129, 0.1);
+  animation: sfw-success-pop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes sfw-success-pop {
+  0% { transform: scale(0) rotate(-180deg); opacity: 0; }
+  60% { transform: scale(1.15) rotate(10deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+.sfw-success h2 {
+  font-size: 1.55rem;
+  font-weight: 900;
+  color: #0f172a;
+  margin: 0 0 10px 0;
+}
+
+.sfw-success p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0 0 24px 0;
+}
+
+.sfw-success-details {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 24px;
+  text-align: start;
+}
+
+.sfw-success-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.9rem;
+}
+
+.sfw-success-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sfw-success-row:first-child {
+  padding-top: 0;
+}
+
+.sfw-success-row span {
+  color: #64748b;
+  font-weight: 700;
+}
+
+.sfw-success-row strong {
+  color: #0f172a;
+  font-weight: 900;
+  font-family: 'Cairo', sans-serif;
+}
+
+.sfw-success-row strong.mono {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.5px;
+  color: #7c3aed;
+}
+
+/* ============================================
+   17. RESPONSIVE
+   ============================================ */
+@media (max-width: 640px) {
+  #sfwOverlay {
+    padding: 10px;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
+  #sfwModal {
+    max-width: 100%;
+    border-radius: 20px;
+    max-height: calc(100vh - 40px);
+  }
+
+  .sfw-steps {
+    padding: 24px 20px 18px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .sfw-steps::before {
+    inset-inline-start: 60px;
+    inset-inline-end: 60px;
+  }
+
+  .sfw-step-circle {
+    width: 38px;
+    height: 38px;
+    font-size: 0.85rem;
+  }
+
+  .sfw-step-label {
+    font-size: 0.7rem;
+  }
+
+  .sfw-body {
+    padding: 20px 18px 24px;
+  }
+
+  .sfw-plan-price-main {
+    font-size: 1.6rem;
+  }
+
+  .sfw-plan-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sfw-plan-price {
+    text-align: start;
+  }
+
+  .sfw-methods {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sfw-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .sfw-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .sfw-amount-value {
+    font-size: 2rem;
+  }
+}

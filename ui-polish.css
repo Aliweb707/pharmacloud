@@ -1,0 +1,436 @@
+/* ============================================
+   PHARMACLOUD - UI POLISH v1.0
+   Visual improvements, RTL fixes, typography
+   ============================================ */
+
+/* ============================================
+   1. GLOBAL FONT IMPROVEMENTS
+   ============================================ */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'Cairo', 'Segoe UI', system-ui, sans-serif;
+  font-feature-settings: 'liga' 1, 'kern' 1;
+}
+
+/* Numbers always English (no Arabic-Indic) */
+.num, .kpi-value, .ph-kpi-value, .sa-kpi-value,
+[class*="value"], .price, .amount {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* ============================================
+   2. KPI CARDS - BETTER SPACING
+   ============================================ */
+.ph-kpi, .sa-kpi, .bi-widget {
+  border-radius: 20px !important;
+  padding: 24px !important;
+  transition: all .35s cubic-bezier(.4,0,.2,1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.ph-kpi:hover, .sa-kpi:hover, .bi-widget:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(15,23,42,.12);
+}
+
+.ph-kpi-value, .sa-kpi-value {
+  font-size: 2.1rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  letter-spacing: -1px !important;
+  margin-bottom: 8px !important;
+  font-variant-numeric: tabular-nums;
+}
+
+.ph-kpi-label, .sa-kpi-label {
+  font-size: .82rem !important;
+  font-weight: 700 !important;
+  color: var(--text-muted) !important;
+  letter-spacing: .3px;
+}
+
+.ph-kpi-icon, .sa-kpi-icon {
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  transition: transform .35s cubic-bezier(.4,0,.2,1);
+}
+
+.ph-kpi:hover .ph-kpi-icon,
+.sa-kpi:hover .sa-kpi-icon {
+  transform: scale(1.08) rotate(-5deg);
+}
+
+/* ============================================
+   3. TABLES - CLEANER
+   ============================================ */
+.ph-table th, .sa-table th {
+  font-size: .78rem !important;
+  letter-spacing: .8px !important;
+  font-weight: 800 !important;
+  padding: 16px 20px !important;
+  background: linear-gradient(180deg, #f8fafc, #f1f5f9) !important;
+}
+
+.ph-table td, .sa-table td {
+  padding: 16px 20px !important;
+  font-size: .9rem !important;
+  vertical-align: middle !important;
+}
+
+.ph-table tbody tr, .sa-table tbody tr {
+  transition: background .2s ease;
+}
+
+.ph-table tbody tr:hover, .sa-table tbody tr:hover {
+  background: linear-gradient(90deg, rgba(0,184,132,.04), transparent) !important;
+}
+
+/* Table numbers */
+.ph-table td strong, .sa-table td strong {
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  color: var(--text);
+}
+
+/* ============================================
+   4. PAGE HEADERS - CONSISTENT
+   ============================================ */
+.ph-page-head {
+  margin-bottom: 28px !important;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.ph-page-head h1 {
+  font-size: 1.75rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -.5px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+}
+
+.ph-page-head h1 i {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: var(--gradient-brand);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  box-shadow: 0 8px 20px rgba(0,184,132,.25);
+}
+
+.ph-page-head p {
+  font-size: .92rem !important;
+  color: var(--text-muted) !important;
+  margin-top: 6px !important;
+}
+
+/* ============================================
+   5. BUTTONS - BETTER
+   ============================================ */
+.btn {
+  font-weight: 800 !important;
+  letter-spacing: .2px !important;
+  transition: all .25s cubic-bezier(.4,0,.2,1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-sm {
+  padding: 10px 20px !important;
+  font-size: .85rem !important;
+  border-radius: 12px !important;
+}
+
+.btn-primary {
+  box-shadow: 0 8px 24px rgba(0,184,132,.28) !important;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 14px 36px rgba(0,184,132,.42) !important;
+}
+
+.btn-outline {
+  border-width: 1.5px !important;
+  background: #fff !important;
+}
+
+.btn-outline:hover {
+  background: rgba(0,184,132,.05) !important;
+}
+
+/* ============================================
+   6. BADGES - SOFTER
+   ============================================ */
+.ph-badge, .sa-badge {
+  font-weight: 800 !important;
+  letter-spacing: .3px !important;
+  padding: 5px 12px !important;
+  font-size: .74rem !important;
+  border-radius: 999px !important;
+}
+
+/* ============================================
+   7. SIDEBAR - POLISH
+   ============================================ */
+.ph-sidebar {
+  box-shadow: inset -1px 0 0 rgba(255,255,255,.05);
+}
+
+.ph-brand {
+  border: 1px solid rgba(255,255,255,.06);
+  transition: all .3s ease;
+}
+
+.ph-brand:hover {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(0,212,160,.3);
+}
+
+.ph-item {
+  transition: all .25s cubic-bezier(.4,0,.2,1);
+  position: relative;
+  border-radius: 11px !important;
+}
+
+.ph-item:hover {
+  transform: translateX(-4px);
+}
+
+.ph-item.active {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+  box-shadow: 0 10px 24px rgba(0,184,132,.35) !important;
+}
+
+/* Pro section highlight */
+.ph-section:has(.ph-section-title:not([class*="النظام"])):has(.ph-item[onclick*="interactions"]) {
+  background: linear-gradient(135deg, rgba(124,58,237,.08), rgba(0,184,132,.05));
+  border-radius: 16px;
+  padding: 8px;
+  margin: 14px 6px;
+  border: 1px solid rgba(124,58,237,.15);
+}
+
+/* ============================================
+   8. CHARTS - BETTER CONTAINERS
+   ============================================ */
+.ph-chart-card, .sa-chart-card, .bi-widget {
+  border-radius: 20px !important;
+  padding: 24px !important;
+  border: 1px solid var(--border-light) !important;
+  transition: all .3s ease;
+}
+
+.ph-chart-card:hover, .sa-chart-card:hover {
+  box-shadow: 0 16px 40px rgba(15,23,42,.08);
+}
+
+.ph-chart-title, .sa-chart-title, .bi-widget-title {
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -.2px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.ph-chart-title i, .sa-chart-title i, .bi-widget-title i {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(0,184,132,.12), rgba(30,136,229,.08));
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .9rem;
+}
+
+/* ============================================
+   9. MODALS - POLISH
+   ============================================ */
+.ph-modal, .sa-modal, .auth-modal {
+  border-radius: 24px !important;
+  box-shadow: 0 40px 100px rgba(0,0,0,.35) !important;
+  border: 1px solid rgba(255,255,255,.5);
+}
+
+.ph-modal-head, .sa-modal-head {
+  background: linear-gradient(135deg, #f8fafc, #fff);
+}
+
+.ph-modal-head h3, .sa-modal-head h3 {
+  font-weight: 900 !important;
+  letter-spacing: -.3px;
+}
+
+/* ============================================
+   10. TOPBAR - GLASS EFFECT
+   ============================================ */
+.ph-topbar, .sa-topbar {
+  background: rgba(255,255,255,.85) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(226,232,240,.8) !important;
+}
+
+.ph-search input, .sa-search input {
+  border-radius: 12px !important;
+  border-width: 1.5px !important;
+  transition: all .25s ease;
+}
+
+.ph-search input:focus, .sa-search input:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 4px rgba(0,184,132,.12) !important;
+}
+
+/* ============================================
+   11. EMPTY STATES - ELEGANT
+   ============================================ */
+.ph-empty, .sa-empty {
+  padding: 60px 30px !important;
+}
+
+.ph-empty i, .sa-empty i {
+  font-size: 3.5rem !important;
+  opacity: .15 !important;
+  margin-bottom: 20px !important;
+  color: var(--primary);
+}
+
+.ph-empty h4, .sa-empty h4 {
+  font-size: 1.05rem !important;
+  font-weight: 900 !important;
+  color: var(--text) !important;
+  margin-bottom: 8px !important;
+}
+
+/* ============================================
+   12. SCROLLBARS - THIN & ELEGANT
+   ============================================ */
+.ph-content::-webkit-scrollbar,
+.sa-content::-webkit-scrollbar,
+.ph-sidebar::-webkit-scrollbar,
+.sa-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ph-content::-webkit-scrollbar-track,
+.sa-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ph-content::-webkit-scrollbar-thumb,
+.sa-content::-webkit-scrollbar-thumb {
+  background: rgba(100,116,139,.2);
+  border-radius: 6px;
+}
+
+.ph-content::-webkit-scrollbar-thumb:hover,
+.sa-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(100,116,139,.4);
+}
+
+/* ============================================
+   13. ANIMATIONS - SMOOTHER
+   ============================================ */
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ph-kpi, .sa-kpi, .ph-chart-card, .ph-table-card {
+  animation: slideInUp .45s cubic-bezier(.16,1,.3,1) both;
+}
+
+.ph-kpi:nth-child(1) { animation-delay: 0s; }
+.ph-kpi:nth-child(2) { animation-delay: .05s; }
+.ph-kpi:nth-child(3) { animation-delay: .1s; }
+.ph-kpi:nth-child(4) { animation-delay: .15s; }
+
+/* ============================================
+   14. RTL FIXES
+   ============================================ */
+html[dir="rtl"] .ph-kpi::before,
+html[dir="rtl"] .sa-kpi::before {
+  inset-inline-start: 0;
+  inset-inline-end: auto;
+}
+
+html[dir="rtl"] .ph-item.active::before,
+html[dir="rtl"] .sa-item.active::before {
+  inset-inline-start: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* ============================================
+   15. MICRO-INTERACTIONS
+   ============================================ */
+.ph-actions button, .sa-actions button {
+  transition: all .22s cubic-bezier(.4,0,.2,1);
+  border-radius: 10px !important;
+}
+
+.ph-actions button:hover, .sa-actions button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,184,132,.25);
+}
+
+/* Row highlight on click */
+.ph-table tbody tr:active, .sa-table tbody tr:active {
+  background: rgba(0,184,132,.08);
+}
+
+/* ============================================
+   16. INPUT FIELDS - POLISH
+   ============================================ */
+.ph-input, .ph-select, .sa-select {
+  border-radius: 12px !important;
+  border-width: 1.5px !important;
+  transition: all .25s ease;
+  font-weight: 600;
+}
+
+.ph-input:focus, .ph-select:focus, .sa-select:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 4px rgba(0,184,132,.1) !important;
+  background: #fff !important;
+}
+
+/* ============================================
+   17. AI FAB - FLOATING BUTTON
+   ============================================ */
+.ai-fab {
+  box-shadow: 0 16px 40px rgba(124,58,237,.45), 
+              0 0 0 0 rgba(124,58,237,.5);
+  animation: pulse-soft 2.5s infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { box-shadow: 0 16px 40px rgba(124,58,237,.45), 0 0 0 0 rgba(124,58,237,.5); }
+  50% { box-shadow: 0 16px 40px rgba(124,58,237,.45), 0 0 0 18px rgba(124,58,237,0); }
+}
+
+/* ============================================
+   18. RESPONSIVE FIXES
+   ============================================ */
+@media (max-width: 768px) {
+  .ph-page-head h1 { font-size: 1.4rem !important; }
+  .ph-page-head h1 i { width: 38px; height: 38px; font-size: 1rem; }
+  .ph-kpi-value, .sa-kpi-value { font-size: 1.75rem !important; }
+  .ph-table th, .ph-table td { padding: 12px 14px !important; }
+}

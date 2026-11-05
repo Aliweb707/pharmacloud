@@ -1,0 +1,1930 @@
+/* ============================================
+   PHARMACLOUD - THEME MANAGER v2.0
+   Dark Mode — FIXED (override original vars)
+   ============================================ */
+
+/* ============================================
+   1. LIGHT MODE (DEFAULT) — Nothing to change
+   ============================================ */
+/* Light mode uses the defaults from styles.css */
+
+/* ============================================
+   2. DARK MODE — OVERRIDE ORIGINAL VARIABLES
+   ============================================ */
+html[data-theme="dark"] {
+  /* ==== Base Backgrounds ==== */
+  --bg: #0f172a !important;
+  --bg-alt: #1e293b !important;
+  --bg-dark: #0a0f1d !important;
+  --bg-soft: #334155 !important;
+
+  /* ==== Text ==== */
+  --text: #f1f5f9 !important;
+  --text-muted: #94a3b8 !important;
+  --text-light: #64748b !important;
+
+  /* ==== Borders ==== */
+  --border: #334155 !important;
+  --border-light: #1e293b !important;
+  --border-dark: #475569 !important;
+
+  /* ==== Primary accents keep their value (they work in both modes) ==== */
+  /* --primary, --secondary, --accent, --purple, --success, --danger, --warning, --info stay the same */
+
+  /* ==== Soft/Light variants → darker in dark mode ==== */
+  --primary-50: #0a2620 !important;
+  --primary-100: #0d3a2e !important;
+  --danger-light: #451a1a !important;
+  --warning-light: #3a2a0a !important;
+
+  /* ==== Shadows get darker ==== */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+
+  /* ==== Set color-scheme for native UI ==== */
+  color-scheme: dark;
+}
+
+/* ============================================
+   3. BODY & ROOT ELEMENTS
+   ============================================ */
+html[data-theme="dark"],
+html[data-theme="dark"] body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] body.dashboard-mode {
+  background: var(--bg-alt) !important;
+}
+
+/* ============================================
+   4. NAVBAR
+   ============================================ */
+html[data-theme="dark"] .navbar {
+  background: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .navbar.scrolled {
+  background: rgba(15, 23, 42, 0.95) !important;
+  border-bottom-color: var(--border) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+html[data-theme="dark"] .brand-text {
+  color: #f1f5f9 !important;
+}
+
+html[data-theme="dark"] .nav-links a {
+  color: #94a3b8 !important;
+}
+
+html[data-theme="dark"] .nav-links a:hover {
+  color: var(--primary) !important;
+  background: rgba(0, 184, 132, 0.1) !important;
+}
+
+/* ============================================
+   5. SECTIONS (Landing Page)
+   ============================================ */
+html[data-theme="dark"] .section {
+  background: var(--bg) !important;
+}
+
+html[data-theme="dark"] .section-alt {
+  background: var(--bg-alt) !important;
+}
+
+html[data-theme="dark"] .section-head h2 {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .section-head p {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .section-badge {
+  background: rgba(0, 184, 132, 0.12) !important;
+  color: var(--primary-light) !important;
+}
+
+/* ============================================
+   6. HERO
+   ============================================ */
+html[data-theme="dark"] .hero {
+  background: linear-gradient(135deg, #0a0f1d 0%, #0f172a 50%, #0a0f1d 100%) !important;
+}
+
+html[data-theme="dark"] .hero h1 {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .hero p.lead {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .hero-badge {
+  background: rgba(30, 41, 59, 0.8) !important;
+  border-color: var(--border) !important;
+  color: var(--primary-light) !important;
+}
+
+html[data-theme="dark"] .hero-trust {
+  border-top-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .trust-item strong {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .trust-item span {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .dashboard-mockup {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .mock-header {
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .mock-title {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .mock-stat {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(15, 23, 42, 0.6)) !important;
+}
+
+html[data-theme="dark"] .mock-stat .label {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .mock-stat .value {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .mock-chart {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(15, 23, 42, 0.6)) !important;
+}
+
+html[data-theme="dark"] .floating-badge {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* ============================================
+   7. FEATURE CARDS
+   ============================================ */
+html[data-theme="dark"] .feature-card,
+html[data-theme="dark"] .pro-card,
+html[data-theme="dark"] .step-card,
+html[data-theme="dark"] .testimonial-card {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .feature-card:hover,
+html[data-theme="dark"] .pro-card:hover,
+html[data-theme="dark"] .step-card:hover,
+html[data-theme="dark"] .testimonial-card:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
+  border-color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .feature-card h3,
+html[data-theme="dark"] .pro-card h3,
+html[data-theme="dark"] .step-card h3,
+html[data-theme="dark"] .testimonial-card strong {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .feature-card p,
+html[data-theme="dark"] .pro-card p,
+html[data-theme="dark"] .step-card p,
+html[data-theme="dark"] .testimonial-card p {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .pro-card-tech span {
+  background: var(--bg-soft) !important;
+  border-color: var(--border) !important;
+  color: var(--text-muted) !important;
+}
+
+/* ============================================
+   8. FAQ
+   ============================================ */
+html[data-theme="dark"] .faq-item {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .faq-q {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .faq-a {
+  color: var(--text-muted) !important;
+}
+
+/* ============================================
+   9. STATS BAND (keeps gradient — fine)
+   ============================================ */
+
+/* ============================================
+   10. FOOTER
+   ============================================ */
+html[data-theme="dark"] .footer {
+  background: #050810 !important;
+}
+
+/* ============================================
+   11. PRICING CARDS
+   ============================================ */
+html[data-theme="dark"] .pricing-card {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .pricing-card.featured {
+  border-color: var(--primary) !important;
+  box-shadow: 0 25px 60px rgba(0, 184, 132, 0.15) !important;
+}
+
+html[data-theme="dark"] .pricing-plan {
+  background: rgba(0, 184, 132, 0.15) !important;
+  color: var(--primary-light) !important;
+}
+
+html[data-theme="dark"] .pricing-card.featured .pricing-plan {
+  background: var(--gradient-brand) !important;
+  color: #fff !important;
+}
+
+html[data-theme="dark"] .pricing-price .amount {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .pricing-price .currency {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .pricing-price .period {
+  color: var(--text-light) !important;
+}
+
+html[data-theme="dark"] .pricing-desc {
+  color: var(--text-muted) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .pricing-features li {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .pricing-features li.disabled {
+  color: var(--text-light) !important;
+}
+
+html[data-theme="dark"] .pricing-features li.disabled i {
+  color: var(--text-light) !important;
+  background: var(--bg-soft) !important;
+}
+
+html[data-theme="dark"] .pricing-comparison {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .pricing-comparison-head {
+  background: linear-gradient(135deg, var(--bg-soft), var(--bg-alt)) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .pricing-comparison-head h3 {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .pricing-comparison-table thead th {
+  background: var(--bg-soft) !important;
+  color: var(--text-muted) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .pricing-comparison-table td {
+  color: var(--text-muted) !important;
+  border-bottom-color: var(--border-light) !important;
+}
+
+html[data-theme="dark"] .pricing-comparison-table td:first-child {
+  color: var(--text) !important;
+  background: linear-gradient(90deg, var(--bg-soft), var(--bg-alt)) !important;
+}
+
+html[data-theme="dark"] .pricing-comparison-table .cell-text {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .pricing-comparison-table tbody tr:hover {
+  background: rgba(0, 184, 132, 0.05) !important;
+}
+
+/* ============================================
+   12. AUTH MODAL — COMPLETE FIX
+   ============================================ */
+html[data-theme="dark"] .auth-modal {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .auth-header {
+  background: var(--bg-alt) !important;
+}
+
+html[data-theme="dark"] .auth-header h2 {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .auth-header p {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .auth-close {
+  background: var(--bg-soft) !important;
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .auth-close:hover {
+  background: #dc2626 !important;
+  color: #fff !important;
+}
+
+/* === TABS — THE FIX === */
+html[data-theme="dark"] .auth-tabs {
+  background: var(--bg-soft) !important;
+  border: 1px solid var(--border) !important;
+}
+
+html[data-theme="dark"] .auth-tab {
+  color: var(--text-muted) !important;
+  background: transparent !important;
+}
+
+html[data-theme="dark"] .auth-tab.active {
+  background: var(--gradient-brand) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(0, 184, 132, 0.35) !important;
+}
+
+html[data-theme="dark"] .auth-tab:hover:not(.active) {
+  color: var(--primary) !important;
+  background: rgba(0, 184, 132, 0.08) !important;
+}
+
+html[data-theme="dark"] .auth-body {
+  background: var(--bg-alt) !important;
+}
+
+html[data-theme="dark"] .auth-footer {
+  color: var(--text-muted) !important;
+  border-top-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .auth-footer a {
+  color: var(--primary) !important;
+}
+
+/* Form fields inside auth */
+html[data-theme="dark"] .auth-body .form-group label {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .auth-body .form-group input {
+  background: var(--bg-soft) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .auth-body .form-group input:focus {
+  background: var(--bg-alt) !important;
+  border-color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .auth-body .form-group input::placeholder {
+  color: var(--text-light) !important;
+}
+
+/* Plan picker */
+html[data-theme="dark"] .plan-option {
+  background: var(--bg-soft) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .plan-option.selected {
+  background: rgba(0, 184, 132, 0.12) !important;
+  border-color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .plan-option span {
+  color: var(--text-muted) !important;
+}
+
+/* Checkbox row */
+html[data-theme="dark"] .checkbox-row label {
+  color: var(--text-muted) !important;
+}
+
+/* Alert */
+html[data-theme="dark"] .alert.error {
+  background: rgba(220, 38, 38, 0.15) !important;
+  border-color: rgba(220, 38, 38, 0.35) !important;
+  color: #fca5a5 !important;
+}
+
+html[data-theme="dark"] .alert.success {
+  background: rgba(16, 185, 129, 0.15) !important;
+  border-color: rgba(16, 185, 129, 0.35) !important;
+  color: #6ee7b7 !important;
+}
+
+/* ============================================
+   13. PHARMACY DASHBOARD — COMPLETE
+   ============================================ */
+html[data-theme="dark"] .ph-app,
+html[data-theme="dark"] .admin-app {
+  background: var(--bg-alt) !important;
+}
+
+html[data-theme="dark"] .ph-main,
+html[data-theme="dark"] .sa-main {
+  background: var(--bg-alt) !important;
+}
+
+html[data-theme="dark"] .ph-topbar,
+html[data-theme="dark"] .sa-topbar {
+  background: var(--bg-alt) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .ph-search input,
+html[data-theme="dark"] .sa-search input {
+  background: var(--bg-soft) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .ph-search input:focus,
+html[data-theme="dark"] .sa-search input:focus {
+  background: var(--bg-alt) !important;
+  border-color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .ph-search input::placeholder,
+html[data-theme="dark"] .sa-search input::placeholder {
+  color: var(--text-light) !important;
+}
+
+html[data-theme="dark"] .ph-search > i,
+html[data-theme="dark"] .sa-search > i {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .ph-menu-toggle,
+html[data-theme="dark"] .sa-menu-toggle {
+  background: var(--bg-soft) !important;
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .ph-btn,
+html[data-theme="dark"] .sa-btn {
+  background: var(--bg-soft) !important;
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .ph-user,
+html[data-theme="dark"] .sa-user {
+  background: var(--bg-soft) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ph-user-name,
+html[data-theme="dark"] .sa-user-name {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ph-user-role,
+html[data-theme="dark"] .sa-user-role {
+  color: var(--text-muted) !important;
+}
+
+/* Content area */
+html[data-theme="dark"] .ph-content,
+html[data-theme="dark"] .sa-content {
+  background: var(--bg-alt) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ph-page-head h1,
+html[data-theme="dark"] .ph-page-head h2 {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ph-page-head p {
+  color: var(--text-muted) !important;
+}
+
+/* ============================================
+   14. KPI CARDS — THE BIG FIX
+   ============================================ */
+html[data-theme="dark"] .ph-kpi,
+html[data-theme="dark"] .sa-kpi,
+html[data-theme="dark"] .bi-widget,
+html[data-theme="dark"] .fefo-kpi-card-v2,
+html[data-theme="dark"] .loyalty-stat,
+html[data-theme="dark"] .backup-stat,
+html[data-theme="dark"] .ai-kpi-card,
+html[data-theme="dark"] .vld-kpi {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ph-kpi:hover,
+html[data-theme="dark"] .sa-kpi:hover,
+html[data-theme="dark"] .bi-widget:hover {
+  background: var(--bg-alt) !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4) !important;
+}
+
+html[data-theme="dark"] .ph-kpi-value,
+html[data-theme="dark"] .sa-kpi-value,
+html[data-theme="dark"] .bi-value-big,
+html[data-theme="dark"] .fefo-kpi-value-v2,
+html[data-theme="dark"] .loyalty-stat-value,
+html[data-theme="dark"] .backup-stat-value,
+html[data-theme="dark"] .ai-kpi-value,
+html[data-theme="dark"] .vld-kpi-value {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ph-kpi-label,
+html[data-theme="dark"] .sa-kpi-label,
+html[data-theme="dark"] .loyalty-stat-label,
+html[data-theme="dark"] .backup-stat-label,
+html[data-theme="dark"] .ai-kpi-label,
+html[data-theme="dark"] .vld-kpi-label {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .ph-kpi-change,
+html[data-theme="dark"] .sa-kpi-change {
+  background: rgba(16, 185, 129, 0.15) !important;
+  color: #34d399 !important;
+}
+
+html[data-theme="dark"] .ph-kpi-change.down,
+html[data-theme="dark"] .sa-kpi-change.down {
+  background: rgba(239, 68, 68, 0.15) !important;
+  color: #f87171 !important;
+}
+
+/* ============================================
+   15. CHART CARDS & TABLES
+   ============================================ */
+html[data-theme="dark"] .ph-chart-card,
+html[data-theme="dark"] .sa-chart-card,
+html[data-theme="dark"] .ph-table-card,
+html[data-theme="dark"] .sa-table-card,
+html[data-theme="dark"] .bi-card,
+html[data-theme="dark"] .fefo-chart-card,
+html[data-theme="dark"] .fefo-table-card,
+html[data-theme="dark"] .ai-at-risk-card {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ph-chart-title,
+html[data-theme="dark"] .sa-chart-title,
+html[data-theme="dark"] .bi-widget-title,
+html[data-theme="dark"] .ph-table-head h3,
+html[data-theme="dark"] .sa-table-head h3 {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ph-table th,
+html[data-theme="dark"] .sa-table th {
+  background: var(--bg-soft) !important;
+  color: var(--text-muted) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .ph-table td,
+html[data-theme="dark"] .sa-table td {
+  color: var(--text) !important;
+  border-bottom-color: var(--border-light) !important;
+}
+
+html[data-theme="dark"] .ph-table tbody tr:hover,
+html[data-theme="dark"] .sa-table tbody tr:hover {
+  background: rgba(0, 184, 132, 0.05) !important;
+}
+
+html[data-theme="dark"] .ph-chart-head {
+  border-bottom-color: var(--border) !important;
+}
+
+/* ============================================
+   16. MODALS — COMPLETE
+   ============================================ */
+html[data-theme="dark"] .ph-modal,
+html[data-theme="dark"] .sa-modal,
+html[data-theme="dark"] .dlg-modal {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ph-modal-head,
+html[data-theme="dark"] .sa-modal-head,
+html[data-theme="dark"] .dlg-header {
+  background: linear-gradient(135deg, var(--bg-soft), var(--bg-alt)) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .ph-modal-head h3,
+html[data-theme="dark"] .sa-modal-head h3,
+html[data-theme="dark"] .dlg-title {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ph-modal-body,
+html[data-theme="dark"] .sa-modal-body,
+html[data-theme="dark"] .dlg-body {
+  background: var(--bg-alt) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ph-modal-foot,
+html[data-theme="dark"] .sa-modal-foot,
+html[data-theme="dark"] .dlg-footer {
+  background: var(--bg-soft) !important;
+  border-top-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .ph-modal-close,
+html[data-theme="dark"] .sa-modal-close {
+  background: var(--bg-soft) !important;
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .dlg-message {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .dlg-input {
+  background: var(--bg-soft) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .dlg-btn-cancel {
+  background: var(--bg-soft) !important;
+  color: var(--text-muted) !important;
+  border-color: var(--border) !important;
+}
+
+/* ============================================
+   17. FORMS & INPUTS (EVERYWHERE)
+   ============================================ */
+html[data-theme="dark"] input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] select,
+html[data-theme="dark"] .ph-input,
+html[data-theme="dark"] .ph-select,
+html[data-theme="dark"] .sa-select,
+html[data-theme="dark"] .bi-select {
+  background: var(--bg-soft) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+  color: var(--text-light) !important;
+}
+
+html[data-theme="dark"] input:focus:not([type="checkbox"]):not([type="radio"]),
+html[data-theme="dark"] textarea:focus,
+html[data-theme="dark"] select:focus {
+  background: var(--bg-alt) !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 4px rgba(0, 184, 132, 0.15) !important;
+}
+
+html[data-theme="dark"] .form-group label {
+  color: var(--text) !important;
+}
+
+/* File upload */
+html[data-theme="dark"] .file-upload-label {
+  background: var(--bg-soft) !important;
+  border-color: var(--border) !important;
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .file-upload-label:hover {
+  background: rgba(0, 184, 132, 0.08) !important;
+  color: var(--primary) !important;
+}
+
+/* ============================================
+   18. SEARCH DROPDOWN
+   ============================================ */
+html[data-theme="dark"] .search-dropdown {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .search-dd-section {
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .search-dd-title {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .search-dd-item:hover {
+  background: var(--bg-soft) !important;
+}
+
+html[data-theme="dark"] .search-dd-info strong {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .search-dd-info span {
+  color: var(--text-muted) !important;
+}
+
+/* ============================================
+   19. EMPTY STATES
+   ============================================ */
+html[data-theme="dark"] .ph-empty,
+html[data-theme="dark"] .sa-empty {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .ph-empty i,
+html[data-theme="dark"] .sa-empty i {
+  color: var(--text-light) !important;
+}
+
+html[data-theme="dark"] .ph-empty h4,
+html[data-theme="dark"] .sa-empty h4 {
+  color: var(--text) !important;
+}
+
+/* ============================================
+   20. POS PAGE
+   ============================================ */
+html[data-theme="dark"] .ph-pos-card {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .ph-pos-card:hover {
+  border-color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .ph-pos-card h4 {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ph-cart {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .ph-cart-head {
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .ph-cart-head h3 {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ph-cart-item {
+  border-bottom-color: var(--border-light) !important;
+}
+
+html[data-theme="dark"] .ph-cart-item-info strong {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ph-cart-total {
+  border-top-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .ph-cart-row {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ph-qty {
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .ph-qty span {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ph-qty button {
+  color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .barcode-input input {
+  background: var(--bg-soft) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+/* ============================================
+   21. BUTTONS (adjust outlines)
+   ============================================ */
+html[data-theme="dark"] .btn-outline {
+  background: transparent !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .btn-outline:hover {
+  border-color: var(--primary) !important;
+  color: var(--primary) !important;
+  background: rgba(0, 184, 132, 0.08) !important;
+}
+
+html[data-theme="dark"] .btn-ghost {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ============================================
+   22. TOAST
+   ============================================ */
+html[data-theme="dark"] .toast {
+  background: #1e293b !important;
+  color: #f1f5f9 !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .toast.success { background: #059669 !important; }
+html[data-theme="dark"] .toast.error   { background: #dc2626 !important; }
+html[data-theme="dark"] .toast.warning { background: #d97706 !important; }
+
+/* ============================================
+   23. COMMAND PALETTE
+   ============================================ */
+html[data-theme="dark"] .cmd-modal {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .cmd-input-row {
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .cmd-input-row input {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .cmd-input-row input::placeholder {
+  color: var(--text-light) !important;
+}
+
+html[data-theme="dark"] .cmd-input-row kbd {
+  background: var(--bg-soft) !important;
+  border-color: var(--border) !important;
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .cmd-item:hover,
+html[data-theme="dark"] .cmd-item.active {
+  background: var(--bg-soft) !important;
+}
+
+html[data-theme="dark"] .cmd-item i {
+  background: var(--bg-soft) !important;
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .cmd-item strong {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .cmd-item small {
+  color: var(--text-muted) !important;
+}
+
+/* ============================================
+   24. AUDIT PANEL
+   ============================================ */
+html[data-theme="dark"] .audit-panel {
+  background: var(--bg-alt) !important;
+  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .audit-header {
+  background: var(--bg-soft) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .audit-header h3 {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .audit-header button {
+  background: var(--bg-alt) !important;
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .audit-entry {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .audit-entry strong {
+  color: var(--text) !important;
+}
+
+/* ============================================
+   25. EXPIRY DRAWER
+   ============================================ */
+html[data-theme="dark"] .expiry-drawer {
+  background: var(--bg-alt) !important;
+}
+
+html[data-theme="dark"] .expiry-drawer-header {
+  background: linear-gradient(135deg, var(--bg-soft), var(--bg-alt)) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .expiry-drawer-header h3 {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .expiry-card {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .expiry-info strong {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .expiry-info small {
+  color: var(--text-muted) !important;
+}
+
+/* ============================================
+   26. LIVE ALERTS
+   ============================================ */
+html[data-theme="dark"] .live-alert {
+  background: var(--bg-alt) !important;
+  color: var(--text) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .live-alert-body strong {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .live-alert-body p {
+  color: var(--text-muted) !important;
+}
+
+/* ============================================
+   27. AI CHAT
+   ============================================ */
+html[data-theme="dark"] .ai-chat {
+  background: var(--bg-alt) !important;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5) !important;
+}
+
+html[data-theme="dark"] .ai-body {
+  background: var(--bg) !important;
+}
+
+html[data-theme="dark"] .ai-msg.bot .ai-msg-bubble {
+  background: var(--bg-alt) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .ai-suggestions {
+  background: var(--bg-alt) !important;
+  border-top-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .ai-sug {
+  background: var(--bg-soft) !important;
+  border-color: var(--border) !important;
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .ai-input-row {
+  background: var(--bg-alt) !important;
+  border-top-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .ai-input {
+  background: var(--bg-soft) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+/* ============================================
+   28. DASHBOARD SPECIFIC — BI CARDS, ETC
+   ============================================ */
+html[data-theme="dark"] .bi-period {
+  background: var(--bg-soft) !important;
+}
+
+html[data-theme="dark"] .bi-period button {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .bi-period button.active {
+  background: var(--bg-alt) !important;
+  color: var(--primary) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+html[data-theme="dark"] .bi-top-item {
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .bi-top-info strong {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .bi-top-info span {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .bi-heatmap-cell {
+  background: var(--bg-soft) !important;
+}
+
+/* ============================================
+   29. LOYALTY SPECIFIC
+   ============================================ */
+html[data-theme="dark"] .loyalty-card {
+  background: linear-gradient(135deg, var(--bg-alt), var(--bg-soft)) !important;
+}
+
+html[data-theme="dark"] .loyalty-points-value {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .loyalty-progress-bar {
+  background: var(--bg-soft) !important;
+}
+
+html[data-theme="dark"] .loyalty-tier-item,
+html[data-theme="dark"] .loyalty-reward,
+html[data-theme="dark"] .loyalty-history-item,
+html[data-theme="dark"] .loyalty-top-item {
+  background: var(--bg-soft) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .loyalty-tier-item strong,
+html[data-theme="dark"] .loyalty-reward-info strong,
+html[data-theme="dark"] .loyalty-top-item strong {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .loyalty-tier-item span,
+html[data-theme="dark"] .loyalty-reward-info span,
+html[data-theme="dark"] .loyalty-top-item span {
+  color: var(--text-muted) !important;
+}
+
+/* ============================================
+   30. LOYALTY UI TABS
+   ============================================ */
+html[data-theme="dark"] .lui-tabs {
+  background: linear-gradient(135deg, var(--bg-alt), var(--bg-soft)) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .lui-tab {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .lui-tab:hover:not(.active) {
+  background: rgba(0, 184, 132, 0.08) !important;
+  color: var(--primary) !important;
+}
+
+html[data-theme="dark"] .lui-tab-icon {
+  background: linear-gradient(135deg, var(--bg-soft), var(--border)) !important;
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .lui-tab.active .lui-tab-icon {
+  background: rgba(255, 255, 255, 0.25) !important;
+  color: #fff !important;
+}
+
+html[data-theme="dark"] .lui-tab-count {
+  background: rgba(100, 116, 139, 0.25) !important;
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .lui-tab.active .lui-tab-count {
+  background: rgba(255, 255, 255, 0.3) !important;
+  color: #fff !important;
+}
+
+/* ============================================
+   31. AI INSIGHTS SPECIFIC
+   ============================================ */
+html[data-theme="dark"] .ai-hero {
+  background: linear-gradient(135deg, #0a0f1d 0%, #1e293b 50%, #0a0f1d 100%) !important;
+}
+
+html[data-theme="dark"] .ai-segment-card {
+  background: var(--bg-alt) !important;
+}
+
+html[data-theme="dark"] .ai-section-title {
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .ai-section-title h2 {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ai-at-risk-table th {
+  background: var(--bg-soft) !important;
+  color: var(--text-muted) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .ai-at-risk-table td {
+  color: var(--text) !important;
+  border-bottom-color: var(--border-light) !important;
+}
+
+html[data-theme="dark"] .ai-at-risk-table tbody tr:hover {
+  background: rgba(0, 184, 132, 0.05) !important;
+}
+
+html[data-theme="dark"] .ai-customer-info strong {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .ai-customer-info span {
+  color: var(--text-muted) !important;
+}
+
+/* ============================================
+   32. FEFO SPECIFIC
+   ============================================ */
+html[data-theme="dark"] .fefo-heatmap-card {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .fefo-heat-name {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .fefo-heat-count {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .fefo-table th {
+  background: var(--bg-soft) !important;
+  color: var(--text-muted) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .fefo-table td {
+  color: var(--text) !important;
+  border-bottom-color: var(--border-light) !important;
+}
+
+html[data-theme="dark"] .fefo-table tbody tr:hover {
+  background: rgba(0, 184, 132, 0.05) !important;
+}
+
+/* ============================================
+   33. DRUG INTERACTIONS SPECIFIC
+   ============================================ */
+html[data-theme="dark"] .di-stat-card,
+html[data-theme="dark"] .di-card,
+html[data-theme="dark"] .di-result-card {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .di-stat-value,
+html[data-theme="dark"] .di-card-title,
+html[data-theme="dark"] .di-result-title {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .di-stat-label,
+html[data-theme="dark"] .di-card-desc,
+html[data-theme="dark"] .di-result-desc {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .di-drug-chip {
+  background: var(--bg-soft) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .di-search {
+  background: var(--bg-soft) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .di-view-toggle {
+  background: var(--bg-soft) !important;
+}
+
+html[data-theme="dark"] .di-view-toggle button {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .di-view-toggle button.active {
+  background: var(--bg-alt) !important;
+  color: var(--primary) !important;
+}
+
+/* ============================================
+   34. PAYMENTS SPECIFIC
+   ============================================ */
+html[data-theme="dark"] .pay-form-group input {
+  background: var(--bg-soft) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .pay-brand {
+  background: var(--bg-soft) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .pay-success-details {
+  background: var(--bg-soft) !important;
+}
+
+html[data-theme="dark"] .pay-success-row span {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .pay-success-row strong {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .pay-valu-plan {
+  background: var(--bg-soft) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .pay-valu-plan strong {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .pay-valu-plan span {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .pay-quick-btn {
+  background: var(--bg-soft) !important;
+  border-color: var(--border) !important;
+  color: var(--text-muted) !important;
+}
+
+/* ============================================
+   35. BACKUP SPECIFIC
+   ============================================ */
+html[data-theme="dark"] .backup-action {
+  background: var(--bg-soft) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .backup-action-info strong {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .backup-action-info span {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .backup-warning {
+  background: rgba(245, 158, 11, 0.1) !important;
+  color: #fcd34d !important;
+  border-color: rgba(245, 158, 11, 0.3) !important;
+}
+
+html[data-theme="dark"] .backup-danger-btn {
+  background: rgba(220, 38, 38, 0.1) !important;
+  border-color: rgba(220, 38, 38, 0.3) !important;
+  color: #fca5a5 !important;
+}
+
+html[data-theme="dark"] .backup-danger-btn:hover {
+  background: #dc2626 !important;
+  color: #fff !important;
+}
+
+/* ============================================
+   36. RECEIPT SPECIFIC
+   ============================================ */
+html[data-theme="dark"] .rp-preview-body {
+  background: #0a0f1d !important;
+}
+
+/* ============================================
+   37. SCROLLBAR
+   ============================================ */
+html[data-theme="dark"] ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+html[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: #0a0f1d;
+}
+
+html[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 5px;
+}
+
+html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* ============================================
+   38. SELECTION
+   ============================================ */
+html[data-theme="dark"] ::selection {
+  background: rgba(0, 184, 132, 0.3) !important;
+  color: #f1f5f9 !important;
+}
+
+/* ============================================
+   39. HIGH CONTRAST MODE
+   ============================================ */
+.theme-high-contrast {
+  --border: #000 !important;
+  --border-strong: #000 !important;
+}
+
+html[data-theme="dark"].theme-high-contrast {
+  --border: #fff !important;
+  --border-strong: #fff !important;
+}
+
+.theme-high-contrast *:focus {
+  outline: 3px solid var(--primary) !important;
+  outline-offset: 3px !important;
+}
+
+/* ============================================
+   40. REDUCED MOTION
+   ============================================ */
+.theme-reduced-motion *,
+.theme-reduced-motion *::before,
+.theme-reduced-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* ============================================
+   41. COMPACT MODE
+   ============================================ */
+.theme-compact .ph-content,
+.theme-compact .sa-content {
+  padding: 14px !important;
+}
+
+.theme-compact .ph-kpi,
+.theme-compact .sa-kpi {
+  padding: 14px !important;
+}
+
+.theme-compact .ph-table td,
+.theme-compact .ph-table th {
+  padding: 8px 12px !important;
+  font-size: 0.82rem !important;
+}
+
+.theme-compact .ph-item {
+  padding: 8px 12px !important;
+}
+
+/* ============================================
+   42. FOCUS MODE
+   ============================================ */
+.theme-focus-mode .ph-sidebar,
+.theme-focus-mode .sa-sidebar {
+  transform: translateX(100%);
+}
+
+html[dir="rtl"].theme-focus-mode .ph-sidebar,
+html[dir="rtl"].theme-focus-mode .sa-sidebar {
+  transform: translateX(-100%);
+}
+
+.theme-focus-mode .ai-fab,
+.theme-focus-mode .live-alert {
+  display: none !important;
+}
+
+/* ============================================
+   43. THEME TOGGLE BUTTON
+   ============================================ */
+[data-theme-toggle] {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme-toggle]:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+[data-theme-toggle] i {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme-toggle][data-effective="dark"] i {
+  color: #c4b5fd;
+}
+
+[data-theme-toggle][data-effective="light"] i {
+  color: #fbbf24;
+}
+
+html[data-theme="dark"] .ph-topbar [data-theme-toggle],
+html[data-theme="dark"] .sa-topbar [data-theme-toggle] {
+  background: var(--bg-soft) !important;
+  border-color: var(--border) !important;
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .ph-topbar [data-theme-toggle]:hover,
+html[data-theme="dark"] .sa-topbar [data-theme-toggle]:hover {
+  background: var(--primary) !important;
+  color: #fff !important;
+}
+
+/* ============================================
+   44. THEME SETTINGS MODAL
+   ============================================ */
+.theme-section {
+  margin-bottom: 22px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.theme-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.theme-section h4 {
+  font-size: 0.92rem;
+  font-weight: 900;
+  color: var(--text);
+  margin: 0 0 14px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-mode-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.theme-mode-card {
+  position: relative;
+  padding: 18px 12px;
+  border: 2px solid var(--border);
+  background: var(--bg);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.25s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+}
+
+.theme-mode-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.theme-mode-card.active {
+  border-color: var(--primary);
+  background: rgba(0, 184, 132, 0.08);
+}
+
+.theme-mode-card i:first-child {
+  font-size: 1.6rem;
+  color: var(--text-muted);
+}
+
+.theme-mode-card.active i:first-child {
+  color: var(--primary);
+}
+
+.theme-mode-card span {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.theme-accent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 10px;
+}
+
+.theme-accent-btn {
+  position: relative;
+  padding: 12px 8px;
+  border: 2px solid var(--border);
+  background: var(--bg);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s;
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.theme-accent-btn.active {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 184, 132, 0.15);
+}
+
+.theme-accent-preview {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.theme-accent-name {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.theme-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.theme-toggle-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.theme-toggle-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--bg-soft);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.theme-toggle-info strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.theme-toggle-info span {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.theme-switch {
+  position: relative;
+  width: 42px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--border);
+  transition: all 0.3s;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.theme-switch.active {
+  background: linear-gradient(135deg, #00b884, #1E88E5);
+}
+
+.theme-switch-knob {
+  position: absolute;
+  top: 3px;
+  inset-inline-start: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  transition: all 0.3s;
+}
+
+.theme-switch.active .theme-switch-knob {
+  inset-inline-start: calc(100% - 21px);
+}
+
+/* ============================================
+   45. RESPONSIVE
+   ============================================ */
+@media (max-width: 640px) {
+  .theme-mode-grid { grid-template-columns: 1fr; }
+  .theme-accent-grid { grid-template-columns: repeat(3, 1fr); }
+}
+/* ============================================
+   THEME TOGGLE BUTTONS (Topbar & Navbar)
+   ============================================ */
+
+/* زر التبديل في شريط الصيدلية و Super Admin */
+.ph-topbar .theme-toggle-topbar,
+.sa-topbar .theme-toggle-topbar {
+  background: var(--bg-alt) !important;
+  color: var(--text-muted) !important;
+  border: 1.5px solid var(--border-light) !important;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.ph-topbar .theme-toggle-topbar:hover,
+.sa-topbar .theme-toggle-topbar:hover {
+  background: linear-gradient(135deg, #7c3aed, #1E88E5) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);
+}
+
+.ph-topbar .theme-toggle-topbar i,
+.sa-topbar .theme-toggle-topbar i {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ph-topbar .theme-toggle-topbar:hover i,
+.sa-topbar .theme-toggle-topbar:hover i {
+  transform: rotate(360deg);
+}
+
+/* في الوضع الليلي */
+html[data-theme="dark"] .ph-topbar .theme-toggle-topbar,
+html[data-theme="dark"] .sa-topbar .theme-toggle-topbar {
+  background: var(--bg-soft) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .theme-toggle-topbar[data-effective="dark"] i {
+  color: #c4b5fd !important;
+}
+
+html[data-theme="dark"] .theme-toggle-topbar[data-effective="light"] i {
+  color: #fbbf24 !important;
+}
+
+/* زر التبديل في الـ Landing Navbar */
+.nav-theme-toggle {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--bg-alt);
+  color: var(--text);
+  border: 1.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: inherit;
+}
+
+.nav-theme-toggle:hover {
+  background: linear-gradient(135deg, #00b884, #1E88E5);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 184, 132, 0.35);
+}
+
+.nav-theme-toggle:hover i {
+  transform: rotate(360deg);
+}
+
+.nav-theme-toggle i {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html[data-theme="dark"] .navbar .nav-theme-toggle {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: var(--border);
+  color: var(--text);
+}
+
+/* ============================================
+   FIX: FEFO Discount Modal - Dark Mode
+   ============================================ */
+
+html[data-theme="dark"] .fefo-disc-info-item {
+  background: linear-gradient(135deg, #1e293b, #0f172a) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .fefo-disc-info-label {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .fefo-disc-info-value {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .fefo-disc-info-item.fefo-disc-info-danger {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.2), rgba(220, 38, 38, 0.05)) !important;
+  border-color: rgba(248, 113, 113, 0.4) !important;
+}
+
+html[data-theme="dark"] .fefo-disc-info-danger .fefo-disc-info-label {
+  color: #fca5a5 !important;
+}
+
+html[data-theme="dark"] .fefo-disc-info-danger .fefo-disc-info-value {
+  color: #f87171 !important;
+}
+
+/* Preset buttons in dark mode */
+html[data-theme="dark"] .fefo-disc-preset {
+  background: var(--bg-soft) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .fefo-disc-preset:hover {
+  border-color: #a78bfa !important;
+  color: #a78bfa !important;
+  background: rgba(124, 58, 237, 0.1) !important;
+}
+
+html[data-theme="dark"] .fefo-disc-preset.active {
+  background: linear-gradient(135deg, #7c3aed, #a78bfa) !important;
+  border-color: #7c3aed !important;
+  color: #fff !important;
+}
+
+/* Custom slider area */
+html[data-theme="dark"] .fefo-disc-custom {
+  background: linear-gradient(135deg, var(--bg-soft), var(--bg-alt)) !important;
+  border-color: var(--border) !important;
+}
+
+/* Preview box */
+html[data-theme="dark"] .fefo-disc-preview {
+  background: linear-gradient(135deg, rgba(0, 184, 132, 0.08), rgba(30, 136, 229, 0.05)) !important;
+  border-color: rgba(0, 184, 132, 0.35) !important;
+}
+
+html[data-theme="dark"] .fefo-disc-preview-item {
+  background: var(--bg-alt) !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] .fefo-disc-preview-item span {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] .fefo-disc-preview-item strong {
+  color: var(--text) !important;
+}
+
+/* AI Suggest Box */
+html[data-theme="dark"] .fefo-disc-ai-suggest {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(30, 136, 229, 0.08)) !important;
+  border-color: rgba(124, 58, 237, 0.35) !important;
+}
+
+html[data-theme="dark"] .fefo-disc-ai-body strong {
+  color: var(--text) !important;
+}
+
+html[data-theme="dark"] .fefo-disc-ai-body p {
+  color: var(--text-muted) !important;
+}
+
+/* ============================================
+   FIX: Sidebar "Pro AI Tools" title contrast
+   ============================================ */
+.ph-sidebar .ph-section:has(.ph-item[onclick*="interactions"]) .ph-section-title {
+  background: linear-gradient(135deg, #a5f3fc, #c4b5fd) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  font-weight: 900 !important;
+  letter-spacing: 1.5px !important;
+  text-shadow: 0 2px 8px rgba(165, 243, 252, 0.15);
+}
+
+/* Improve sidebar items contrast in pro section */
+.ph-sidebar .ph-section:has(.ph-item[onclick*="interactions"]) .ph-item {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.ph-sidebar .ph-section:has(.ph-item[onclick*="interactions"]) .ph-item:hover {
+  background: rgba(196, 181, 253, 0.15) !important;
+  color: #c4b5fd !important;
+}
+
+/* ============================================
+   GLOBAL DARK MODE POLISH
+   ============================================ */
+
+/* FEFO Table header contrast in dark mode */
+html[data-theme="dark"] .fefo-table th {
+  background: var(--bg-soft) !important;
+  color: var(--text) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+/* FEFO table rows */
+html[data-theme="dark"] .fefo-table td {
+  color: var(--text) !important;
+  border-bottom-color: var(--border-light) !important;
+}
+
+html[data-theme="dark"] .fefo-table tbody tr:hover {
+  background: rgba(124, 58, 237, 0.08) !important;
+}

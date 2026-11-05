@@ -1,0 +1,211 @@
+/* ============================================
+   VOICE LEARNING DASHBOARD - STYLES
+   ============================================ */
+
+.vld-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.vld-kpi {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 16px 12px;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.vld-kpi:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.vld-kpi-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  margin: 0 auto 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.vld-kpi-value {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1;
+  margin-bottom: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.vld-kpi-label {
+  font-size: 0.72rem;
+  color: #64748b;
+  font-weight: 700;
+}
+
+.vld-section {
+  margin-bottom: 24px;
+}
+
+.vld-section h4 {
+  font-size: 0.92rem;
+  font-weight: 900;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vld-section h4 i { color: #7c3aed; }
+
+.vld-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vld-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vld-bar-label {
+  width: 130px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.vld-bar-track {
+  flex: 1;
+  height: 8px;
+  background: #f1f5f9;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.vld-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.6s;
+}
+
+.vld-bar-count {
+  font-size: 0.78rem;
+  font-weight: 900;
+  color: #0f172a;
+  min-width: 32px;
+  text-align: end;
+}
+
+.vld-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vld-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #f8fafc;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.vld-wrong {
+  background: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.78rem;
+}
+
+.vld-right {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.78rem;
+}
+
+.vld-badge {
+  background: #7c3aed;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.vld-trigger {
+  color: #f59e0b;
+  font-weight: 900;
+  padding: 3px 10px;
+  background: rgba(245, 158, 11, 0.1);
+  border-radius: 6px;
+}
+
+.vld-delete {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.vld-delete:hover {
+  background: #dc2626;
+  color: #fff;
+}
+
+.vld-empty {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.vld-empty h3 {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #0f172a;
+  margin: 16px 0 8px;
+}
+
+.vld-empty p {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .vld-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .vld-bar-label {
+    width: 90px;
+    font-size: 0.75rem;
+  }
+}

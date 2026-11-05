@@ -1,0 +1,5784 @@
+{
+  "version": "5.0.0",
+  "app": "PharmaCloud Pro",
+  "exportedAt": "2026-09-22T12:31:12.026Z",
+  "data": {
+    "pc_voice_ai_learning": {
+      "corrections": {},
+      "frequency": {
+        "discount": 3,
+        "add": 15,
+        "remove": 1,
+        "change_qty": 1,
+        "report": 1,
+        "help": 1,
+        "unknown": 13,
+        "greeting": 2,
+        "query": 1,
+        "analytics": 7,
+        "advice": 2,
+        "checkout": 1,
+        "clear": 2,
+        "scan_rx": 1
+      },
+      "patterns": {
+        "discount:💯 خصم 5% على بندول أدفانس": 1,
+        "add:✅ 2 × بنادول أدفانس": 1,
+        "add:✅ 1 × أدول": 2,
+        "remove:🗑️ تم حذف أدول من السلة": 1,
+        "add:✅ تم إضافة 2 × جهاز قياس ضغط إ": 1,
+        "change_qty:✅ تم تعديل الكمية إلى 1 × جهاز": 1,
+        "discount:💯 خصم 20% على الجهاز": 1,
+        "add:✅ 3 × بنادول أدفانس": 1,
+        "add:✅ 2 × أدول": 1,
+        "discount:💯 خصم 120%": 1,
+        "report:📦 لا توجد منتجات منخفضة المخز": 1,
+        "help:🛠️ إليك ما يمكنني القيام به:\n": 1,
+        "unknown:🤔 أحتاج توضيح أكثر، هل تريد م": 1,
+        "unknown:🤔 مش فاهم طلبك. ممكن توضح أكت": 1,
+        "unknown:عذرًا، لم أفهم طلبك. هل يمكنك ": 5,
+        "greeting:👋 مرحبًا! كيف أستطيع مساعدتك ": 1,
+        "add:✅ 70 × جهاز قياس ضغط": 1,
+        "add:✅ 30 × أدول": 1,
+        "add:✅ 600 × بنادول أدفانس": 1,
+        "unknown:عذرًا، لا أستطيع المساعدة في ه": 1,
+        "query:🔎 مخزون جهاز قياس ضغط: 786 وح": 1,
+        "unknown:عذرًا، لا أستطيع فهم طلبك. هل ": 1,
+        "add:✅ تم إضافة 1 وحدة من بنادول أد": 1,
+        "analytics:✅ تم توفير معلومات مخزون الأدو": 1,
+        "analytics:تم": 2,
+        "advice:✅ تم": 1,
+        "unknown:مصطلح \"كرسي الضغط\" غير موجود ف": 1,
+        "advice:✅ تم تقديم نصيحة حول إضافة منت": 1,
+        "analytics:✅ تم توفير معدل البيع.": 1,
+        "analytics:✅ تم": 1,
+        "add:✅ تم إضافة 70 بندول أدفانس إلى": 1,
+        "add:✅ تم إضافة 15 أدول إلى السلة.": 1,
+        "add:✅ تم إضافة 3 جهاز قياس ضغط إلى": 1,
+        "add:✅ تم إضافة 20 وحدة من بنادول أ": 1,
+        "add:✅ تم إضافة 5 وحدة من أدول إلى ": 1,
+        "checkout:✅ تم إتمام البيع بنجاح. إجمالي": 1,
+        "analytics:✅ تم توفير قائمة المنتجات.": 1,
+        "unknown:لم أفهم": 1,
+        "unknown:عذرًا، لا يوجد منتج باسم \"الأم": 1,
+        "greeting:مرحباً! كيف يمكنني مساعدتك الي": 1,
+        "analytics:✅ تم تزويدك بمعلومات المنتج.": 1,
+        "unknown:❓ عذرًا، لم أفهم أي منتج تريد ": 1,
+        "clear:✅ تم تفريغ السلة بنجاح.": 1,
+        "clear:✅ تم تفريغ السلة.": 1,
+        "scan_rx:🖨️ جاري فتح ماسح الروشتة...": 1
+      }
+    },
+    "pc_users": [
+      {
+        "id": "u_demo_admin",
+        "tenantId": "t_demo",
+        "email": "demo@pharmacloud.app",
+        "password": "demo1234",
+        "name": "أحمد الشريف",
+        "role": "admin"
+      },
+      {
+        "id": "u_demo_cashier",
+        "tenantId": "t_demo",
+        "email": "cashier@pharmacloud.app",
+        "password": "cash1234",
+        "name": "منى سعيد",
+        "role": "cashier"
+      },
+      {
+        "id": "u_super",
+        "tenantId": null,
+        "email": "super@pharmacloud.app",
+        "password": "super1234",
+        "name": "Super Admin",
+        "role": "superadmin"
+      }
+    ],
+    "pc_notif_expiry": 1790077705174,
+    "pc_t_demo_orders": [
+      {
+        "id": "ORD-501994",
+        "customerId": "c2",
+        "customerName": "سارة محمود",
+        "items": [
+          {
+            "id": "p2",
+            "name": "فيتامين د 50000",
+            "price": 85,
+            "qty": 1
+          },
+          {
+            "id": "p4",
+            "name": "جهاز قياس ضغط",
+            "price": 450,
+            "qty": 1
+          },
+          {
+            "id": "p10",
+            "name": "أموكسيسيلين 500mg",
+            "price": 85,
+            "qty": 1
+          }
+        ],
+        "total": 620,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-21T15:45:08.408Z",
+        "createdBy": "u_demo_admin"
+      },
+      {
+        "id": "ORD-704621",
+        "customerId": null,
+        "customerName": "عميل عابر",
+        "items": [
+          {
+            "id": "p2",
+            "name": "فيتامين د 50000",
+            "price": 85,
+            "qty": 1
+          },
+          {
+            "id": "p1",
+            "name": "بنادول أدفانس",
+            "price": 34,
+            "qty": 1
+          },
+          {
+            "id": "p3",
+            "name": "كريم مرطب للبشرة",
+            "price": 60,
+            "qty": 2
+          },
+          {
+            "id": "p5",
+            "name": "حفاضات أطفال مقاس 3",
+            "price": 180,
+            "qty": 1
+          },
+          {
+            "id": "p10",
+            "name": "أموكسيسيلين 500mg",
+            "price": 85,
+            "qty": 2
+          },
+          {
+            "id": "p9",
+            "name": "أدول",
+            "price": 35,
+            "qty": 1
+          },
+          {
+            "id": "p4",
+            "name": "جهاز قياس ضغط",
+            "price": 450,
+            "qty": 2
+          },
+          {
+            "id": "p8",
+            "name": "أوميجا 3",
+            "price": 220,
+            "qty": 1
+          },
+          {
+            "id": "p7",
+            "name": "معجون أسنان",
+            "price": 35,
+            "qty": 1
+          }
+        ],
+        "total": 1779,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-21T15:32:12.798Z",
+        "createdBy": "u_demo_admin"
+      },
+      {
+        "id": "ORD-476195",
+        "customerId": null,
+        "customerName": "عميل عابر",
+        "items": [
+          {
+            "id": "p1",
+            "name": "بنادول أدفانس",
+            "price": 34,
+            "qty": 20
+          },
+          {
+            "id": "p9",
+            "name": "أدول",
+            "price": 35,
+            "qty": 5
+          }
+        ],
+        "total": 855,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-21T14:04:36.196Z",
+        "createdBy": "u_demo_admin",
+        "branchId": "main"
+      },
+      {
+        "id": "ORD-216161",
+        "customerId": null,
+        "customerName": "عميل عابر",
+        "items": [
+          {
+            "id": "p1",
+            "name": "بنادول أدفانس",
+            "price": 34,
+            "qty": 2
+          }
+        ],
+        "total": 68,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-21T13:10:16.161Z",
+        "createdBy": "u_demo_admin",
+        "branchId": "main"
+      },
+      {
+        "id": "ORD-333442",
+        "customerId": null,
+        "customerName": "عميل عابر",
+        "items": [
+          {
+            "id": "p5",
+            "name": "حفاضات أطفال مقاس 3",
+            "price": 180,
+            "qty": 1
+          },
+          {
+            "id": "p4",
+            "name": "جهاز قياس ضغط",
+            "price": 450,
+            "qty": 1
+          },
+          {
+            "id": "p3",
+            "name": "كريم مرطب للبشرة",
+            "price": 102,
+            "qty": 1
+          }
+        ],
+        "total": 732,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-20T14:58:53.442Z",
+        "createdBy": "u_demo_admin",
+        "branchId": "main"
+      },
+      {
+        "id": "ORD-895610",
+        "customerId": null,
+        "customerName": "عميل عابر",
+        "items": [
+          {
+            "id": "p4",
+            "name": "جهاز قياس ضغط",
+            "price": 450,
+            "qty": 3
+          }
+        ],
+        "total": 1350,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-20T13:44:55.610Z",
+        "createdBy": "u_demo_admin",
+        "branchId": "main"
+      },
+      {
+        "id": "ORD-892682",
+        "customerId": null,
+        "customerName": "عميل عابر",
+        "items": [
+          {
+            "id": "p10",
+            "name": "أموكسيسيلين 500mg",
+            "price": 85,
+            "qty": 2
+          }
+        ],
+        "total": 170,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-20T13:44:52.682Z",
+        "createdBy": "u_demo_admin",
+        "branchId": "main"
+      },
+      {
+        "id": "ORD-890020",
+        "customerId": null,
+        "customerName": "عميل عابر",
+        "items": [
+          {
+            "id": "p4",
+            "name": "جهاز قياس ضغط",
+            "price": 450,
+            "qty": 1
+          }
+        ],
+        "total": 450,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-20T13:44:50.020Z",
+        "createdBy": "u_demo_admin",
+        "branchId": "main"
+      },
+      {
+        "id": "ORD-886433",
+        "customerId": null,
+        "customerName": "عميل عابر",
+        "items": [
+          {
+            "id": "p1",
+            "name": "بنادول أدفانس",
+            "price": 34,
+            "qty": 1
+          }
+        ],
+        "total": 34,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-20T13:44:46.433Z",
+        "createdBy": "u_demo_admin",
+        "branchId": "main"
+      },
+      {
+        "id": "ORD-884337",
+        "customerId": null,
+        "customerName": "عميل عابر",
+        "items": [
+          {
+            "id": "p1",
+            "name": "بنادول أدفانس",
+            "price": 34,
+            "qty": 6
+          }
+        ],
+        "total": 204,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-20T13:44:44.337Z",
+        "createdBy": "u_demo_admin",
+        "branchId": "main"
+      },
+      {
+        "id": "ORD-871919",
+        "customerId": null,
+        "customerName": "عميل عابر",
+        "items": [
+          {
+            "id": "p4",
+            "name": "جهاز قياس ضغط",
+            "price": 450,
+            "qty": 3
+          },
+          {
+            "id": "p5",
+            "name": "حفاضات أطفال مقاس 3",
+            "price": 180,
+            "qty": 2
+          },
+          {
+            "id": "p3",
+            "name": "كريم مرطب للبشرة",
+            "price": 120,
+            "qty": 1
+          },
+          {
+            "id": "p2",
+            "name": "فيتامين د 50000",
+            "price": 85,
+            "qty": 2
+          },
+          {
+            "id": "p1",
+            "name": "بنادول أدفانس",
+            "price": 34,
+            "qty": 2
+          },
+          {
+            "id": "p6",
+            "name": "غسول مطهر لليدين",
+            "price": 75,
+            "qty": 1
+          },
+          {
+            "id": "p7",
+            "name": "معجون أسنان",
+            "price": 35,
+            "qty": 1
+          },
+          {
+            "id": "p8",
+            "name": "أوميجا 3",
+            "price": 220,
+            "qty": 1
+          },
+          {
+            "id": "p10",
+            "name": "أموكسيسيلين 500mg",
+            "price": 85,
+            "qty": 1
+          }
+        ],
+        "total": 2483,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-20T13:44:31.919Z",
+        "createdBy": "u_demo_admin",
+        "branchId": "main"
+      },
+      {
+        "id": "ORD-858950",
+        "customerId": null,
+        "customerName": "عميل عابر",
+        "items": [
+          {
+            "id": "p1",
+            "name": "بنادول أدفانس",
+            "price": 34,
+            "qty": 3
+          },
+          {
+            "id": "p6",
+            "name": "غسول مطهر لليدين",
+            "price": 75,
+            "qty": 2
+          },
+          {
+            "id": "p7",
+            "name": "معجون أسنان",
+            "price": 35,
+            "qty": 1
+          },
+          {
+            "id": "p2",
+            "name": "فيتامين د 50000",
+            "price": 85,
+            "qty": 1
+          },
+          {
+            "id": "p3",
+            "name": "كريم مرطب للبشرة",
+            "price": 120,
+            "qty": 1
+          },
+          {
+            "id": "p8",
+            "name": "أوميجا 3",
+            "price": 220,
+            "qty": 1
+          },
+          {
+            "id": "p9",
+            "name": "أدول",
+            "price": 35,
+            "qty": 1
+          },
+          {
+            "id": "p5",
+            "name": "حفاضات أطفال مقاس 3",
+            "price": 180,
+            "qty": 1
+          },
+          {
+            "id": "p10",
+            "name": "أموكسيسيلين 500mg",
+            "price": 85,
+            "qty": 1
+          }
+        ],
+        "total": 1012,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-20T13:44:18.950Z",
+        "createdBy": "u_demo_admin",
+        "branchId": "main"
+      },
+      {
+        "id": "ORD-850710",
+        "customerId": null,
+        "customerName": "عميل عابر",
+        "items": [
+          {
+            "id": "p10",
+            "name": "أموكسيسيلين 500mg",
+            "price": 85,
+            "qty": 2
+          },
+          {
+            "id": "p3",
+            "name": "كريم مرطب للبشرة",
+            "price": 120,
+            "qty": 2
+          },
+          {
+            "id": "p5",
+            "name": "حفاضات أطفال مقاس 3",
+            "price": 180,
+            "qty": 2
+          },
+          {
+            "id": "p8",
+            "name": "أوميجا 3",
+            "price": 220,
+            "qty": 1
+          },
+          {
+            "id": "p7",
+            "name": "معجون أسنان",
+            "price": 35,
+            "qty": 3
+          },
+          {
+            "id": "p2",
+            "name": "فيتامين د 50000",
+            "price": 85,
+            "qty": 1
+          },
+          {
+            "id": "p4",
+            "name": "جهاز قياس ضغط",
+            "price": 450,
+            "qty": 1
+          },
+          {
+            "id": "p9",
+            "name": "أدول",
+            "price": 35,
+            "qty": 2
+          }
+        ],
+        "total": 1700,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-20T13:44:10.710Z",
+        "createdBy": "u_demo_admin",
+        "branchId": "main"
+      },
+      {
+        "id": "ORD-842396",
+        "customerId": null,
+        "customerName": "عميل عابر",
+        "items": [
+          {
+            "id": "p1",
+            "name": "بنادول أدفانس",
+            "price": 34,
+            "qty": 2
+          },
+          {
+            "id": "p6",
+            "name": "غسول مطهر لليدين",
+            "price": 75,
+            "qty": 1
+          },
+          {
+            "id": "p2",
+            "name": "فيتامين د 50000",
+            "price": 85,
+            "qty": 1
+          },
+          {
+            "id": "p7",
+            "name": "معجون أسنان",
+            "price": 35,
+            "qty": 1
+          },
+          {
+            "id": "p9",
+            "name": "أدول",
+            "price": 35,
+            "qty": 1
+          },
+          {
+            "id": "p4",
+            "name": "جهاز قياس ضغط",
+            "price": 450,
+            "qty": 5
+          },
+          {
+            "id": "p10",
+            "name": "أموكسيسيلين 500mg",
+            "price": 85,
+            "qty": 1
+          }
+        ],
+        "total": 2633,
+        "paymentMethod": "wallet",
+        "status": "completed",
+        "createdAt": "2026-09-20T13:44:02.397Z",
+        "createdBy": "u_demo_admin",
+        "branchId": "main"
+      },
+      {
+        "id": "ORD-449070",
+        "customerId": null,
+        "customerName": "عميل عابر",
+        "items": [
+          {
+            "id": "p10",
+            "name": "أموكسيسيلين 500mg",
+            "price": 85,
+            "qty": 2
+          },
+          {
+            "id": "p5",
+            "name": "حفاضات أطفال مقاس 3",
+            "price": 180,
+            "qty": 2
+          }
+        ],
+        "total": 530,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-20T10:50:49.070Z",
+        "createdBy": "u_demo_admin",
+        "branchId": "main"
+      },
+      {
+        "id": "ORD-442173",
+        "customerId": null,
+        "customerName": "عميل عابر",
+        "items": [
+          {
+            "id": "p4",
+            "name": "جهاز قياس ضغط",
+            "price": 450,
+            "qty": 12
+          }
+        ],
+        "total": 5400,
+        "paymentMethod": "card",
+        "status": "completed",
+        "createdAt": "2026-09-20T10:50:42.173Z",
+        "createdBy": "u_demo_admin",
+        "branchId": "main"
+      },
+      {
+        "id": "ORD-1000",
+        "customerId": "c1",
+        "customerName": "محمد أحمد",
+        "items": [
+          {
+            "id": "p4",
+            "name": "جهاز قياس ضغط",
+            "price": 450,
+            "qty": 3
+          },
+          {
+            "id": "p5",
+            "name": "حفاضات أطفال مقاس 3",
+            "price": 180,
+            "qty": 2
+          }
+        ],
+        "total": 1710,
+        "paymentMethod": "wallet",
+        "status": "completed",
+        "createdAt": "2026-09-16T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1001",
+        "customerId": "c5",
+        "customerName": "كريم يوسف",
+        "items": [
+          {
+            "id": "p5",
+            "name": "حفاضات أطفال مقاس 3",
+            "price": 180,
+            "qty": 1
+          },
+          {
+            "id": "p4",
+            "name": "جهاز قياس ضغط",
+            "price": 450,
+            "qty": 1
+          }
+        ],
+        "total": 630,
+        "paymentMethod": "wallet",
+        "status": "completed",
+        "createdAt": "2026-09-09T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1002",
+        "customerId": "c2",
+        "customerName": "سارة محمود",
+        "items": [
+          {
+            "id": "p9",
+            "name": "أدول",
+            "price": 35,
+            "qty": 1
+          },
+          {
+            "id": "p8",
+            "name": "أوميجا 3",
+            "price": 220,
+            "qty": 2
+          }
+        ],
+        "total": 475,
+        "paymentMethod": "wallet",
+        "status": "completed",
+        "createdAt": "2026-09-04T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1003",
+        "customerId": "c2",
+        "customerName": "سارة محمود",
+        "items": [
+          {
+            "id": "p2",
+            "name": "فيتامين د 50000",
+            "price": 85,
+            "qty": 1
+          },
+          {
+            "id": "p9",
+            "name": "أدول",
+            "price": 35,
+            "qty": 1
+          }
+        ],
+        "total": 120,
+        "paymentMethod": "wallet",
+        "status": "completed",
+        "createdAt": "2026-09-01T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1004",
+        "customerId": "c4",
+        "customerName": "منى عبد الله",
+        "items": [
+          {
+            "id": "p10",
+            "name": "أموكسيسيلين 500mg",
+            "price": 85,
+            "qty": 2
+          },
+          {
+            "id": "p8",
+            "name": "أوميجا 3",
+            "price": 220,
+            "qty": 1
+          }
+        ],
+        "total": 390,
+        "paymentMethod": "card",
+        "status": "completed",
+        "createdAt": "2026-08-28T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1005",
+        "customerId": "c1",
+        "customerName": "محمد أحمد",
+        "items": [
+          {
+            "id": "p10",
+            "name": "أموكسيسيلين 500mg",
+            "price": 85,
+            "qty": 3
+          },
+          {
+            "id": "p2",
+            "name": "فيتامين د 50000",
+            "price": 85,
+            "qty": 1
+          }
+        ],
+        "total": 340,
+        "paymentMethod": "card",
+        "status": "completed",
+        "createdAt": "2026-09-12T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1006",
+        "customerId": "c5",
+        "customerName": "كريم يوسف",
+        "items": [
+          {
+            "id": "p7",
+            "name": "معجون أسنان",
+            "price": 35,
+            "qty": 3
+          },
+          {
+            "id": "p1",
+            "name": "بنادول أدفانس",
+            "price": 45,
+            "qty": 1
+          }
+        ],
+        "total": 150,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-08-28T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1007",
+        "customerId": "c3",
+        "customerName": "أحمد الشريف",
+        "items": [
+          {
+            "id": "p6",
+            "name": "غسول مطهر لليدين",
+            "price": 75,
+            "qty": 1
+          },
+          {
+            "id": "p2",
+            "name": "فيتامين د 50000",
+            "price": 85,
+            "qty": 2
+          }
+        ],
+        "total": 245,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-03T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1008",
+        "customerId": "c2",
+        "customerName": "سارة محمود",
+        "items": [
+          {
+            "id": "p2",
+            "name": "فيتامين د 50000",
+            "price": 85,
+            "qty": 2
+          },
+          {
+            "id": "p9",
+            "name": "أدول",
+            "price": 35,
+            "qty": 2
+          }
+        ],
+        "total": 240,
+        "paymentMethod": "wallet",
+        "status": "completed",
+        "createdAt": "2026-09-19T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1009",
+        "customerId": "c2",
+        "customerName": "سارة محمود",
+        "items": [
+          {
+            "id": "p7",
+            "name": "معجون أسنان",
+            "price": 35,
+            "qty": 2
+          },
+          {
+            "id": "p2",
+            "name": "فيتامين د 50000",
+            "price": 85,
+            "qty": 2
+          }
+        ],
+        "total": 240,
+        "paymentMethod": "wallet",
+        "status": "completed",
+        "createdAt": "2026-08-25T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1010",
+        "customerId": "c2",
+        "customerName": "سارة محمود",
+        "items": [
+          {
+            "id": "p1",
+            "name": "بنادول أدفانس",
+            "price": 45,
+            "qty": 1
+          },
+          {
+            "id": "p7",
+            "name": "معجون أسنان",
+            "price": 35,
+            "qty": 2
+          }
+        ],
+        "total": 115,
+        "paymentMethod": "card",
+        "status": "completed",
+        "createdAt": "2026-08-28T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1011",
+        "customerId": "c4",
+        "customerName": "منى عبد الله",
+        "items": [
+          {
+            "id": "p3",
+            "name": "كريم مرطب للبشرة",
+            "price": 120,
+            "qty": 1
+          },
+          {
+            "id": "p4",
+            "name": "جهاز قياس ضغط",
+            "price": 450,
+            "qty": 2
+          }
+        ],
+        "total": 1020,
+        "paymentMethod": "wallet",
+        "status": "completed",
+        "createdAt": "2026-09-14T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1012",
+        "customerId": "c3",
+        "customerName": "أحمد الشريف",
+        "items": [
+          {
+            "id": "p7",
+            "name": "معجون أسنان",
+            "price": 35,
+            "qty": 1
+          },
+          {
+            "id": "p4",
+            "name": "جهاز قياس ضغط",
+            "price": 450,
+            "qty": 1
+          }
+        ],
+        "total": 485,
+        "paymentMethod": "wallet",
+        "status": "completed",
+        "createdAt": "2026-08-21T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1013",
+        "customerId": "c4",
+        "customerName": "منى عبد الله",
+        "items": [
+          {
+            "id": "p8",
+            "name": "أوميجا 3",
+            "price": 220,
+            "qty": 2
+          },
+          {
+            "id": "p1",
+            "name": "بنادول أدفانس",
+            "price": 45,
+            "qty": 1
+          }
+        ],
+        "total": 485,
+        "paymentMethod": "card",
+        "status": "completed",
+        "createdAt": "2026-09-08T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1014",
+        "customerId": "c2",
+        "customerName": "سارة محمود",
+        "items": [
+          {
+            "id": "p7",
+            "name": "معجون أسنان",
+            "price": 35,
+            "qty": 3
+          },
+          {
+            "id": "p7",
+            "name": "معجون أسنان",
+            "price": 35,
+            "qty": 2
+          }
+        ],
+        "total": 175,
+        "paymentMethod": "wallet",
+        "status": "completed",
+        "createdAt": "2026-09-16T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1015",
+        "customerId": "c2",
+        "customerName": "سارة محمود",
+        "items": [
+          {
+            "id": "p8",
+            "name": "أوميجا 3",
+            "price": 220,
+            "qty": 2
+          },
+          {
+            "id": "p8",
+            "name": "أوميجا 3",
+            "price": 220,
+            "qty": 1
+          }
+        ],
+        "total": 660,
+        "paymentMethod": "wallet",
+        "status": "completed",
+        "createdAt": "2026-08-29T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1016",
+        "customerId": "c2",
+        "customerName": "سارة محمود",
+        "items": [
+          {
+            "id": "p7",
+            "name": "معجون أسنان",
+            "price": 35,
+            "qty": 3
+          },
+          {
+            "id": "p5",
+            "name": "حفاضات أطفال مقاس 3",
+            "price": 180,
+            "qty": 2
+          }
+        ],
+        "total": 465,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-03T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1017",
+        "customerId": "c5",
+        "customerName": "كريم يوسف",
+        "items": [
+          {
+            "id": "p6",
+            "name": "غسول مطهر لليدين",
+            "price": 75,
+            "qty": 1
+          },
+          {
+            "id": "p10",
+            "name": "أموكسيسيلين 500mg",
+            "price": 85,
+            "qty": 2
+          }
+        ],
+        "total": 245,
+        "paymentMethod": "wallet",
+        "status": "completed",
+        "createdAt": "2026-08-30T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1018",
+        "customerId": "c2",
+        "customerName": "سارة محمود",
+        "items": [
+          {
+            "id": "p4",
+            "name": "جهاز قياس ضغط",
+            "price": 450,
+            "qty": 2
+          },
+          {
+            "id": "p5",
+            "name": "حفاضات أطفال مقاس 3",
+            "price": 180,
+            "qty": 1
+          }
+        ],
+        "total": 1080,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-01T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1019",
+        "customerId": "c5",
+        "customerName": "كريم يوسف",
+        "items": [
+          {
+            "id": "p5",
+            "name": "حفاضات أطفال مقاس 3",
+            "price": 180,
+            "qty": 2
+          },
+          {
+            "id": "p10",
+            "name": "أموكسيسيلين 500mg",
+            "price": 85,
+            "qty": 1
+          }
+        ],
+        "total": 445,
+        "paymentMethod": "wallet",
+        "status": "completed",
+        "createdAt": "2026-09-18T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1020",
+        "customerId": "c5",
+        "customerName": "كريم يوسف",
+        "items": [
+          {
+            "id": "p2",
+            "name": "فيتامين د 50000",
+            "price": 85,
+            "qty": 3
+          },
+          {
+            "id": "p6",
+            "name": "غسول مطهر لليدين",
+            "price": 75,
+            "qty": 2
+          }
+        ],
+        "total": 405,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-03T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1021",
+        "customerId": "c5",
+        "customerName": "كريم يوسف",
+        "items": [
+          {
+            "id": "p5",
+            "name": "حفاضات أطفال مقاس 3",
+            "price": 180,
+            "qty": 1
+          },
+          {
+            "id": "p5",
+            "name": "حفاضات أطفال مقاس 3",
+            "price": 180,
+            "qty": 2
+          }
+        ],
+        "total": 540,
+        "paymentMethod": "card",
+        "status": "completed",
+        "createdAt": "2026-09-17T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1022",
+        "customerId": "c1",
+        "customerName": "محمد أحمد",
+        "items": [
+          {
+            "id": "p5",
+            "name": "حفاضات أطفال مقاس 3",
+            "price": 180,
+            "qty": 3
+          },
+          {
+            "id": "p6",
+            "name": "غسول مطهر لليدين",
+            "price": 75,
+            "qty": 2
+          }
+        ],
+        "total": 690,
+        "paymentMethod": "cash",
+        "status": "completed",
+        "createdAt": "2026-09-10T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1023",
+        "customerId": "c3",
+        "customerName": "أحمد الشريف",
+        "items": [
+          {
+            "id": "p3",
+            "name": "كريم مرطب للبشرة",
+            "price": 120,
+            "qty": 3
+          },
+          {
+            "id": "p3",
+            "name": "كريم مرطب للبشرة",
+            "price": 120,
+            "qty": 1
+          }
+        ],
+        "total": 480,
+        "paymentMethod": "card",
+        "status": "completed",
+        "createdAt": "2026-09-01T19:14:36.565Z"
+      },
+      {
+        "id": "ORD-1024",
+        "customerId": "c1",
+        "customerName": "محمد أحمد",
+        "items": [
+          {
+            "id": "p10",
+            "name": "أموكسيسيلين 500mg",
+            "price": 85,
+            "qty": 1
+          },
+          {
+            "id": "p8",
+            "name": "أوميجا 3",
+            "price": 220,
+            "qty": 2
+          }
+        ],
+        "total": 525,
+        "paymentMethod": "wallet",
+        "status": "completed",
+        "createdAt": "2026-09-10T19:14:36.565Z"
+      }
+    ],
+    "pc_t_demo_products": [
+      {
+        "id": "p1",
+        "barcode": "6221234567890",
+        "name": "بنادول أدفانس",
+        "active": "Paracetamol 500mg",
+        "category": "أدوية",
+        "price": 34,
+        "cost": 28,
+        "stock": 83,
+        "minStock": 20,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&q=80",
+        "originalPrice": 45,
+        "discountedAt": "2026-09-21T12:33:52.451Z"
+      },
+      {
+        "id": "p2",
+        "barcode": "6221234567891",
+        "name": "فيتامين د 50000",
+        "active": "Cholecalciferol",
+        "category": "فيتامينات",
+        "price": 85,
+        "cost": 55,
+        "stock": 73,
+        "minStock": 15,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1550572017-edd951b55104?w=200&q=80"
+      },
+      {
+        "id": "p3",
+        "barcode": "6221234567892",
+        "name": "كريم مرطب للبشرة",
+        "active": "Glycerin + Ceramides",
+        "category": "عناية بالبشرة",
+        "price": 60,
+        "cost": 75,
+        "stock": 38,
+        "minStock": 10,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=200&q=80",
+        "originalPrice": 120,
+        "discountedAt": "2026-09-20T18:16:28.091Z"
+      },
+      {
+        "id": "p4",
+        "barcode": "6221234567893",
+        "name": "جهاز قياس ضغط",
+        "active": "Digital BP Monitor",
+        "category": "أجهزة طبية",
+        "price": 450,
+        "cost": 320,
+        "stock": 783,
+        "minStock": 5,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1579154204601-01588f351e67?w=200&q=80"
+      },
+      {
+        "id": "p5",
+        "barcode": "6221234567894",
+        "name": "حفاضات أطفال مقاس 3",
+        "active": "Baby Diapers",
+        "category": "الأم والطفل",
+        "price": 180,
+        "cost": 130,
+        "stock": 191,
+        "minStock": 30,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=200&q=80"
+      },
+      {
+        "id": "p6",
+        "barcode": "6221234567895",
+        "name": "غسول مطهر لليدين",
+        "active": "Chlorhexidine 2%",
+        "category": "عناية شخصية",
+        "price": 75,
+        "cost": 45,
+        "stock": 146,
+        "minStock": 25,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=200&q=80"
+      },
+      {
+        "id": "p7",
+        "barcode": "6221234567896",
+        "name": "معجون أسنان",
+        "active": "Fluoride 1450ppm",
+        "category": "عناية شخصية",
+        "price": 35,
+        "cost": 20,
+        "stock": 293,
+        "minStock": 50,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1559591937-abc3a7eb9c5c?w=200&q=80"
+      },
+      {
+        "id": "p8",
+        "barcode": "6221234567897",
+        "name": "أوميجا 3",
+        "active": "Omega-3 1000mg",
+        "category": "مكملات غذائية",
+        "price": 220,
+        "cost": 155,
+        "stock": 56,
+        "minStock": 12,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=200&q=80"
+      },
+      {
+        "id": "p9",
+        "barcode": "6221234567898",
+        "name": "أدول",
+        "active": "Paracetamol 500mg",
+        "category": "أدوية",
+        "price": 35,
+        "cost": 20,
+        "stock": 140,
+        "minStock": 20,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&q=80"
+      },
+      {
+        "id": "p10",
+        "barcode": "6221234567899",
+        "name": "أموكسيسيلين 500mg",
+        "active": "Amoxicillin",
+        "category": "أدوية",
+        "price": 85,
+        "cost": 55,
+        "stock": 28,
+        "minStock": 10,
+        "rx": true,
+        "image": "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=200&q=80"
+      }
+    ],
+    "pc_t_demo_current_branch": [],
+    "pc_t_demo_prescriptions": [
+      {
+        "id": "rx1",
+        "patientName": "محمد أحمد",
+        "phone": "01012345678",
+        "doctorName": "د. أحمد سمير",
+        "diagnosis": "برد حاد",
+        "items": [
+          {
+            "name": "بنادول أدفانس",
+            "qty": 1,
+            "price": 45
+          }
+        ],
+        "notes": "قرص كل 8 ساعات",
+        "status": "dispensed",
+        "createdAt": "2026-09-17T19:14:36.566Z"
+      },
+      {
+        "id": "rx2",
+        "patientName": "سارة محمود",
+        "phone": "01023456789",
+        "doctorName": "د. منى إبراهيم",
+        "diagnosis": "التهاب حلق",
+        "items": [
+          {
+            "name": "أموكسيسيلين 500mg",
+            "qty": 1,
+            "price": 85
+          }
+        ],
+        "notes": "قرص 3 مرات يومياً",
+        "status": "pending",
+        "createdAt": "2026-09-19T19:14:36.566Z"
+      }
+    ],
+    "pc_notif_noSales": 1790077705943,
+    "pc_ocr_learning": {
+      "‏لمدة أسبوع * ولايكرد\"‎": {
+        "correct": {
+          "name": "قرص بعد الاكل مرتين يومياً لمدة اسبوع \"ولا يتكرر\""
+        },
+        "learnedAt": "2026-09-20T11:34:58.230Z",
+        "count": 1
+      },
+      "ei lubrican": {
+        "correct": {
+          "name": "Lubricant Eye Drops E.D."
+        },
+        "learnedAt": "2026-09-20T11:37:11.426Z",
+        "count": 1
+      }
+    },
+    "pc_t_demo_products_branch_b_1789902135014": [
+      {
+        "id": "p_1789902155593_9",
+        "name": "أموكسيسيلين 500mg",
+        "active": "Amoxicillin",
+        "barcode": "6221234567899",
+        "category": "أدوية",
+        "price": 85,
+        "cost": 55,
+        "stock": 40,
+        "minStock": 10,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&q=80"
+      },
+      {
+        "id": "p_1789902155593_8",
+        "name": "أدول",
+        "active": "Paracetamol 500mg",
+        "barcode": "6221234567898",
+        "category": "أدوية",
+        "price": 35,
+        "cost": 20,
+        "stock": 150,
+        "minStock": 20,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&q=80"
+      },
+      {
+        "id": "p_1789902155593_7",
+        "name": "أوميجا 3",
+        "active": "Omega-3 1000mg",
+        "barcode": "6221234567897",
+        "category": "مكملات غذائية",
+        "price": 220,
+        "cost": 155,
+        "stock": 60,
+        "minStock": 12,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&q=80"
+      },
+      {
+        "id": "p_1789902155593_6",
+        "name": "معجون أسنان",
+        "active": "Fluoride 1450ppm",
+        "barcode": "6221234567896",
+        "category": "عناية شخصية",
+        "price": 35,
+        "cost": 20,
+        "stock": 300,
+        "minStock": 50,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&q=80"
+      },
+      {
+        "id": "p_1789902155593_5",
+        "name": "غسول مطهر لليدين",
+        "active": "Chlorhexidine 2%",
+        "barcode": "6221234567895",
+        "category": "عناية شخصية",
+        "price": 75,
+        "cost": 45,
+        "stock": 150,
+        "minStock": 25,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&q=80"
+      },
+      {
+        "id": "p_1789902155593_4",
+        "name": "حفاضات أطفال مقاس 3",
+        "active": "Baby Diapers",
+        "barcode": "6221234567894",
+        "category": "الأم والطفل",
+        "price": 180,
+        "cost": 130,
+        "stock": 200,
+        "minStock": 30,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&q=80"
+      },
+      {
+        "id": "p_1789902155593_3",
+        "name": "جهاز قياس ضغط",
+        "active": "Digital BP Monitor",
+        "barcode": "6221234567893",
+        "category": "أجهزة طبية",
+        "price": 450,
+        "cost": 320,
+        "stock": 12,
+        "minStock": 5,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&q=80"
+      },
+      {
+        "id": "p_1789902155593_2",
+        "name": "كريم مرطب للبشرة",
+        "active": "Glycerin + Ceramides",
+        "barcode": "6221234567892",
+        "category": "عناية بالبشرة",
+        "price": 120,
+        "cost": 75,
+        "stock": 45,
+        "minStock": 10,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&q=80"
+      },
+      {
+        "id": "p_1789902155593_1",
+        "name": "فيتامين د 50000",
+        "active": "Cholecalciferol",
+        "barcode": "6221234567891",
+        "category": "فيتامينات",
+        "price": 85,
+        "cost": 55,
+        "stock": 79,
+        "minStock": 15,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&q=80"
+      },
+      {
+        "id": "p_1789902155593_0",
+        "name": "بنادول أدفانس",
+        "active": "Paracetamol 500mg",
+        "barcode": "6221234567890",
+        "category": "أدوية",
+        "price": 45,
+        "cost": 28,
+        "stock": 120,
+        "minStock": 20,
+        "rx": false,
+        "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&q=80"
+      }
+    ],
+    "pc_loyalty_t_demo": {
+      "customers": {
+        "c1": {
+          "id": "c1",
+          "points": 652,
+          "totalSpent": 6520,
+          "tier": "silver",
+          "history": [
+            {
+              "type": "earn",
+              "amount": 500,
+              "orderId": "ord1",
+              "totalAfter": 652,
+              "at": "2026-09-21T15:50:36.972Z"
+            },
+            {
+              "type": "earn",
+              "amount": 102,
+              "orderId": "manual-1790005446931",
+              "totalAfter": 152,
+              "at": "2026-09-21T15:44:06.932Z"
+            },
+            {
+              "type": "earn",
+              "amount": 50,
+              "orderId": "test-order",
+              "totalAfter": 50,
+              "at": "2026-09-21T15:27:48.977Z"
+            }
+          ],
+          "redeemed": [],
+          "joinedAt": "2026-09-21T15:27:48.977Z"
+        },
+        "c2": {
+          "id": "c2",
+          "points": 1562,
+          "totalSpent": 15620,
+          "tier": "silver",
+          "history": [
+            {
+              "type": "earn",
+              "amount": 1500,
+              "orderId": "ord2",
+              "totalAfter": 1562,
+              "at": "2026-09-21T15:50:36.973Z"
+            },
+            {
+              "type": "earn",
+              "amount": 62,
+              "orderId": "ORD-501994",
+              "totalAfter": 62,
+              "at": "2026-09-21T15:45:08.412Z"
+            }
+          ],
+          "redeemed": [],
+          "joinedAt": "2026-09-21T15:45:08.412Z"
+        },
+        "c3": {
+          "id": "c3",
+          "points": 80,
+          "totalSpent": 800,
+          "tier": "bronze",
+          "history": [
+            {
+              "type": "earn",
+              "amount": 80,
+              "orderId": "ord3",
+              "totalAfter": 80,
+              "at": "2026-09-21T15:50:36.973Z"
+            }
+          ],
+          "redeemed": [],
+          "joinedAt": "2026-09-21T15:50:36.973Z"
+        },
+        "c4": {
+          "id": "c4",
+          "points": 2500,
+          "totalSpent": 25000,
+          "tier": "gold",
+          "history": [
+            {
+              "type": "earn",
+              "amount": 2500,
+              "orderId": "ord4",
+              "totalAfter": 2500,
+              "at": "2026-09-21T15:50:36.973Z"
+            }
+          ],
+          "redeemed": [],
+          "joinedAt": "2026-09-21T15:50:36.973Z"
+        },
+        "c5": {
+          "id": "c5",
+          "points": 30,
+          "totalSpent": 300,
+          "tier": "bronze",
+          "history": [
+            {
+              "type": "earn",
+              "amount": 30,
+              "orderId": "ord5",
+              "totalAfter": 30,
+              "at": "2026-09-21T15:50:36.973Z"
+            }
+          ],
+          "redeemed": [],
+          "joinedAt": "2026-09-21T15:50:36.973Z"
+        }
+      }
+    },
+    "pc_session": {
+      "userId": "u_demo_admin",
+      "tenantId": "t_demo",
+      "email": "demo@pharmacloud.app",
+      "name": "أحمد الشريف",
+      "role": "admin",
+      "loginAt": "2026-09-19T19:14:33.186Z"
+    },
+    "pc_subscriptions": [
+      {
+        "id": "sub_1789902460798_r49um",
+        "tenantId": "t_demo",
+        "plan": "enterprise",
+        "amount": 2000,
+        "type": "payment",
+        "status": "paid",
+        "method": "visa",
+        "createdAt": "2026-09-20T11:07:40.798Z"
+      }
+    ],
+    "pc_tenants": [
+      {
+        "id": "t_demo",
+        "name": "صيدلية الشريف",
+        "owner": "أحمد الشريف",
+        "email": "demo@pharmacloud.app",
+        "phone": "+201234567890",
+        "address": "محرم بك ، الإسكندرية",
+        "plan": "enterprise",
+        "status": "active",
+        "isDemo": true,
+        "trialEndsAt": "2026-10-03T18:57:47.548Z",
+        "subscriptionEndsAt": "2026-10-20T11:07:40.799Z",
+        "createdAt": "2026-09-19T18:57:47.548Z",
+        "apiKey": "pk_U0yc5G8mSDpxE8HgfHavKcwCNfocdz2c",
+        "apiSecret": "sk_SfNI6lz5vfyd51sYOVGBoIuYtKY7ee0oZdQhlfk8"
+      }
+    ],
+    "pc_t_demo_audit": [
+      {
+        "id": "audit_1790005506891_ypmca",
+        "action": "payment_completed",
+        "details": {
+          "method": "cash",
+          "total": 620,
+          "txn": "TXN-05506890"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:45:06.891Z"
+      },
+      {
+        "id": "audit_1790005488362_ue9w2",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أموكسيسيلين 500mg"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:44:48.362Z"
+      },
+      {
+        "id": "audit_1790005486589_unqw6",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:44:46.590Z"
+      },
+      {
+        "id": "audit_1790005485788_m1twh",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "فيتامين د 50000"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:44:45.788Z"
+      },
+      {
+        "id": "audit_1790005476476_ei3eu",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "حفاضات أطفال مقاس 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:44:36.476Z"
+      },
+      {
+        "id": "audit_1790005475924_k1h43",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:44:35.924Z"
+      },
+      {
+        "id": "audit_1790005475555_uiyh0",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:44:35.555Z"
+      },
+      {
+        "id": "audit_1790005475275_nsnp2",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أموكسيسيلين 500mg"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:44:35.275Z"
+      },
+      {
+        "id": "audit_1790005474858_rmwkw",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "حفاضات أطفال مقاس 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:44:34.858Z"
+      },
+      {
+        "id": "audit_1790004731280_2ksv5",
+        "action": "payment_completed",
+        "details": {
+          "method": "cash",
+          "total": 1779,
+          "txn": "TXN-04731278"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:32:11.280Z"
+      },
+      {
+        "id": "audit_1790004704033_ay3ok",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أموكسيسيلين 500mg"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:31:44.033Z"
+      },
+      {
+        "id": "audit_1790004703639_ka0wl",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:31:43.639Z"
+      },
+      {
+        "id": "audit_1790004702671_g1ftu",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "معجون أسنان"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:31:42.671Z"
+      },
+      {
+        "id": "audit_1790004702217_ngasz",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أوميجا 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:31:42.217Z"
+      },
+      {
+        "id": "audit_1790004701919_iyjyj",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "كريم مرطب للبشرة"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:31:41.919Z"
+      },
+      {
+        "id": "audit_1790004701619_k99q9",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:31:41.619Z"
+      },
+      {
+        "id": "audit_1790004701255_kq7b8",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:31:41.255Z"
+      },
+      {
+        "id": "audit_1790004700898_dqhe4",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أموكسيسيلين 500mg"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:31:40.898Z"
+      },
+      {
+        "id": "audit_1790004700565_rw903",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "حفاضات أطفال مقاس 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:31:40.565Z"
+      },
+      {
+        "id": "audit_1790004593234_fxue6",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "كريم مرطب للبشرة"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:29:53.234Z"
+      },
+      {
+        "id": "audit_1790004592692_r6aut",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:29:52.692Z"
+      },
+      {
+        "id": "audit_1790004592402_m2fao",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "فيتامين د 50000"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T15:29:52.402Z"
+      },
+      {
+        "id": "audit_1789999476197_tsqlx",
+        "action": "sale_completed",
+        "details": {
+          "orderId": "ORD-476195",
+          "total": 855
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:36.197Z"
+      },
+      {
+        "id": "audit_1789999461789_qysu6",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.789Z"
+      },
+      {
+        "id": "audit_1789999461785_ouv9l",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.785Z"
+      },
+      {
+        "id": "audit_1789999461777_8hdbu",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.780Z"
+      },
+      {
+        "id": "audit_1789999461772_9c7yt",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.772Z"
+      },
+      {
+        "id": "audit_1789999461770_sc1e5",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.770Z"
+      },
+      {
+        "id": "audit_1789999461764_10i5g",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.764Z"
+      },
+      {
+        "id": "audit_1789999461760_l0385",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.760Z"
+      },
+      {
+        "id": "audit_1789999461756_jytqx",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.757Z"
+      },
+      {
+        "id": "audit_1789999461753_19md2",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.753Z"
+      },
+      {
+        "id": "audit_1789999461749_pgm50",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.749Z"
+      },
+      {
+        "id": "audit_1789999461745_kk6gr",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.745Z"
+      },
+      {
+        "id": "audit_1789999461743_57fn0",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.743Z"
+      },
+      {
+        "id": "audit_1789999461737_14m59",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.738Z"
+      },
+      {
+        "id": "audit_1789999461734_g27xo",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.734Z"
+      },
+      {
+        "id": "audit_1789999461732_8di06",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.732Z"
+      },
+      {
+        "id": "audit_1789999461724_wjr5k",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.724Z"
+      },
+      {
+        "id": "audit_1789999461720_vp7hd",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.720Z"
+      },
+      {
+        "id": "audit_1789999461715_r1qiv",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.715Z"
+      },
+      {
+        "id": "audit_1789999461711_q2y4e",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.711Z"
+      },
+      {
+        "id": "audit_1789999461708_7h8vt",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.708Z"
+      },
+      {
+        "id": "audit_1789999461701_m42wj",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.701Z"
+      },
+      {
+        "id": "audit_1789999461699_sg7fl",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.699Z"
+      },
+      {
+        "id": "audit_1789999461695_hnofx",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.695Z"
+      },
+      {
+        "id": "audit_1789999461691_ymb9q",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.691Z"
+      },
+      {
+        "id": "audit_1789999461684_4npt1",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:04:21.684Z"
+      },
+      {
+        "id": "audit_1789999422473_xjche",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.473Z"
+      },
+      {
+        "id": "audit_1789999422470_19orc",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.470Z"
+      },
+      {
+        "id": "audit_1789999422468_ci3i6",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.468Z"
+      },
+      {
+        "id": "audit_1789999422464_mk7wx",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.464Z"
+      },
+      {
+        "id": "audit_1789999422462_7nj9k",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.462Z"
+      },
+      {
+        "id": "audit_1789999422459_zd2wf",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.459Z"
+      },
+      {
+        "id": "audit_1789999422457_eaj4d",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.457Z"
+      },
+      {
+        "id": "audit_1789999422455_p8ox7",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.455Z"
+      },
+      {
+        "id": "audit_1789999422453_ydu6q",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.453Z"
+      },
+      {
+        "id": "audit_1789999422451_vcfap",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.451Z"
+      },
+      {
+        "id": "audit_1789999422449_rsz5m",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.449Z"
+      },
+      {
+        "id": "audit_1789999422444_20fvj",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.444Z"
+      },
+      {
+        "id": "audit_1789999422441_c0lgi",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.441Z"
+      },
+      {
+        "id": "audit_1789999422439_191i3",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.439Z"
+      },
+      {
+        "id": "audit_1789999422437_jslls",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.437Z"
+      },
+      {
+        "id": "audit_1789999422434_8yc24",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.434Z"
+      },
+      {
+        "id": "audit_1789999422432_lieq7",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.432Z"
+      },
+      {
+        "id": "audit_1789999422428_9no4z",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.428Z"
+      },
+      {
+        "id": "audit_1789999422426_5l09p",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.426Z"
+      },
+      {
+        "id": "audit_1789999422421_4c7a0",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.421Z"
+      },
+      {
+        "id": "audit_1789999422419_vv4yt",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.419Z"
+      },
+      {
+        "id": "audit_1789999422418_ww7sr",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.418Z"
+      },
+      {
+        "id": "audit_1789999422415_dm8dj",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.415Z"
+      },
+      {
+        "id": "audit_1789999422413_2xj8s",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.413Z"
+      },
+      {
+        "id": "audit_1789999422410_tqsts",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.411Z"
+      },
+      {
+        "id": "audit_1789999422407_tju81",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.407Z"
+      },
+      {
+        "id": "audit_1789999422405_edau9",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.405Z"
+      },
+      {
+        "id": "audit_1789999422402_lmzhn",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.402Z"
+      },
+      {
+        "id": "audit_1789999422396_omyml",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.396Z"
+      },
+      {
+        "id": "audit_1789999422394_1tgt2",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.394Z"
+      },
+      {
+        "id": "audit_1789999422391_tcgw5",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.392Z"
+      },
+      {
+        "id": "audit_1789999422390_fv59e",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.390Z"
+      },
+      {
+        "id": "audit_1789999422388_6xhsy",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.389Z"
+      },
+      {
+        "id": "audit_1789999422387_v8ure",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.387Z"
+      },
+      {
+        "id": "audit_1789999422385_uzykw",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.385Z"
+      },
+      {
+        "id": "audit_1789999422384_z712u",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.384Z"
+      },
+      {
+        "id": "audit_1789999422382_q250d",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.382Z"
+      },
+      {
+        "id": "audit_1789999422379_7unn9",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.380Z"
+      },
+      {
+        "id": "audit_1789999422377_z9qjb",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.377Z"
+      },
+      {
+        "id": "audit_1789999422376_eprv9",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.376Z"
+      },
+      {
+        "id": "audit_1789999422374_cf0y9",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.374Z"
+      },
+      {
+        "id": "audit_1789999422370_ts82d",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.370Z"
+      },
+      {
+        "id": "audit_1789999422367_5w602",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.367Z"
+      },
+      {
+        "id": "audit_1789999422364_ejnrm",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.364Z"
+      },
+      {
+        "id": "audit_1789999422361_wx448",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.361Z"
+      },
+      {
+        "id": "audit_1789999422359_tbmba",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.359Z"
+      },
+      {
+        "id": "audit_1789999422357_ra17z",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.357Z"
+      },
+      {
+        "id": "audit_1789999422355_plz70",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.355Z"
+      },
+      {
+        "id": "audit_1789999422353_9upcp",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.353Z"
+      },
+      {
+        "id": "audit_1789999422352_1n0ry",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.352Z"
+      },
+      {
+        "id": "audit_1789999422350_g0wic",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.350Z"
+      },
+      {
+        "id": "audit_1789999422349_32yf4",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.349Z"
+      },
+      {
+        "id": "audit_1789999422347_kqvpr",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.347Z"
+      },
+      {
+        "id": "audit_1789999422345_rtv9s",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.345Z"
+      },
+      {
+        "id": "audit_1789999422342_0cvh5",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.342Z"
+      },
+      {
+        "id": "audit_1789999422341_jq2h9",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.341Z"
+      },
+      {
+        "id": "audit_1789999422341_2k4kr",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.341Z"
+      },
+      {
+        "id": "audit_1789999422340_qzpwx",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.340Z"
+      },
+      {
+        "id": "audit_1789999422337_15mna",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.337Z"
+      },
+      {
+        "id": "audit_1789999422336_nxjc0",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.336Z"
+      },
+      {
+        "id": "audit_1789999422335_hlm9b",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.335Z"
+      },
+      {
+        "id": "audit_1789999422333_yzk4p",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.333Z"
+      },
+      {
+        "id": "audit_1789999422330_5909y",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.330Z"
+      },
+      {
+        "id": "audit_1789999422328_jdaf2",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.328Z"
+      },
+      {
+        "id": "audit_1789999422325_e709y",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.325Z"
+      },
+      {
+        "id": "audit_1789999422324_0kf2w",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.324Z"
+      },
+      {
+        "id": "audit_1789999422323_onyu5",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.323Z"
+      },
+      {
+        "id": "audit_1789999422320_0kz5p",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.320Z"
+      },
+      {
+        "id": "audit_1789999422319_v940h",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.319Z"
+      },
+      {
+        "id": "audit_1789999422318_fcs4j",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.318Z"
+      },
+      {
+        "id": "audit_1789999422317_cvldh",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.317Z"
+      },
+      {
+        "id": "audit_1789999422316_rr67o",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.316Z"
+      },
+      {
+        "id": "audit_1789999422315_jzr11",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.315Z"
+      },
+      {
+        "id": "audit_1789999422312_grlhy",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.312Z"
+      },
+      {
+        "id": "audit_1789999422310_5fti2",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.310Z"
+      },
+      {
+        "id": "audit_1789999422308_rnzou",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.308Z"
+      },
+      {
+        "id": "audit_1789999422307_lu96z",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.307Z"
+      },
+      {
+        "id": "audit_1789999422306_slivh",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.306Z"
+      },
+      {
+        "id": "audit_1789999422304_vazli",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.304Z"
+      },
+      {
+        "id": "audit_1789999422302_fa1bx",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.302Z"
+      },
+      {
+        "id": "audit_1789999422301_5p0s3",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.301Z"
+      },
+      {
+        "id": "audit_1789999422300_avz4h",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.300Z"
+      },
+      {
+        "id": "audit_1789999422298_8i8cf",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.298Z"
+      },
+      {
+        "id": "audit_1789999422296_pdtna",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.296Z"
+      },
+      {
+        "id": "audit_1789999422290_4q8e2",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.290Z"
+      },
+      {
+        "id": "audit_1789999422288_11kzf",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.288Z"
+      },
+      {
+        "id": "audit_1789999422286_u1vcm",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.286Z"
+      },
+      {
+        "id": "audit_1789999422283_8aog2",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T14:03:42.284Z"
+      },
+      {
+        "id": "audit_1789998876171_mrbea",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:54:36.172Z"
+      },
+      {
+        "id": "audit_1789998326842_tnlz3",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.843Z"
+      },
+      {
+        "id": "audit_1789998326839_rjh4m",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.839Z"
+      },
+      {
+        "id": "audit_1789998326836_d8j58",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.836Z"
+      },
+      {
+        "id": "audit_1789998326834_fhmiv",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.834Z"
+      },
+      {
+        "id": "audit_1789998326832_8442m",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.832Z"
+      },
+      {
+        "id": "audit_1789998326830_v59wl",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.830Z"
+      },
+      {
+        "id": "audit_1789998326828_dstya",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.828Z"
+      },
+      {
+        "id": "audit_1789998326826_unxmx",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.826Z"
+      },
+      {
+        "id": "audit_1789998326823_h2siv",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.823Z"
+      },
+      {
+        "id": "audit_1789998326819_43elk",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.819Z"
+      },
+      {
+        "id": "audit_1789998326817_97hzd",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.817Z"
+      },
+      {
+        "id": "audit_1789998326814_m3pge",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.814Z"
+      },
+      {
+        "id": "audit_1789998326809_rhbbs",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.809Z"
+      },
+      {
+        "id": "audit_1789998326805_7u2k6",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.805Z"
+      },
+      {
+        "id": "audit_1789998326803_51575",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.803Z"
+      },
+      {
+        "id": "audit_1789998326801_dscod",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.801Z"
+      },
+      {
+        "id": "audit_1789998326799_b21hn",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.799Z"
+      },
+      {
+        "id": "audit_1789998326796_qie7s",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.796Z"
+      },
+      {
+        "id": "audit_1789998326794_dg3bc",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.794Z"
+      },
+      {
+        "id": "audit_1789998326793_40kim",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.793Z"
+      },
+      {
+        "id": "audit_1789998326792_57kx5",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.792Z"
+      },
+      {
+        "id": "audit_1789998326788_jhcia",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.788Z"
+      },
+      {
+        "id": "audit_1789998326786_13qgd",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.786Z"
+      },
+      {
+        "id": "audit_1789998326785_61ggj",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.785Z"
+      },
+      {
+        "id": "audit_1789998326783_hwn9r",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.783Z"
+      },
+      {
+        "id": "audit_1789998326781_9ni1d",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.781Z"
+      },
+      {
+        "id": "audit_1789998326780_2r8kh",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.780Z"
+      },
+      {
+        "id": "audit_1789998326778_cynws",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.778Z"
+      },
+      {
+        "id": "audit_1789998326776_0akwp",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.777Z"
+      },
+      {
+        "id": "audit_1789998326774_wpynp",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.774Z"
+      },
+      {
+        "id": "audit_1789998326767_krlfm",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.767Z"
+      },
+      {
+        "id": "audit_1789998326766_nwr76",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.766Z"
+      },
+      {
+        "id": "audit_1789998326765_wlkwq",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.765Z"
+      },
+      {
+        "id": "audit_1789998326763_o3s1y",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.763Z"
+      },
+      {
+        "id": "audit_1789998326761_ip0o4",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.761Z"
+      },
+      {
+        "id": "audit_1789998326758_7ggya",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.758Z"
+      },
+      {
+        "id": "audit_1789998326757_rj6pb",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.757Z"
+      },
+      {
+        "id": "audit_1789998326754_8ga7p",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.754Z"
+      },
+      {
+        "id": "audit_1789998326751_zoppl",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.751Z"
+      },
+      {
+        "id": "audit_1789998326747_n9twp",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.747Z"
+      },
+      {
+        "id": "audit_1789998326745_s2lvg",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.745Z"
+      },
+      {
+        "id": "audit_1789998326743_63sbv",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.743Z"
+      },
+      {
+        "id": "audit_1789998326740_mshcg",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.740Z"
+      },
+      {
+        "id": "audit_1789998326737_4fmdn",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.737Z"
+      },
+      {
+        "id": "audit_1789998326735_4blyz",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.735Z"
+      },
+      {
+        "id": "audit_1789998326734_pg6y2",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.734Z"
+      },
+      {
+        "id": "audit_1789998326731_nzb8p",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.731Z"
+      },
+      {
+        "id": "audit_1789998326727_eryhg",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.727Z"
+      },
+      {
+        "id": "audit_1789998326720_v4n7n",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.720Z"
+      },
+      {
+        "id": "audit_1789998326696_5clwe",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.696Z"
+      },
+      {
+        "id": "audit_1789998326690_4pah1",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.690Z"
+      },
+      {
+        "id": "audit_1789998326684_igpgw",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.684Z"
+      },
+      {
+        "id": "audit_1789998326680_xinap",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.680Z"
+      },
+      {
+        "id": "audit_1789998326678_ewamb",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.678Z"
+      },
+      {
+        "id": "audit_1789998326677_ay8t1",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.677Z"
+      },
+      {
+        "id": "audit_1789998326673_v2e86",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.673Z"
+      },
+      {
+        "id": "audit_1789998326666_3z8xo",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.666Z"
+      },
+      {
+        "id": "audit_1789998326664_xst4v",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.664Z"
+      },
+      {
+        "id": "audit_1789998326663_pzwup",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.663Z"
+      },
+      {
+        "id": "audit_1789998326660_ugp12",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.660Z"
+      },
+      {
+        "id": "audit_1789998326656_figsk",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.656Z"
+      },
+      {
+        "id": "audit_1789998326652_gcvtr",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.652Z"
+      },
+      {
+        "id": "audit_1789998326647_04tru",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.647Z"
+      },
+      {
+        "id": "audit_1789998326645_6db69",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.645Z"
+      },
+      {
+        "id": "audit_1789998326644_ncblt",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.644Z"
+      },
+      {
+        "id": "audit_1789998326640_vkp32",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.640Z"
+      },
+      {
+        "id": "audit_1789998326638_f0has",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.638Z"
+      },
+      {
+        "id": "audit_1789998326637_v88dd",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.637Z"
+      },
+      {
+        "id": "audit_1789998326635_k29k4",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.635Z"
+      },
+      {
+        "id": "audit_1789998326634_d9f6i",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.634Z"
+      },
+      {
+        "id": "audit_1789998326633_p4t3y",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.633Z"
+      },
+      {
+        "id": "audit_1789998326630_nubev",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.631Z"
+      },
+      {
+        "id": "audit_1789998326627_g6ejm",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.627Z"
+      },
+      {
+        "id": "audit_1789998326625_wqqfb",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.625Z"
+      },
+      {
+        "id": "audit_1789998326623_nn6v4",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.623Z"
+      },
+      {
+        "id": "audit_1789998326622_90ka4",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.622Z"
+      },
+      {
+        "id": "audit_1789998326620_7dd49",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.620Z"
+      },
+      {
+        "id": "audit_1789998326619_h6nul",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.619Z"
+      },
+      {
+        "id": "audit_1789998326617_ilh1j",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.617Z"
+      },
+      {
+        "id": "audit_1789998326617_1jlwh",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.617Z"
+      },
+      {
+        "id": "audit_1789998326616_108n2",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.616Z"
+      },
+      {
+        "id": "audit_1789998326615_fxaij",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.615Z"
+      },
+      {
+        "id": "audit_1789998326613_4ocix",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.613Z"
+      },
+      {
+        "id": "audit_1789998326612_6c5j0",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.612Z"
+      },
+      {
+        "id": "audit_1789998326609_f4xev",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.609Z"
+      },
+      {
+        "id": "audit_1789998326607_v3mth",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.607Z"
+      },
+      {
+        "id": "audit_1789998326605_qr0an",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.606Z"
+      },
+      {
+        "id": "audit_1789998326603_8ydzy",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.603Z"
+      },
+      {
+        "id": "audit_1789998326601_lu7ni",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.601Z"
+      },
+      {
+        "id": "audit_1789998326600_0p3ln",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.600Z"
+      },
+      {
+        "id": "audit_1789998326599_yudl2",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.599Z"
+      },
+      {
+        "id": "audit_1789998326598_uh297",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.598Z"
+      },
+      {
+        "id": "audit_1789998326593_jg10t",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.593Z"
+      },
+      {
+        "id": "audit_1789998326591_ow3qu",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.591Z"
+      },
+      {
+        "id": "audit_1789998326590_z378k",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.590Z"
+      },
+      {
+        "id": "audit_1789998326589_45bph",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.589Z"
+      },
+      {
+        "id": "audit_1789998326587_gq294",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.587Z"
+      },
+      {
+        "id": "audit_1789998326585_dmot1",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.585Z"
+      },
+      {
+        "id": "audit_1789998326583_5x1yd",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.583Z"
+      },
+      {
+        "id": "audit_1789998326581_loufc",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:45:26.581Z"
+      },
+      {
+        "id": "audit_1789997735931_c2pex",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:35:35.931Z"
+      },
+      {
+        "id": "audit_1789997735931_6y700",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:35:35.931Z"
+      },
+      {
+        "id": "audit_1789997735930_m1gmd",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:35:35.930Z"
+      },
+      {
+        "id": "audit_1789997735929_fw2y4",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:35:35.929Z"
+      },
+      {
+        "id": "audit_1789997735928_m8a28",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:35:35.928Z"
+      },
+      {
+        "id": "audit_1789997293690_s9zjl",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:28:13.690Z"
+      },
+      {
+        "id": "audit_1789997293689_nxfct",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:28:13.689Z"
+      },
+      {
+        "id": "audit_1789997281033_62rct",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:28:01.033Z"
+      },
+      {
+        "id": "audit_1789997269211_opuv5",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:27:49.211Z"
+      },
+      {
+        "id": "audit_1789997269210_bfsg3",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:27:49.210Z"
+      },
+      {
+        "id": "audit_1789997269208_spc4z",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:27:49.208Z"
+      },
+      {
+        "id": "audit_1789996216162_fsutt",
+        "action": "sale_completed",
+        "details": {
+          "orderId": "ORD-216161",
+          "total": 68
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:10:16.162Z"
+      },
+      {
+        "id": "audit_1789996197697_om1x3",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:09:57.697Z"
+      },
+      {
+        "id": "audit_1789996197695_doivy",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:09:57.695Z"
+      },
+      {
+        "id": "audit_1789996197693_cqwyx",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:09:57.693Z"
+      },
+      {
+        "id": "audit_1789996037604_unrb6",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:07:17.604Z"
+      },
+      {
+        "id": "audit_1789996037602_hyznb",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:07:17.602Z"
+      },
+      {
+        "id": "audit_1789996037599_ep4nh",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:07:17.599Z"
+      },
+      {
+        "id": "audit_1789995948007_arklw",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:05:48.008Z"
+      },
+      {
+        "id": "audit_1789995948006_hmm8m",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T13:05:48.006Z"
+      },
+      {
+        "id": "audit_1789995283774_zzx23",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:54:43.774Z"
+      },
+      {
+        "id": "audit_1789995283774_cdkhh",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:54:43.774Z"
+      },
+      {
+        "id": "audit_1789995248496_llp6x",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:54:08.496Z"
+      },
+      {
+        "id": "audit_1789995248495_nx1q9",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:54:08.495Z"
+      },
+      {
+        "id": "audit_1789995248494_h9yb7",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:54:08.494Z"
+      },
+      {
+        "id": "audit_1789994185942_jko83",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:36:25.942Z"
+      },
+      {
+        "id": "audit_1789994185941_jh2di",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:36:25.941Z"
+      },
+      {
+        "id": "audit_1789994178827_qi9sf",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:36:18.827Z"
+      },
+      {
+        "id": "audit_1789994178827_j1yw1",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:36:18.827Z"
+      },
+      {
+        "id": "audit_1789994051515_oob7u",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:34:11.515Z"
+      },
+      {
+        "id": "audit_1789994051513_p38qh",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:34:11.513Z"
+      },
+      {
+        "id": "audit_1789994051511_60su4",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:34:11.511Z"
+      },
+      {
+        "id": "audit_1789994044163_mdrxp",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:34:04.163Z"
+      },
+      {
+        "id": "audit_1789994044162_xpeqw",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:34:04.163Z"
+      },
+      {
+        "id": "audit_1789994044162_d4sz4",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:34:04.162Z"
+      },
+      {
+        "id": "audit_1789994004101_k8iip",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:33:24.101Z"
+      },
+      {
+        "id": "audit_1789994004091_nxq3w",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:33:24.094Z"
+      },
+      {
+        "id": "audit_1789994004083_dlaok",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:33:24.084Z"
+      },
+      {
+        "id": "audit_1789993959547_gw8q1",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:32:39.547Z"
+      },
+      {
+        "id": "audit_1789993959546_c6sxh",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:32:39.546Z"
+      },
+      {
+        "id": "audit_1789993937685_bp1ce",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:32:17.685Z"
+      },
+      {
+        "id": "audit_1789993937684_0xrpm",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-21T12:32:17.684Z"
+      },
+      {
+        "id": "audit_1789916333442_fa5fv",
+        "action": "sale_completed",
+        "details": {
+          "orderId": "ORD-333442",
+          "total": 732
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T14:58:53.443Z"
+      },
+      {
+        "id": "audit_1789916331643_yvxo5",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "كريم مرطب للبشرة"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T14:58:51.644Z"
+      },
+      {
+        "id": "audit_1789916331171_z9uzp",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T14:58:51.171Z"
+      },
+      {
+        "id": "audit_1789916329362_fyk24",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "حفاضات أطفال مقاس 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T14:58:49.362Z"
+      },
+      {
+        "id": "audit_1789911895611_rgf1h",
+        "action": "sale_completed",
+        "details": {
+          "orderId": "ORD-895610",
+          "total": 1350
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:55.611Z"
+      },
+      {
+        "id": "audit_1789911894835_b9n5v",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:54.835Z"
+      },
+      {
+        "id": "audit_1789911894171_91p47",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:54.171Z"
+      },
+      {
+        "id": "audit_1789911894019_esr61",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:54.019Z"
+      },
+      {
+        "id": "audit_1789911892683_6ovbo",
+        "action": "sale_completed",
+        "details": {
+          "orderId": "ORD-892682",
+          "total": 170
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:52.683Z"
+      },
+      {
+        "id": "audit_1789911891660_eezbs",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أموكسيسيلين 500mg"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:51.660Z"
+      },
+      {
+        "id": "audit_1789911891483_qlhrq",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أموكسيسيلين 500mg"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:51.483Z"
+      },
+      {
+        "id": "audit_1789911890020_c37by",
+        "action": "sale_completed",
+        "details": {
+          "orderId": "ORD-890020",
+          "total": 450
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:50.020Z"
+      },
+      {
+        "id": "audit_1789911887066_nm34l",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:47.066Z"
+      },
+      {
+        "id": "audit_1789911886434_zcegj",
+        "action": "sale_completed",
+        "details": {
+          "orderId": "ORD-886433",
+          "total": 34
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:46.434Z"
+      },
+      {
+        "id": "audit_1789911885795_7ojlf",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:45.795Z"
+      },
+      {
+        "id": "audit_1789911884337_iobxe",
+        "action": "sale_completed",
+        "details": {
+          "orderId": "ORD-884337",
+          "total": 204
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:44.337Z"
+      },
+      {
+        "id": "audit_1789911883402_4fx66",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:43.402Z"
+      },
+      {
+        "id": "audit_1789911882466_pwhdn",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:42.466Z"
+      },
+      {
+        "id": "audit_1789911881498_4fapy",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:41.498Z"
+      },
+      {
+        "id": "audit_1789911880281_41yht",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:40.281Z"
+      },
+      {
+        "id": "audit_1789911878946_tg6dr",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:38.946Z"
+      },
+      {
+        "id": "audit_1789911877705_g6qwk",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:37.705Z"
+      },
+      {
+        "id": "audit_1789911871920_x0jou",
+        "action": "sale_completed",
+        "details": {
+          "orderId": "ORD-871919",
+          "total": 2483
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:31.920Z"
+      },
+      {
+        "id": "audit_1789911865371_j3j45",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "فيتامين د 50000"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:25.371Z"
+      },
+      {
+        "id": "audit_1789911865067_b2jge",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:25.067Z"
+      },
+      {
+        "id": "audit_1789911864743_krza3",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "حفاضات أطفال مقاس 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:24.743Z"
+      },
+      {
+        "id": "audit_1789911864408_dj8at",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أموكسيسيلين 500mg"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:24.408Z"
+      },
+      {
+        "id": "audit_1789911863852_eq0r2",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أوميجا 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:23.852Z"
+      },
+      {
+        "id": "audit_1789911863521_pr769",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "معجون أسنان"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:23.521Z"
+      },
+      {
+        "id": "audit_1789911863207_en9s3",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "غسول مطهر لليدين"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:23.207Z"
+      },
+      {
+        "id": "audit_1789911862840_d94fp",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:22.840Z"
+      },
+      {
+        "id": "audit_1789911862547_vwcfd",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:22.547Z"
+      },
+      {
+        "id": "audit_1789911862209_q2kr0",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "فيتامين د 50000"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:22.209Z"
+      },
+      {
+        "id": "audit_1789911861894_cccvf",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "كريم مرطب للبشرة"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:21.894Z"
+      },
+      {
+        "id": "audit_1789911861559_3plfz",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:21.559Z"
+      },
+      {
+        "id": "audit_1789911861176_n57o3",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "حفاضات أطفال مقاس 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:21.176Z"
+      },
+      {
+        "id": "audit_1789911860439_051wo",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:20.439Z"
+      },
+      {
+        "id": "audit_1789911858951_e9u5a",
+        "action": "sale_completed",
+        "details": {
+          "orderId": "ORD-858950",
+          "total": 1012
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:18.951Z"
+      },
+      {
+        "id": "audit_1789911856920_2jolq",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أموكسيسيلين 500mg"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:16.920Z"
+      },
+      {
+        "id": "audit_1789911856519_dlv2o",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "حفاضات أطفال مقاس 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:16.519Z"
+      },
+      {
+        "id": "audit_1789911855920_8cau0",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:15.920Z"
+      },
+      {
+        "id": "audit_1789911855640_u22y3",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أوميجا 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:15.640Z"
+      },
+      {
+        "id": "audit_1789911855304_u4l4t",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "كريم مرطب للبشرة"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:15.304Z"
+      },
+      {
+        "id": "audit_1789911854991_x6uw3",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "فيتامين د 50000"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:14.991Z"
+      },
+      {
+        "id": "audit_1789911854720_mkklg",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "معجون أسنان"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:14.720Z"
+      },
+      {
+        "id": "audit_1789911854025_tatao",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:14.025Z"
+      },
+      {
+        "id": "audit_1789911853676_8hb7h",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "غسول مطهر لليدين"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:13.676Z"
+      },
+      {
+        "id": "audit_1789911853303_5n81s",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:13.303Z"
+      },
+      {
+        "id": "audit_1789911852942_qlwlr",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "غسول مطهر لليدين"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:12.942Z"
+      },
+      {
+        "id": "audit_1789911852510_5cytj",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:12.510Z"
+      },
+      {
+        "id": "audit_1789911850710_a7l33",
+        "action": "sale_completed",
+        "details": {
+          "orderId": "ORD-850710",
+          "total": 1700
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:10.710Z"
+      },
+      {
+        "id": "audit_1789911849359_g5qiz",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:09.359Z"
+      },
+      {
+        "id": "audit_1789911849120_d63cz",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:09.120Z"
+      },
+      {
+        "id": "audit_1789911848822_juc12",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "معجون أسنان"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:08.822Z"
+      },
+      {
+        "id": "audit_1789911848551_e8j1x",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "معجون أسنان"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:08.551Z"
+      },
+      {
+        "id": "audit_1789911848007_6ilch",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:08.007Z"
+      },
+      {
+        "id": "audit_1789911847736_vkm99",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "حفاضات أطفال مقاس 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:07.737Z"
+      },
+      {
+        "id": "audit_1789911847263_4khq3",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أموكسيسيلين 500mg"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:07.263Z"
+      },
+      {
+        "id": "audit_1789911846671_lsvx4",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "كريم مرطب للبشرة"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:06.671Z"
+      },
+      {
+        "id": "audit_1789911846382_xbbhk",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "فيتامين د 50000"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:06.382Z"
+      },
+      {
+        "id": "audit_1789911846061_qicoa",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "معجون أسنان"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:06.061Z"
+      },
+      {
+        "id": "audit_1789911845797_hi2jo",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أوميجا 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:05.797Z"
+      },
+      {
+        "id": "audit_1789911845222_tlpwj",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "حفاضات أطفال مقاس 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:05.222Z"
+      },
+      {
+        "id": "audit_1789911844622_r2suk",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "كريم مرطب للبشرة"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:04.622Z"
+      },
+      {
+        "id": "audit_1789911843445_oho7p",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أموكسيسيلين 500mg"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:03.445Z"
+      },
+      {
+        "id": "audit_1789911842397_e5tzc",
+        "action": "sale_completed",
+        "details": {
+          "orderId": "ORD-842396",
+          "total": 2633
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:44:02.397Z"
+      },
+      {
+        "id": "audit_1789911839094_gtrc3",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أموكسيسيلين 500mg"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:43:59.094Z"
+      },
+      {
+        "id": "audit_1789911838780_44s4v",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:43:58.780Z"
+      },
+      {
+        "id": "audit_1789911838549_0zo4t",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:43:58.549Z"
+      },
+      {
+        "id": "audit_1789911838414_6amom",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:43:58.414Z"
+      },
+      {
+        "id": "audit_1789911838190_rqnp3",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:43:58.190Z"
+      },
+      {
+        "id": "audit_1789911837703_t6pbi",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:43:57.703Z"
+      },
+      {
+        "id": "audit_1789911837287_0zaky",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:43:57.287Z"
+      },
+      {
+        "id": "audit_1789911836941_rr90x",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "معجون أسنان"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:43:56.941Z"
+      },
+      {
+        "id": "audit_1789911836590_gyunu",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "فيتامين د 50000"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:43:56.590Z"
+      },
+      {
+        "id": "audit_1789911835772_2hbs3",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "غسول مطهر لليدين"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:43:55.772Z"
+      },
+      {
+        "id": "audit_1789911690818_dvbh1",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:41:30.818Z"
+      },
+      {
+        "id": "audit_1789911682463_6956b",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:41:22.464Z"
+      },
+      {
+        "id": "audit_1789911185227_be7nl",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T13:33:05.227Z"
+      },
+      {
+        "id": "audit_1789902208838_czkgv",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أموكسيسيلين 500mg"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:28.838Z"
+      },
+      {
+        "id": "audit_1789902208448_vmuie",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "حفاضات أطفال مقاس 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:28.448Z"
+      },
+      {
+        "id": "audit_1789902208063_q8wtk",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:28.063Z"
+      },
+      {
+        "id": "audit_1789902207686_6psqo",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:27.686Z"
+      },
+      {
+        "id": "audit_1789902207311_9md4u",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أوميجا 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:27.311Z"
+      },
+      {
+        "id": "audit_1789902206896_ixybn",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "كريم مرطب للبشرة"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:26.896Z"
+      },
+      {
+        "id": "audit_1789902206188_ya0on",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "معجون أسنان"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:26.188Z"
+      },
+      {
+        "id": "audit_1789902205836_egdm8",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "غسول مطهر لليدين"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:25.836Z"
+      },
+      {
+        "id": "audit_1789902205518_9c8nt",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:25.518Z"
+      },
+      {
+        "id": "audit_1789902205062_m05f9",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "فيتامين د 50000"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:25.062Z"
+      },
+      {
+        "id": "audit_1789902203918_bo0xk",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "غسول مطهر لليدين"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:23.918Z"
+      },
+      {
+        "id": "audit_1789902202686_2u9bj",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أوميجا 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:22.686Z"
+      },
+      {
+        "id": "audit_1789902202173_t0b1p",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أدول"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:22.173Z"
+      },
+      {
+        "id": "audit_1789902201653_hyca0",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أموكسيسيلين 500mg"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:21.653Z"
+      },
+      {
+        "id": "audit_1789902200632_oh2oh",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "حفاضات أطفال مقاس 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:20.632Z"
+      },
+      {
+        "id": "audit_1789902200117_2k9k9",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:20.117Z"
+      },
+      {
+        "id": "audit_1789902199436_q8gs3",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "كريم مرطب للبشرة"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:19.436Z"
+      },
+      {
+        "id": "audit_1789902194756_6ztkz",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أوميجا 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:14.756Z"
+      },
+      {
+        "id": "audit_1789902194028_mzhke",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "معجون أسنان"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:14.028Z"
+      },
+      {
+        "id": "audit_1789902192883_xs5dk",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "فيتامين د 50000"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:12.884Z"
+      },
+      {
+        "id": "audit_1789902189915_f7f55",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:09.915Z"
+      },
+      {
+        "id": "audit_1789902185170_hn5l0",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "غسول مطهر لليدين"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T11:03:05.170Z"
+      },
+      {
+        "id": "audit_1789901497868_zqthk",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "كريم مرطب للبشرة"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:51:37.868Z"
+      },
+      {
+        "id": "audit_1789901496796_4o3h5",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "حفاضات أطفال مقاس 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:51:36.796Z"
+      },
+      {
+        "id": "audit_1789901449070_sioz2",
+        "action": "sale_completed",
+        "details": {
+          "orderId": "ORD-449070",
+          "total": 530
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:49.070Z"
+      },
+      {
+        "id": "audit_1789901445462_f4ykq",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "حفاضات أطفال مقاس 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:45.462Z"
+      },
+      {
+        "id": "audit_1789901444958_1yf8l",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أموكسيسيلين 500mg"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:44.958Z"
+      },
+      {
+        "id": "audit_1789901444405_nokxg",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "حفاضات أطفال مقاس 3"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:44.405Z"
+      },
+      {
+        "id": "audit_1789901444022_rfwnv",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "أموكسيسيلين 500mg"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:44.022Z"
+      },
+      {
+        "id": "audit_1789901442174_q8pgo",
+        "action": "sale_completed",
+        "details": {
+          "orderId": "ORD-442173",
+          "total": 5400
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:42.174Z"
+      },
+      {
+        "id": "audit_1789901433526_wpj0g",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:33.526Z"
+      },
+      {
+        "id": "audit_1789901433293_r6dlg",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:33.293Z"
+      },
+      {
+        "id": "audit_1789901433070_96d27",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:33.070Z"
+      },
+      {
+        "id": "audit_1789901432885_fd76f",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:32.886Z"
+      },
+      {
+        "id": "audit_1789901432692_s4kcf",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:32.692Z"
+      },
+      {
+        "id": "audit_1789901432188_1mmph",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:32.188Z"
+      },
+      {
+        "id": "audit_1789901432012_yigxn",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:32.012Z"
+      },
+      {
+        "id": "audit_1789901431789_3o7pa",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:31.789Z"
+      },
+      {
+        "id": "audit_1789901431605_ahccx",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:31.605Z"
+      },
+      {
+        "id": "audit_1789901431436_zimsr",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:31.436Z"
+      },
+      {
+        "id": "audit_1789901430940_40lah",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:30.940Z"
+      },
+      {
+        "id": "audit_1789901427815_cfyxy",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "جهاز قياس ضغط"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:50:27.815Z"
+      },
+      {
+        "id": "audit_1789901376887_7pjr3",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:49:36.887Z"
+      },
+      {
+        "id": "audit_1789901372253_hpp47",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:49:32.253Z"
+      },
+      {
+        "id": "audit_1789901357369_9th8a",
+        "action": "sale_add_to_cart",
+        "details": {
+          "product": "بنادول أدفانس"
+        },
+        "user": "أحمد الشريف",
+        "timestamp": "2026-09-20T10:49:17.369Z"
+      }
+    ],
+    "pc_notif_peakHour": 1790006943457,
+    "pc_t_demo_customers": [
+      {
+        "id": "c1",
+        "name": "محمد أحمد",
+        "phone": "01012345678",
+        "email": "m@test.com",
+        "address": "سموحة",
+        "totalSpent": 1250,
+        "orders": 8,
+        "createdAt": "2026-05-10"
+      },
+      {
+        "id": "c2",
+        "name": "سارة محمود",
+        "phone": "01023456789",
+        "email": "s@test.com",
+        "address": "سيدي جابر",
+        "totalSpent": 1510,
+        "orders": 6,
+        "createdAt": "2026-06-22"
+      },
+      {
+        "id": "c3",
+        "name": "أحمد الشريف",
+        "phone": "01034567890",
+        "email": "a@test.com",
+        "address": "العصافرة",
+        "totalSpent": 2100,
+        "orders": 14,
+        "createdAt": "2026-04-01"
+      },
+      {
+        "id": "c4",
+        "name": "منى عبد الله",
+        "phone": "01045678901",
+        "email": "mn@test.com",
+        "address": "المندرة",
+        "totalSpent": 560,
+        "orders": 3,
+        "createdAt": "2026-07-15"
+      },
+      {
+        "id": "c5",
+        "name": "كريم يوسف",
+        "phone": "01056789012",
+        "email": "k@test.com",
+        "address": "العجمي",
+        "totalSpent": 1780,
+        "orders": 11,
+        "createdAt": "2026-03-08"
+      }
+    ],
+    "pc_openai_key": [],
+    "pc_last_backup": 1790003711062,
+    "pc_t_demo_branches": [
+      {
+        "id": "b_1789902135014",
+        "name": "صيدلية الشريف فرع محرم بك",
+        "address": "محرم بك",
+        "phone": "202552",
+        "manager": "علي الشريف",
+        "createdAt": "2026-09-20T11:02:15.014Z"
+      }
+    ],
+    "pc_t_demo_batches": [
+      {
+        "id": "batch_1789846096504_9ckkt",
+        "productId": "p1",
+        "productName": "بنادول أدفانس",
+        "batchNo": "B4616",
+        "expiryDate": "2027-01-17T22:24:36.213Z",
+        "quantity": 120,
+        "cost": 28
+      },
+      {
+        "id": "batch_1789846096504_ir1lq",
+        "productId": "p3",
+        "productName": "كريم مرطب للبشرة",
+        "batchNo": "B7366",
+        "expiryDate": "2027-04-19T23:38:38.392Z",
+        "quantity": 45,
+        "cost": 75
+      },
+      {
+        "id": "batch_1789846096504_sljnl",
+        "productId": "p4",
+        "productName": "جهاز قياس ضغط",
+        "batchNo": "B5467",
+        "expiryDate": "2026-12-29T13:23:59.845Z",
+        "quantity": 12,
+        "cost": 320
+      },
+      {
+        "id": "batch_1789846096504_vrgyt",
+        "productId": "p6",
+        "productName": "غسول مطهر لليدين",
+        "batchNo": "B9851",
+        "expiryDate": "2026-12-21T22:06:26.614Z",
+        "quantity": 150,
+        "cost": 45
+      },
+      {
+        "id": "batch_1789846096504_b6qhh",
+        "productId": "p7",
+        "productName": "معجون أسنان",
+        "batchNo": "B2457",
+        "expiryDate": "2027-06-13T08:48:30.514Z",
+        "quantity": 300,
+        "cost": 20
+      },
+      {
+        "id": "batch_1789846096504_sj3if",
+        "productId": "p8",
+        "productName": "أوميجا 3",
+        "batchNo": "B4052",
+        "expiryDate": "2027-09-20T08:40:48.023Z",
+        "quantity": 60,
+        "cost": 155
+      },
+      {
+        "id": "batch_1789846096504_udsy4",
+        "productId": "p9",
+        "productName": "أدول",
+        "batchNo": "B4658",
+        "expiryDate": "2027-09-02T05:36:33.201Z",
+        "quantity": 150,
+        "cost": 20
+      },
+      {
+        "id": "batch_1789846096504_szvix",
+        "productId": "p10",
+        "productName": "أموكسيسيلين 500mg",
+        "batchNo": "B3549",
+        "expiryDate": "2027-06-14T10:01:43.203Z",
+        "quantity": 40,
+        "cost": 55
+      },
+      {
+        "id": "batch_1789846330902_j5zkx",
+        "productId": "p1",
+        "productName": "بنادول أدفانس",
+        "batchNo": "B6780",
+        "quantity": 10,
+        "expiryDate": "2026-10-19T00:00:00.000Z",
+        "cost": 152
+      },
+      {
+        "id": "batch_1789913835558_omaqn",
+        "productId": "p1",
+        "productName": "بنادول أدفانس",
+        "batchNo": "B9318",
+        "quantity": 10,
+        "expiryDate": "2026-09-21T00:00:00.000Z",
+        "cost": 55
+      },
+      {
+        "id": "batch_1789916023219",
+        "productId": "p3",
+        "productName": "كريم مرطب للبشرة",
+        "batchNo": "B8193",
+        "quantity": 10,
+        "expiryDate": "2026-10-02T00:00:00.000Z",
+        "cost": 75
+      }
+    ],
+    "pc_t_demo_attendance": [
+      {
+        "id": "att_1789909751277",
+        "date": "2026-09-20T13:09:11.277Z",
+        "userId": "u_demo_admin",
+        "userName": "أحمد الشريف",
+        "checkIn": "04:09 PM",
+        "checkOut": "05:57 PM"
+      },
+      {
+        "id": "att_0",
+        "date": "2026-09-19T19:14:36.566Z",
+        "userId": "u_demo_admin",
+        "userName": "أحمد الشريف",
+        "checkIn": "09:14",
+        "checkOut": null
+      },
+      {
+        "id": "att_1",
+        "date": "2026-09-18T19:14:36.566Z",
+        "userId": "u_demo_admin",
+        "userName": "أحمد الشريف",
+        "checkIn": "09:30",
+        "checkOut": "17:39"
+      },
+      {
+        "id": "att_2",
+        "date": "2026-09-17T19:14:36.566Z",
+        "userId": "u_demo_admin",
+        "userName": "أحمد الشريف",
+        "checkIn": "09:19",
+        "checkOut": "17:22"
+      },
+      {
+        "id": "att_3",
+        "date": "2026-09-16T19:14:36.566Z",
+        "userId": "u_demo_admin",
+        "userName": "أحمد الشريف",
+        "checkIn": "09:29",
+        "checkOut": "17:29"
+      },
+      {
+        "id": "att_4",
+        "date": "2026-09-15T19:14:36.566Z",
+        "userId": "u_demo_admin",
+        "userName": "أحمد الشريف",
+        "checkIn": "09:28",
+        "checkOut": "17:25"
+      },
+      {
+        "id": "att_5",
+        "date": "2026-09-14T19:14:36.566Z",
+        "userId": "u_demo_admin",
+        "userName": "أحمد الشريف",
+        "checkIn": "09:25",
+        "checkOut": "17:30"
+      },
+      {
+        "id": "att_6",
+        "date": "2026-09-13T19:14:36.566Z",
+        "userId": "u_demo_admin",
+        "userName": "أحمد الشريف",
+        "checkIn": "09:33",
+        "checkOut": "17:32"
+      },
+      {
+        "id": "att_7",
+        "date": "2026-09-12T19:14:36.566Z",
+        "userId": "u_demo_admin",
+        "userName": "أحمد الشريف",
+        "checkIn": "09:20",
+        "checkOut": "17:36"
+      },
+      {
+        "id": "att_8",
+        "date": "2026-09-11T19:14:36.566Z",
+        "userId": "u_demo_admin",
+        "userName": "أحمد الشريف",
+        "checkIn": "09:37",
+        "checkOut": "17:10"
+      },
+      {
+        "id": "att_9",
+        "date": "2026-09-10T19:14:36.566Z",
+        "userId": "u_demo_admin",
+        "userName": "أحمد الشريف",
+        "checkIn": "09:21",
+        "checkOut": "17:29"
+      },
+      {
+        "id": "att_10",
+        "date": "2026-09-09T19:14:36.566Z",
+        "userId": "u_demo_admin",
+        "userName": "أحمد الشريف",
+        "checkIn": "09:30",
+        "checkOut": "17:21"
+      },
+      {
+        "id": "att_11",
+        "date": "2026-09-08T19:14:36.566Z",
+        "userId": "u_demo_admin",
+        "userName": "أحمد الشريف",
+        "checkIn": "09:20",
+        "checkOut": "17:30"
+      },
+      {
+        "id": "att_12",
+        "date": "2026-09-07T19:14:36.566Z",
+        "userId": "u_demo_admin",
+        "userName": "أحمد الشريف",
+        "checkIn": "09:39",
+        "checkOut": "17:28"
+      },
+      {
+        "id": "att_13",
+        "date": "2026-09-06T19:14:36.566Z",
+        "userId": "u_demo_admin",
+        "userName": "أحمد الشريف",
+        "checkIn": "09:17",
+        "checkOut": "17:32"
+      },
+      {
+        "id": "att_14",
+        "date": "2026-09-05T19:14:36.566Z",
+        "userId": "u_demo_admin",
+        "userName": "أحمد الشريف",
+        "checkIn": "09:21",
+        "checkOut": "17:14"
+      }
+    ],
+    "pc_ocr_cache": {
+      "rxnorm:ls tae ‏ف ص‎": {
+        "v": {
+          "input": "LS Tae ‏ف ص‎",
+          "name": "LS Tae ‏ف ص‎",
+          "generic": "",
+          "rxcui": null,
+          "source": "none",
+          "verified": false,
+          "confidence": "low"
+        },
+        "t": 1789903997491
+      },
+      "rxnorm:ei lubrican": {
+        "v": {
+          "input": "Ei Lubrican",
+          "name": "Ei Lubrican",
+          "generic": "",
+          "rxcui": null,
+          "source": "none",
+          "verified": false,
+          "confidence": "low"
+        },
+        "t": 1789903997750
+      },
+      "rxnorm:ee diop": {
+        "v": {
+          "input": "Ee Diop",
+          "name": "Ee Diop",
+          "generic": "",
+          "rxcui": null,
+          "source": "none",
+          "verified": false,
+          "confidence": "low"
+        },
+        "t": 1789904009718
+      },
+      "rxnorm:ed)": {
+        "v": {
+          "input": "ED)",
+          "name": "ED)",
+          "generic": "",
+          "rxcui": null,
+          "source": "none",
+          "verified": false,
+          "confidence": "low"
+        },
+        "t": 1789904010203
+      },
+      "rxnorm:ep jot ten ‏ل‎": {
+        "v": {
+          "input": "ep Jot ten ‏ل‎",
+          "name": "ep Jot ten ‏ل‎",
+          "generic": "",
+          "rxcui": null,
+          "source": "none",
+          "verified": false,
+          "confidence": "low"
+        },
+        "t": 1789904010712
+      },
+      "rxnorm:‎fe analgesic drug tab.": {
+        "v": {
+          "input": "‎fe Analgesic Drug TAB.",
+          "name": "‎fe Analgesic Drug TAB.",
+          "generic": "",
+          "rxcui": null,
+          "source": "none",
+          "verified": false,
+          "confidence": "low"
+        },
+        "t": 1789904011076
+      },
+      "rxnorm:‏بعد الأأكل مرتين يوم‎ 3": {
+        "v": {
+          "input": "‏بعد الأأكل مرتين يوم‎ 3",
+          "name": "‏بعد الأأكل مرتين يوم‎ 3",
+          "generic": "",
+          "rxcui": null,
+          "source": "none",
+          "verified": false,
+          "confidence": "low"
+        },
+        "t": 1789904011487
+      },
+      "rxnorm:‏لمدة أسبوع * ولايكرد\"‎": {
+        "v": {
+          "input": "‏لمدة أسبوع * ولايكرد\"‎",
+          "name": "‏لمدة أسبوع * ولايكرد\"‎",
+          "generic": "",
+          "rxcui": null,
+          "source": "none",
+          "verified": false,
+          "confidence": "low"
+        },
+        "t": 1789904011982
+      },
+      "rxnorm:‏ل‎ antibiotic eye qintment. 0": {
+        "v": {
+          "input": "‏ل‎ Antibiotic Eye Qintment. 0",
+          "name": "‏ل‎ Antibiotic Eye Qintment. 0",
+          "generic": "",
+          "rxcui": null,
+          "source": "none",
+          "verified": false,
+          "confidence": "low"
+        },
+        "t": 1789904012447
+      },
+      "rxnorm:( er ‏مسائلائتة‎ [es": {
+        "v": {
+          "input": "( Er ‏مسائلائتة‎ [ES",
+          "name": "( Er ‏مسائلائتة‎ [ES",
+          "generic": "",
+          "rxcui": null,
+          "source": "none",
+          "verified": false,
+          "confidence": "low"
+        },
+        "t": 1789904012853
+      },
+      "rxnorm:analgesic drug tab": {
+        "v": {
+          "input": "Analgesic Drug TAB",
+          "name": "Analgesic Drug TAB",
+          "generic": "",
+          "rxcui": null,
+          "source": "none",
+          "verified": false,
+          "confidence": "low"
+        },
+        "t": 1789904013373
+      }
+    }
+  }
+}

@@ -1,0 +1,380 @@
+/* ============================================
+   PHARMACLOUD - I18N SYSTEM v1.0
+   Multi-language (RTL/LTR) Styles
+   ============================================ */
+
+/* ============================================
+   1. LANGUAGE SWITCHER
+   ============================================ */
+.lang-switcher {
+  position: relative;
+  display: inline-block;
+  z-index: 100;
+}
+
+.lang-switcher-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+.lang-switcher-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.lang-switcher-btn i.fa-globe {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.lang-current {
+  font-size: 0.82rem;
+}
+
+.lang-chevron {
+  font-size: 0.65rem;
+  transition: transform 0.3s;
+}
+
+.lang-switcher.open .lang-chevron {
+  transform: rotate(180deg);
+}
+
+/* ============================================
+   2. DROPDOWN
+   ============================================ */
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  inset-inline-end: 0;
+  min-width: 180px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow:
+    0 20px 60px rgba(15, 23, 42, 0.2),
+    0 0 0 1px rgba(15, 23, 42, 0.05);
+  padding: 6px;
+  opacity: 0;
+  transform: translateY(-8px) scale(0.96);
+  pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+}
+
+.lang-switcher.open .lang-dropdown {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0f172a;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: start;
+}
+
+.lang-option:hover {
+  background: rgba(0, 184, 132, 0.08);
+  color: #00b884;
+}
+
+.lang-option.active {
+  background: linear-gradient(135deg, rgba(0, 184, 132, 0.1), rgba(30, 136, 229, 0.05));
+  color: #00b884;
+  font-weight: 900;
+}
+
+.lang-flag {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.lang-name {
+  flex: 1;
+}
+
+.lang-option i.fa-check {
+  color: #10b981;
+  font-size: 0.8rem;
+}
+
+/* ============================================
+   3. DARK MODE — Language Switcher
+   ============================================ */
+html[data-theme="dark"] .lang-dropdown {
+  background: #1e293b;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+html[data-theme="dark"] .lang-option {
+  color: #f1f5f9;
+}
+
+html[data-theme="dark"] .lang-option:hover {
+  background: rgba(0, 184, 132, 0.15);
+  color: #34d399;
+}
+
+/* ============================================
+   4. LTR MODE OVERRIDES (English)
+   ============================================ */
+html[dir="ltr"] .ph-item:hover,
+html[dir="ltr"] .sa-item:hover {
+  transform: translateX(3px);
+}
+
+html[dir="ltr"] .ph-item.active::before,
+html[dir="ltr"] .sa-item.active::before {
+  border-radius: 4px 0 0 4px;
+}
+
+html[dir="ltr"] .toast {
+  transform: translateX(-50%) translateY(120px);
+}
+
+html[dir="ltr"] .toast.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+html[dir="ltr"] .live-alert {
+  animation: live-slide-ltr 0.4s;
+}
+
+@keyframes live-slide-ltr {
+  from { transform: translateX(120%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+html[dir="ltr"] .live-alert.closing {
+  transform: translateX(120%);
+}
+
+/* ============================================
+   5. FONT FAMILIES PER LANGUAGE
+   ============================================ */
+body.lang-ar {
+  font-family: 'Cairo', 'Segoe UI', system-ui, sans-serif;
+}
+
+body.lang-en {
+  font-family: 'Inter', 'Cairo', -apple-system, 'Segoe UI', system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* English headings get slightly bolder */
+body.lang-en h1,
+body.lang-en h2,
+body.lang-en h3 {
+  letter-spacing: -0.02em;
+}
+
+/* ============================================
+   6. NUMBER DISPLAY (always LTR)
+   ============================================ */
+body.lang-ar [data-number],
+body.lang-ar .ph-kpi-value,
+body.lang-ar .sa-kpi-value,
+body.lang-ar .bi-value-big,
+body.lang-ar .price,
+body.lang-ar .amount,
+body.lang-ar code,
+body.lang-ar .mono {
+  direction: ltr;
+  unicode-bidi: embed;
+  display: inline-block;
+}
+
+/* Numbers keep English digits in both languages */
+body.lang-ar .number,
+body.lang-ar input[type="number"],
+body.lang-ar input[type="tel"] {
+  direction: ltr;
+  text-align: end;
+}
+
+body.lang-ar input[type="tel"] {
+  text-align: end;
+  padding-inline-end: 12px;
+}
+
+/* ============================================
+   7. CURRENCY POSITIONING
+   ============================================ */
+body.lang-ar .price-currency::before {
+  content: '';
+  margin-inline-end: 0;
+}
+
+body.lang-ar .ph-kpi-value::after {
+  content: ' ' attr(data-unit);
+}
+
+body.lang-en .ph-kpi-value::after {
+  content: ' ' attr(data-unit);
+}
+
+/* ============================================
+   8. TEXT ALIGNMENT
+   ============================================ */
+body.lang-ar {
+  text-align: right;
+}
+
+body.lang-en {
+  text-align: left;
+}
+
+body.lang-ar input,
+body.lang-ar textarea {
+  text-align: right;
+}
+
+body.lang-en input,
+body.lang-en textarea {
+  text-align: left;
+}
+
+/* Keep emails and passwords LTR always */
+body input[type="email"],
+body input[type="password"],
+body input[type="url"],
+body input[type="tel"] {
+  direction: ltr;
+  text-align: left;
+}
+
+/* ============================================
+   9. LAYOUT DIRECTION ADJUSTMENTS
+   ============================================ */
+body.lang-en .feature-card:hover .feature-icon {
+  transform: scale(1.1) rotate(8deg);
+}
+
+body.lang-en .ph-item:hover,
+body.lang-en .sa-item:hover {
+  transform: translateX(3px);
+}
+
+/* ============================================
+   10. RESPONSIVE
+   ============================================ */
+@media (max-width: 640px) {
+  .lang-switcher-btn .lang-current {
+    display: none;
+  }
+
+  .lang-switcher-btn {
+    padding: 8px 10px;
+  }
+
+  .lang-switcher-btn i.fa-chevron-down {
+    display: none;
+  }
+
+  .lang-dropdown {
+    min-width: 160px;
+  }
+}
+
+/* ============================================
+   11. PRINT — Always RTL
+   ============================================ */
+@media print {
+  body,
+  html[dir="ltr"] body {
+    direction: rtl;
+    text-align: right;
+  }
+}
+
+/* ============================================
+   12. CODE & PREFORMATTED (always LTR)
+   ============================================ */
+pre, code, kbd, samp,
+.api-key-display,
+.api-path,
+.rp-mono,
+.pay-fawry-code,
+.pay-phone-display {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: embed;
+}
+
+body.lang-ar pre,
+body.lang-ar code {
+  text-align: left;
+}
+
+/* ============================================
+   13. RTL/RTL SPECIFIC ICONS
+   ============================================ */
+body.lang-ar .fa-arrow-left,
+body.lang-ar .fa-arrow-right,
+body.lang-ar .fa-chevron-left,
+body.lang-ar .fa-chevron-right {
+  /* Keep icons as-is — they're direction-aware by context */
+  transform: none;
+}
+
+/* Arrow icons that should flip in RTL */
+body.lang-ar .arrow-forward {
+  transform: scaleX(-1);
+}
+
+/* ============================================
+   14. BROADCAST BANNER (language aware)
+   ============================================ */
+.lang-broadcast {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #00b884, #1E88E5);
+  color: #fff;
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.lang-broadcast i {
+  font-size: 1rem;
+}
+
+/* ============================================
+   15. AUTO-DETECT HTML LANGS
+   ============================================ */
+html[lang="ar"] {
+  --font-family-primary: 'Cairo', sans-serif;
+}
+
+html[lang="en"] {
+  --font-family-primary: 'Inter', 'Cairo', sans-serif;
+}

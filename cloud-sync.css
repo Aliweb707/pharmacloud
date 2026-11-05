@@ -1,0 +1,422 @@
+/* ============================================
+   CLOUD SYNC v1.0
+   ============================================ */
+
+/* ============================================
+   INDICATOR
+   ============================================ */
+.pc-sync-indicator {
+  position: fixed;
+  bottom: 20px;
+  inset-inline-start: 20px;
+  z-index: 8500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  font-family: 'Cairo', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.pc-sync-indicator:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.pc-sync-indicator i {
+  font-size: 0.95rem;
+}
+
+.pc-sync-idle {
+  color: var(--text-muted);
+}
+
+.pc-sync-syncing {
+  color: #7c3aed;
+  border-color: rgba(124, 58, 237, 0.3);
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(30, 136, 229, 0.05));
+}
+
+.pc-sync-online {
+  color: #10b981;
+  border-color: rgba(16, 185, 129, 0.3);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(52, 211, 153, 0.05));
+}
+
+.pc-sync-offline {
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.3);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(251, 191, 36, 0.05));
+}
+
+.pc-sync-error {
+  color: #dc2626;
+  border-color: rgba(220, 38, 38, 0.3);
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.08), rgba(239, 68, 68, 0.05));
+}
+
+.pc-sync-badge {
+  background: #FF6B35;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 900;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* ============================================
+   MODAL
+   ============================================ */
+.cs-modal-body {
+  padding: 24px;
+}
+
+.cs-status-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  background: var(--bg-alt);
+  border: 1.5px solid var(--border);
+}
+
+.cs-status-card.cs-status-online {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(52, 211, 153, 0.05));
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.cs-status-card.cs-status-syncing {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(30, 136, 229, 0.05));
+  border-color: rgba(124, 58, 237, 0.3);
+}
+
+.cs-status-card.cs-status-error {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.08), rgba(239, 68, 68, 0.05));
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+.cs-status-card.cs-status-offline {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(251, 191, 36, 0.05));
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.cs-status-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.cs-status-online .cs-status-icon {
+  background: linear-gradient(135deg, #10b981, #34d399);
+  color: #fff;
+}
+
+.cs-status-syncing .cs-status-icon {
+  background: linear-gradient(135deg, #7c3aed, #1E88E5);
+  color: #fff;
+}
+
+.cs-status-error .cs-status-icon {
+  background: linear-gradient(135deg, #dc2626, #f87171);
+  color: #fff;
+}
+
+.cs-status-offline .cs-status-icon {
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  color: #fff;
+}
+
+.cs-status-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.cs-status-info strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.cs-status-info span {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.cs-sync-now-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #00b884, #1E88E5);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all 0.25s;
+  flex-shrink: 0;
+}
+
+.cs-sync-now-btn:hover {
+  transform: translateY(-2px) rotate(180deg);
+  box-shadow: 0 10px 24px rgba(0, 184, 132, 0.4);
+}
+
+/* ============================================
+   STATS
+   ============================================ */
+.cs-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.cs-stat {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 10px;
+  text-align: center;
+}
+
+.cs-stat-value {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.cs-stat-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+.cs-section {
+  margin-bottom: 24px;
+}
+
+.cs-section-title {
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.cs-toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+}
+
+.cs-toggle-row strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.cs-toggle-row small {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.cs-toggle-row input[type="checkbox"] {
+  appearance: none;
+  width: 44px;
+  height: 24px;
+  background: var(--border);
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+  flex-shrink: 0;
+}
+
+.cs-toggle-row input[type="checkbox"]::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  inset-inline-start: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  transition: all 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cs-toggle-row input[type="checkbox"]:checked {
+  background: linear-gradient(135deg, #00b884, #1E88E5);
+}
+
+.cs-toggle-row input[type="checkbox"]:checked::after {
+  inset-inline-start: calc(100% - 21px);
+}
+
+.cs-field {
+  margin-bottom: 14px;
+}
+
+.cs-field label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.cs-field input,
+.cs-field select {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-alt);
+  font-family: inherit;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.cs-field input:focus,
+.cs-field select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: var(--bg);
+  box-shadow: 0 0 0 4px rgba(0, 184, 132, 0.1);
+}
+
+.cs-field small {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.cs-device-info {
+  padding: 12px;
+  background: var(--bg-alt);
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+.cs-device-info strong {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.cs-device-info code {
+  display: block;
+  font-family: 'Courier New', monospace;
+  font-size: 0.78rem;
+  color: var(--primary);
+  word-break: break-all;
+  direction: ltr;
+  text-align: left;
+}
+
+/* ============================================
+   ACTIONS
+   ============================================ */
+.cs-actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.cs-action-btn {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.22s;
+}
+
+.cs-action-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 184, 132, 0.15);
+}
+
+.cs-action-btn.danger {
+  color: var(--danger);
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+.cs-action-btn.danger:hover {
+  background: var(--danger);
+  color: #fff;
+  border-color: var(--danger);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 640px) {
+  .pc-sync-indicator {
+    bottom: 12px;
+    inset-inline-start: 12px;
+    padding: 8px 12px;
+    font-size: 0.75rem;
+  }
+  .pc-sync-text {
+    display: none;
+  }
+  .cs-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .cs-actions-grid {
+    grid-template-columns: 1fr;
+  }
+}
