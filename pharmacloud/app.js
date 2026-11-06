@@ -832,70 +832,39 @@ function toggleFaq(el) {
    17. AUTH FUNCTIONS
    ============================================ */
 function openAuth(mode = 'login') {
-  const overlay = document.getElementById('authOverlay');
-  if (overlay) overlay.classList.add('open');
+  $('#authOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
   switchAuthTab(mode);
   hideAuthAlert();
 }
 
 function closeAuth() {
-  const overlay = document.getElementById('authOverlay');
-  if (overlay) overlay.classList.remove('open');
+  $('#authOverlay').classList.remove('open');
   document.body.style.overflow = '';
-  try { document.getElementById('loginForm')?.reset(); } catch(e) {}
-  try { document.getElementById('signupForm')?.reset(); } catch(e) {}
-  const sb = document.getElementById('signupBtn');
-  if (sb) {
-    sb.disabled = false;
-    sb.innerHTML = '<i class="fas fa-rocket"></i> ابدأ 14 يوم مجاناً';
-  }
-  const lb = document.getElementById('loginBtn');
-  if (lb) {
-    lb.disabled = false;
-    lb.innerHTML = '<i class="fas fa-sign-in-alt"></i> تسجيل الدخول';
-  }
+  $('#loginForm').reset();
+  $('#signupForm').reset();
   hideAuthAlert();
 }
 
 function switchAuthTab(mode) {
   const isLogin = mode === 'login';
-  const tabLogin = document.getElementById('tabLogin');
-  const tabSignup = document.getElementById('tabSignup');
-  const loginForm = document.getElementById('loginForm');
-  const signupForm = document.getElementById('signupForm');
-  const titleEl = document.getElementById('authTitle');
-  const subEl = document.getElementById('authSubtitle');
-  if (tabLogin) tabLogin.classList.toggle('active', isLogin);
-  if (tabSignup) tabSignup.classList.toggle('active', !isLogin);
-  if (loginForm) loginForm.style.display = isLogin ? 'block' : 'none';
-  if (signupForm) signupForm.style.display = isLogin ? 'none' : 'block';
-  if (titleEl) titleEl.textContent = isLogin ? 'أهلاً بيك تاني!' : 'ابدأ رحلتك مع PharmaCloud';
-  if (subEl) subEl.textContent = isLogin ? 'سجل دخول للوصول لصيدليتك' : 'أنشئ حساب صيدليتك في دقيقة واحدة';
+  $('#tabLogin').classList.toggle('active', isLogin);
+  $('#tabSignup').classList.toggle('active', !isLogin);
+  $('#loginForm').style.display = isLogin ? 'block' : 'none';
+  $('#signupForm').style.display = isLogin ? 'none' : 'block';
+  $('#authTitle').textContent = isLogin ? 'أهلاً بيك تاني!' : 'ابدأ رحلتك مع PharmaCloud';
+  $('#authSubtitle').textContent = isLogin ? 'سجل دخول للوصول لصيدليتك' : 'أنشئ حساب صيدليتك في دقيقة واحدة';
   hideAuthAlert();
 }
 
 function showAuthAlert(msg, type = 'error') {
-  const el = document.getElementById('authAlert');
-  if (!el) return;
+  const el = $('#authAlert');
   el.className = 'alert ' + type + ' show';
   el.innerHTML = `<i class="fas fa-${type === 'error' ? 'exclamation-circle' : 'check-circle'}"></i> ${escapeHtml(msg)}`;
 }
 
 function hideAuthAlert() {
-  const el = document.getElementById('authAlert');
-  if (el) el.className = 'alert';
-}
-
-function isValidEmail(email) {
-  return /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/.test(email);
-}
-function isValidPhone(phone) {
-  const cleaned = String(phone).replace(/\D/g, '');
-  return cleaned.length >= 10 && cleaned.length <= 15;
-}
-function isValidName(name) {
-  return String(name).trim().length >= 2;
+  $('#authAlert').className = 'alert';
 }
 
 function handleLogin(e) {
@@ -959,141 +928,67 @@ function openSignupWithPlan(plan) {
 }
 
 function handleSignup(e) {
-  if (e && e.preventDefault) e.preventDefault();
-  
-  const pharmacyEl = document.getElementById('signupPharmacyName');
-  const ownerEl = document.getElementById('signupOwnerName');
-  const emailEl = document.getElementById('signupEmail');
-  const phoneEl = document.getElementById('signupPhone');
-  const passEl = document.getElementById('signupPassword');
-  const termsEl = document.getElementById('signupTerms');
-  const btn = document.getElementById('signupBtn');
+  e.preventDefault();
+  const pharmacyName = $('#signupPharmacyName').value.trim();
+  const ownerName = $('#signupOwnerName').value.trim();
+  const email = $('#signupEmail').value.trim().toLowerCase();
+  const phone = $('#signupPhone').value.trim();
+  const password = $('#signupPassword').value;
+  const terms = $('#signupTerms').checked;
 
-  const pharmacyName = (pharmacyEl?.value || '').trim();
-  const ownerName = (ownerEl?.value || '').trim();
-  const email = (emailEl?.value || '').trim().toLowerCase();
-  const phone = (phoneEl?.value || '').trim();
-  const password = passEl?.value || '';
-  const terms = termsEl?.checked || false;
+  if (!terms) { showAuthAlert('يجب الموافقة على الشروط'); return; }
+  if (password.length < 8) { showAuthAlert('كلمة المرور 8 أحرف على الأقل'); return; }
 
-  // Validation - comprehensive
-  if (!isValidName(pharmacyName)) {
-    showAuthAlert('اكتب اسم الصيدلية (حرفين على الأقل)');
-    pharmacyEl?.focus();
-    return;
-  }
-  if (!isValidName(ownerName)) {
-    showAuthAlert('اكتب اسمك الكامل (حرفين على الأقل)');
-    ownerEl?.focus();
-    return;
-  }
-  if (!email || !isValidEmail(email)) {
-    showAuthAlert('البريد الإلكتروني غير صحيح');
-    emailEl?.focus();
-    return;
-  }
-  if (!phone || !isValidPhone(phone)) {
-    showAuthAlert('رقم الهاتف يجب أن يكون 10-15 رقم');
-    phoneEl?.focus();
-    return;
-  }
-  if (!password || password.length < 8) {
-    showAuthAlert('كلمة المرور 8 أحرف على الأقل');
-    passEl?.focus();
-    return;
-  }
-  if (!terms) {
-    showAuthAlert('يجب الموافقة على الشروط والأحكام');
+  const users = DB.getUsers();
+  if (users.find(u => u.email.toLowerCase() === email)) {
+    showAuthAlert('البريد مسجل بالفعل');
     return;
   }
 
-  // Check duplicate
-  try {
-    const users = DB.getUsers() || [];
-    if (users.find(u => String(u.email||'').toLowerCase() === email)) {
-      showAuthAlert('البريد مسجل بالفعل - جرب تسجيل الدخول');
-      return;
-    }
-  } catch(err) {
-    console.warn('Check duplicate failed', err);
-  }
+  const btn = $('#signupBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإنشاء...';
 
-  if (btn) {
-    btn.disabled = true;
-    btn.dataset.loading = 'true';
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإنشاء...';
-  }
-
-  // Use unique IDs - avoid Date.now collision
   setTimeout(() => {
-    try {
-      const tenantId = Utils.uid('t');
-      const userId = Utils.uid('u');
-      const trialEnds = new Date(Date.now() + 14 * 86400000).toISOString();
-      const now = new Date().toISOString();
+    const tenantId = 't_' + Date.now();
+    const trialEnds = new Date(Date.now() + 14 * 86400000).toISOString();
 
-      const tenant = {
-        id: tenantId,
-        name: pharmacyName,
-        owner: ownerName,
-        email, phone,
-        address: '',
-        plan: (typeof selectedPlan !== 'undefined' ? selectedPlan : 'pro'),
-        status: 'trial',
-        trialEndsAt: trialEnds,
-        subscriptionEndsAt: null,
-        createdAt: now
-      };
-      
-      const tenants = DB.getTenants() || [];
-      tenants.push(tenant);
-      DB.setTenants(tenants);
+    const tenant = {
+      id: tenantId,
+      name: pharmacyName,
+      owner: ownerName,
+      email, phone,
+      address: '',
+      plan: selectedPlan,
+      status: 'trial',
+      trialEndsAt: trialEnds,
+      subscriptionEndsAt: null,
+      createdAt: new Date().toISOString()
+    };
+    const tenants = DB.getTenants();
+    tenants.push(tenant);
+    DB.setTenants(tenants);
 
-      const user = { id: userId, tenantId, email, password, name: ownerName, role: 'admin', createdAt: now };
-      const allUsers = DB.getUsers() || [];
-      allUsers.push(user);
-      DB.setUsers(allUsers);
+    const userId = 'u_' + Date.now();
+    const user = { id: userId, tenantId, email, password, name: ownerName, role: 'admin' };
+    const allUsers = DB.getUsers();
+    allUsers.push(user);
+    DB.setUsers(allUsers);
 
-      DB.addSubscription({
-        tenantId, plan: tenant.plan, amount: 0, type: 'trial',
-        status: 'active', startedAt: now, endsAt: trialEnds
-      });
+    DB.addSubscription({
+      tenantId, plan: selectedPlan, amount: 0, type: 'trial',
+      status: 'active', startedAt: new Date().toISOString(), endsAt: trialEnds
+    });
 
-      // Initialize empty tenant data to avoid future crashes
-      try {
-        const emptyKeys = ['products','orders','customers','prescriptions','attendance','batches'];
-        emptyKeys.forEach(k => {
-          const key = `pc_${tenantId}_${k}`;
-          if (!localStorage.getItem(key)) {
-            localStorage.setItem(key, '[]');
-          }
-        });
-      } catch(e) {}
-
-      const session = {
-        userId, tenantId, email, name: ownerName, role: 'admin',
-        loginAt: now
-      };
-      DB.setSession(session);
-      
-      if (typeof showToast === 'function') showToast(`تم إنشاء صيدلية "${pharmacyName}" بنجاح!`, 'success');
-      else if (window.Utils && Utils.toast) Utils.toast(`تم إنشاء صيدلية "${pharmacyName}" بنجاح!`, 'success');
-      
-      closeAuth();
-      setTimeout(() => {
-        if (typeof showPlaceholder === 'function') showPlaceholder(session);
-      }, 400);
-      
-    } catch (err) {
-      console.error('[Signup] Failed:', err);
-      showAuthAlert('حدث خطأ: ' + (err.message || 'حاول مرة أخرى'));
-      if (btn) {
-        btn.disabled = false;
-        btn.dataset.loading = 'false';
-        btn.innerHTML = '<i class="fas fa-rocket"></i> ابدأ 14 يوم مجاناً';
-      }
-    }
-  }, 800);
+    const session = {
+      userId, tenantId, email, name: ownerName, role: 'admin',
+      loginAt: new Date().toISOString()
+    };
+    DB.setSession(session);
+    showToast(`تم إنشاء صيدلية "${pharmacyName}" بنجاح!`, 'success');
+    closeAuth();
+    setTimeout(() => showPlaceholder(session), 400);
+  }, 1100);
 }
 
 /* ============================================
@@ -2931,119 +2826,58 @@ function phClearCart() {
 function phCheckout() {
   if (phCart.length === 0) return;
 
-  // FIXED v4.6 - POS: 6 buttons WITHOUT visa form - Subscription KEEPS visa form
   const total = phCart.reduce((s, c) => s + c.price * c.qty, 0);
   const customerId = document.getElementById('phCartCustomer')?.value || '';
   const customer = customerId ? PH.getCustomers().find(c => c.id === customerId) : null;
-  const customerName = customer ? customer.name : 'عميل عابر';
-  const cartCount = phCart.length;
-  const overlayId='SAFE_POS_PAYMENT_MODAL';
-  let existing=document.getElementById(overlayId);
-  if(existing) existing.remove();
-  let html=`
-      <div id="${overlayId}" style="display:flex; position:fixed; inset:0; background:rgba(15,23,42,0.92); backdrop-filter:blur(16px); z-index:99999; align-items:flex-start; justify-content:center; padding:16px; overflow-y:auto;">
-        <div style="max-width:560px; width:100%; background:#fff; border-radius:28px; overflow:hidden; box-shadow:0 30px 90px rgba(0,0,0,0.7); animation: slideUpSafe 0.5s; margin:20px 0;">
-          <div style="padding:22px 24px; border-bottom:1px solid #f3f4f6; display:flex; justify-content:space-between; align-items:center; background:linear-gradient(135deg, #f9fafb, #fff);">
-            <h3 style="margin:0; font-size:1.3rem; font-weight:900; display:flex; align-items:center; gap:10px;">
-              <span style="width:36px; height:36px; background:linear-gradient(135deg, #00b884, #0ea5e9); border-radius:10px; display:flex; align-items:center; justify-content:center; color:#fff;"><i class="fas fa-cash-register"></i></span>
-              إتمام الدفع
-            </h3>
-            <button onclick="document.getElementById('${overlayId}').remove()" style="width:36px; height:36px; border-radius:12px; border:none; background:#f3f4f6; cursor:pointer;">✕</button>
-          </div>
-          <div style="padding:24px;">
-            <div style="background:linear-gradient(135deg, #00b884, #0ea5e9); border-radius:20px; padding:20px; color:#fff; text-align:center; margin-bottom:24px;">
-              <div style="font-size:0.9rem; opacity:0.9;">المبلغ المطلوب</div>
-              <div style="font-size:2.2rem; font-weight:900; margin:6px 0;">${total.toLocaleString('ar-EG')} <span style="font-size:1rem;">ج.م</span></div>
-              <div style="font-size:0.85rem; opacity:0.9; background:rgba(255,255,255,0.2); padding:6px 14px; border-radius:20px; display:inline-block;">${customerName} - ${cartCount} منتج</div>
-            </div>
-            <div style="margin-bottom:20px;">
-              <div style="font-weight:800; font-size:1rem; margin-bottom:14px;">اختر طريقة الدفع:</div>
-              <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px;">
-                <button class="safe-pay-btn" data-method="cash" style="padding:20px 12px; border:2.5px solid #e5e7eb; border-radius:18px; background:#fff; cursor:pointer; text-align:center; font-weight:700;">
-                  <div style="font-size:2rem;">💵</div><div style="font-size:0.9rem; font-weight:800; margin-top:6px;">نقدي</div>
-                </button>
-                <button class="safe-pay-btn selected" data-method="card" style="padding:20px 12px; border:2.5px solid #00b884; border-radius:18px; background:linear-gradient(135deg, #f0fdf9, #ecfeff); cursor:pointer; text-align:center; font-weight:700;">
-                  <div style="font-size:2rem;">💳</div><div style="font-size:0.9rem; font-weight:800; margin-top:6px;">بطاقة بنكية</div><div style="font-size:0.7rem; color:#6b7280;">بدون إدخال بيانات</div>
-                </button>
-                <button class="safe-pay-btn" data-method="wallet" style="padding:20px 12px; border:2.5px solid #e5e7eb; border-radius:18px; background:#fff; cursor:pointer; text-align:center; font-weight:700;">
-                  <div style="font-size:2rem;">👛</div><div style="font-size:0.9rem; font-weight:800; margin-top:6px;">محفظة</div>
-                </button>
-                <button class="safe-pay-btn" data-method="fawry" style="padding:20px 12px; border:2.5px solid #e5e7eb; border-radius:18px; background:#fff; cursor:pointer; text-align:center; font-weight:700;">
-                  <div style="font-size:2rem;">🏪</div><div style="font-size:0.9rem; font-weight:800; margin-top:6px;">فوري</div>
-                </button>
-                <button class="safe-pay-btn" data-method="valu" style="padding:20px 12px; border:2.5px solid #e5e7eb; border-radius:18px; background:#fff; cursor:pointer; text-align:center; font-weight:700;">
-                  <div style="font-size:2rem;">💰</div><div style="font-size:0.9rem; font-weight:800; margin-top:6px;">فاليو</div>
-                </button>
-                <button class="safe-pay-btn" data-method="instapay" style="padding:20px 12px; border:2.5px solid #e5e7eb; border-radius:18px; background:#fff; cursor:pointer; text-align:center; font-weight:700;">
-                  <div style="font-size:2rem;">⚡</div><div style="font-size:0.9rem; font-weight:800; margin-top:6px;">انستاباي</div>
-                </button>
-              </div>
-            </div>
-            <div style="background:#f9fafb; border:1.5px solid #e5e7eb; border-radius:16px; padding:16px; margin-bottom:20px; text-align:center;">
-              <div style="font-weight:800;">بطاقة بنكية - بدون إدخال بيانات</div>
-              <div style="font-size:0.85rem; color:#6b7280;">مرر البطاقة على الماكينة فقط - ستسجل في التقارير كـ "بطاقة بنكية"</div>
-            </div>
-            <div style="display:flex; gap:12px; margin-top:20px;">
-              <button onclick="document.getElementById('${overlayId}').remove()" style="flex:1; padding:14px; border:1.5px solid #e5e7eb; background:#fff; border-radius:14px; font-weight:700; cursor:pointer;">إلغاء</button>
-              <button id="safeConfirmPay" style="flex:2; padding:14px; border:none; background:linear-gradient(135deg, #00b884, #0ea5e9); color:#fff; border-radius:14px; font-weight:800; cursor:pointer;">
-                تأكيد البيع - ${total.toLocaleString('ar-EG')} ج
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <style>@keyframes slideUpSafe{from{opacity:0;transform:translateY(30px) scale(0.95);}to{opacity:1;transform:translateY(0) scale(1);}} .safe-pay-btn:hover{border-color:#00b884 !important;transform:translateY(-2px);} .safe-pay-btn.selected{border-color:#00b884 !important;background:linear-gradient(135deg, #f0fdf9, #ecfeff) !important;}</style>
-    `;
-  document.body.insertAdjacentHTML('beforeend', html);
-  let overlay=document.getElementById(overlayId);
-  let selectedMethod='card';
-  overlay.querySelectorAll('.safe-pay-btn').forEach(function(btn){
-    btn.onclick=function(){
-      overlay.querySelectorAll('.safe-pay-btn').forEach(function(b){b.classList.remove('selected');});
-      btn.classList.add('selected');
-      selectedMethod=btn.getAttribute('data-method');
-    };
-  });
-  document.getElementById('safeConfirmPay').onclick=function(){
-    const order = {
-      id: 'ORD-' + Date.now().toString().slice(-6),
-      customerId: customer?.id || null,
-      customerName: customer?.name || 'عميل عابر',
-      items: phCart.map(c => ({ id: c.id, name: c.name, price: c.price, qty: c.qty })),
-      total, paymentMethod: selectedMethod, status: 'completed',
-      createdAt: new Date().toISOString(),
-      createdBy: phSession.userId,
-      branchId: PH.getCurrentBranch()
-    };
-    const orders = PH.getOrders();
-    orders.unshift(order);
-    PH.setOrders(orders);
-    const products = PH.getProducts();
-    phCart.forEach(c => {
-      const prod = products.find(p => p.id === c.id);
-      if (prod) prod.stock -= c.qty;
-    });
-    PH.setProducts(products);
-    if (customer) {
-      const customers = PH.getCustomers();
-      const c = customers.find(x => x.id === customer.id);
-      if (c) {
-        c.totalSpent += total;
-        c.orders = (c.orders || 0) + 1;
-        PH.setCustomers(customers);
-      }
-    }
-    DB.logAudit(phSession.tenantId, 'sale_completed', { orderId: order.id, total });
-    overlay.remove();
-    phCart = [];
-    phRenderCart();
-    phUpdateBadges();
-    showToast(`✅ تم البيع — ${total.toLocaleString('ar-EG')} ج عبر ${selectedMethod}`, 'success');
-    pushNotification('💳 عملية بيع جديدة', `مبلغ ${total.toLocaleString('ar-EG')} ج`);
-    playSound('success');
-    setTimeout(phRenderPOS, 300);
+  const paymentMethod = document.getElementById('phPaymentMethod')?.value || 'cash';
+
+  const order = {
+    id: 'ORD-' + Date.now().toString().slice(-6),
+    customerId: customer?.id || null,
+    customerName: customer?.name || 'عميل عابر',
+    items: phCart.map(c => ({ id: c.id, name: c.name, price: c.price, qty: c.qty })),
+    total, paymentMethod, status: 'completed',
+    createdAt: new Date().toISOString(),
+    createdBy: phSession.userId,
+    branchId: PH.getCurrentBranch()
   };
+
+  const orders = PH.getOrders();
+  orders.unshift(order);
+  PH.setOrders(orders);
+
+  const products = PH.getProducts();
+  phCart.forEach(c => {
+    const prod = products.find(p => p.id === c.id);
+    if (prod) prod.stock -= c.qty;
+  });
+  PH.setProducts(products);
+
+  if (customer) {
+    const customers = PH.getCustomers();
+    const c = customers.find(x => x.id === customer.id);
+    if (c) {
+      c.totalSpent += total;
+      c.orders = (c.orders || 0) + 1;
+      PH.setCustomers(customers);
+    }
+  }
+
+  DB.logAudit(phSession.tenantId, 'sale_completed', { orderId: order.id, total });
+
+  phCart = [];
+  phRenderCart();
+  phUpdateBadges();
+  showToast(`✅ تم البيع — ${total.toLocaleString('ar-EG')} ج`, 'success');
+  pushNotification('💳 عملية بيع جديدة', `مبلغ ${total.toLocaleString('ar-EG')} ج`);
+  playSound('success');
+  setTimeout(phRenderPOS, 300);
 }
+
+/* ============================================
+   34. PHARMACY - PRODUCTS
+   ============================================ */
+let phTempImageBase64 = '';
 
 function phRenderProducts() {
   document.getElementById('phContent').innerHTML = `
