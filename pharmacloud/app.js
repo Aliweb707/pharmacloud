@@ -3200,30 +3200,15 @@ function phHandleExcelImport(input) {
       const rows = XLSX.utils.sheet_to_json(sheet);
       if (rows.length === 0) { showToast('الملف فاضي', 'error'); return; }
       const products = PH.getProducts();
-      
-      // === منع التكرار: جهز قايمة الموجود قبل كده ===
-      const existingBarcodes = new Set(products.map(p => (p.barcode || '').toString().trim()).filter(b => b));
-      const existingNames = new Set(products.map(p => (p.name || '').toString().trim().toLowerCase()));
-      
       let added = 0;
-      let skipped = 0;
-      
       rows.forEach(row => {
-        const name = (row['الاسم'] || row['name'] || '').toString().trim();
+        const name = row['الاسم'] || row['name'];
         if (!name) return;
-        const barcode = (row['الباركود'] || '').toString().trim();
-        const nameKey = name.toLowerCase();
-        
-        // لو الباركود موجود قبل كده → تخطى
-        if (barcode && existingBarcodes.has(barcode)) { skipped++; return; }
-        // لو الاسم موجود قبل كده (حتى لو الباركود فاضي) → تخطى
-        if (existingNames.has(nameKey)) { skipped++; return; }
-        
         products.unshift({
           id: 'p_' + Date.now() + '_' + added,
           name,
           active: row['المادة الفعالة'] || '',
-          barcode: barcode,
+          barcode: row['الباركود'] || '',
           category: row['الفئة'] || 'أدوية',
           price: parseFloat(row['السعر'] || 0),
           cost: parseFloat(row['التكلفة'] || 0),
@@ -3232,16 +3217,13 @@ function phHandleExcelImport(input) {
           rx: false,
           image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&q=80'
         });
-        // ضيفه للقايمة عشان لو الـ Excel نفسه فيه نفس المنتج مرتين، التاني يتخطى برضه
-        if (barcode) existingBarcodes.add(barcode);
-        existingNames.add(nameKey);
         added++;
       });
       PH.setProducts(products);
       phCloseModal();
       phRenderProducts();
       phUpdateBadges();
-      showToast(`✅ تم استيراد ${added} منتج، وتخطي ${skipped} مكرر`, 'success');
+      showToast(`✅ تم استيراد ${added} منتج`, 'success');
     } catch (err) {
       console.error(err);
       showToast('خطأ في قراءة الملف', 'error');
